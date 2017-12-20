@@ -1,464 +1,1237 @@
--- MySQL dump 10.13  Distrib 5.7.19, for Linux (x86_64)
+-- phpMyAdmin SQL Dump
+-- version 4.7.3
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost    Database: compcamps
--- ------------------------------------------------------
--- Server version	5.7.19-0ubuntu0.16.04.1
+-- Host: localhost:3306
+-- Generation Time: Dec 20, 2017 at 03:57 AM
+-- Server version: 5.6.38-log
+-- PHP Version: 5.6.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `mentor_wiki`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `attend`
+--
+
+CREATE TABLE `attend` (
+  `_id` int(3) NOT NULL,
+  `camper` int(4) DEFAULT NULL,
+  `camp` int(2) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `attend`
+--
+
+INSERT INTO `attend` (`_id`, `camper`, `camp`) VALUES
+(1, 1000, 4),
+(2, 1000, 2),
+(3, 1001, 4),
+(4, 1001, 2),
+(5, 1002, 3),
+(6, 1003, 4),
+(7, 1004, 1),
+(8, 1004, 4),
+(9, 500, 7),
+(10, 500, 8),
+(11, 501, 7),
+(12, 501, 8),
+(13, 502, 7),
+(14, 502, 8),
+(15, 502, 9),
+(16, 502, 10),
+(17, 503, 7),
+(18, 503, 8),
+(19, 503, 11),
+(20, 503, 12),
+(21, 504, 7),
+(22, 504, 8),
+(23, 504, 11),
+(24, 504, 12),
+(25, 504, 14),
+(26, 505, 7),
+(27, 505, 8),
+(28, 506, 7),
+(29, 506, 8),
+(30, 507, 7),
+(31, 507, 8),
+(32, 508, 7),
+(33, 508, 8),
+(34, 508, 11),
+(35, 508, 12),
+(36, 509, 7),
+(37, 509, 8),
+(38, 510, 7),
+(39, 510, 8),
+(40, 510, 11),
+(41, 510, 12),
+(42, 511, 7),
+(43, 511, 8),
+(46, 511, 11),
+(47, 512, 7),
+(48, 512, 8),
+(49, 513, 7),
+(51, 513, 11),
+(52, 514, 7),
+(53, 514, 8),
+(54, 515, 7),
+(55, 516, 7),
+(56, 2, 7),
+(57, 2, 8),
+(58, 2, 11),
+(59, 2, 12),
+(60, 517, 7),
+(61, 3, 7),
+(62, 3, 8),
+(63, 3, 11),
+(64, 3, 12),
+(65, 518, 7),
+(66, 518, 8),
+(67, 519, 7),
+(68, 519, 8),
+(69, 519, 11),
+(70, 519, 12),
+(71, 520, 7),
+(72, 4, 7),
+(73, 4, 8),
+(74, 4, 11),
+(75, 521, 7),
+(76, 521, 8),
+(77, 5, 7),
+(78, 5, 8),
+(79, 5, 12),
+(80, 5, 13),
+(81, 522, 7),
+(82, 522, 8),
+(83, 522, 11),
+(84, 523, 7),
+(85, 524, 7),
+(86, 525, 7),
+(87, 526, 7),
+(88, 526, 11),
+(89, 526, 12),
+(90, 527, 7),
+(91, 528, 7),
+(92, 528, 8),
+(93, 529, 7),
+(94, 529, 8),
+(95, 529, 11),
+(96, 529, 12),
+(97, 529, 13),
+(98, 530, 8),
+(99, 530, 11),
+(100, 531, 8),
+(101, 532, 8),
+(102, 533, 8),
+(103, 533, 11),
+(104, 533, 12),
+(105, 534, 8),
+(106, 535, 8),
+(107, 536, 7),
+(108, 536, 8),
+(109, 535, 7),
+(110, 537, 8),
+(111, 538, 8),
+(112, 539, 8),
+(113, 539, 11),
+(114, 539, 12),
+(115, 540, 8),
+(116, 540, 11),
+(117, 541, 8),
+(118, 542, 8),
+(119, 542, 11),
+(120, 542, 12),
+(121, 543, 8),
+(122, 544, 8),
+(123, 545, 11),
+(124, 545, 12),
+(125, 545, 13),
+(126, 546, 12),
+(127, 546, 11),
+(128, 546, 13),
+(129, 546, 14),
+(130, 547, 11),
+(131, 548, 11),
+(132, 6, 11),
+(133, 6, 12),
+(134, 6, 13),
+(135, 549, 11),
+(136, 550, 11),
+(137, 551, 11),
+(138, 552, 11),
+(139, 553, 11),
+(140, 554, 11),
+(141, 555, 11),
+(142, 555, 12),
+(143, 556, 11),
+(144, 556, 12),
+(145, 556, 13),
+(146, 556, 14),
+(148, 557, 11),
+(149, 558, 11),
+(150, 558, 12),
+(151, 558, 13),
+(152, 558, 14),
+(153, 558, 15),
+(154, 559, 12),
+(155, 560, 12),
+(156, 561, 12),
+(157, 562, 12),
+(158, 7, 12),
+(159, 7, 13),
+(160, 7, 14),
+(161, 7, 15),
+(162, 563, 12),
+(163, 563, 13),
+(164, 564, 12),
+(165, 564, 13),
+(166, 564, 14),
+(167, 564, 15),
+(168, 564, 16),
+(169, 565, 12),
+(170, 565, 13),
+(171, 566, 12),
+(172, 567, 12),
+(173, 568, 12),
+(174, 568, 13),
+(175, 569, 12),
+(176, 570, 12),
+(177, 570, 13),
+(178, 571, 12),
+(179, 571, 13),
+(180, 571, 14),
+(181, 572, 12),
+(182, 573, 12),
+(183, 573, 13),
+(184, 574, 12),
+(185, 574, 13),
+(186, 574, 14),
+(187, 575, 12),
+(188, 576, 12),
+(189, 577, 12),
+(190, 578, 12),
+(191, 578, 14),
+(192, 578, 15),
+(193, 578, 16),
+(194, 579, 12),
+(195, 580, 12),
+(196, 581, 13),
+(197, 581, 14),
+(198, 581, 15),
+(200, 582, 13),
+(201, 582, 14),
+(202, 583, 13),
+(203, 583, 14),
+(204, 584, 13),
+(205, 585, 12),
+(206, 586, 12),
+(207, 586, 13),
+(208, 586, 15),
+(209, 586, 16),
+(211, 587, 13),
+(212, 588, 12),
+(213, 588, 13),
+(214, 588, 15),
+(215, 589, 13),
+(216, 590, 13),
+(217, 590, 14),
+(218, 591, 13),
+(219, 8, 13),
+(220, 8, 14),
+(221, 8, 15),
+(222, 592, 13),
+(223, 593, 13),
+(224, 594, 13),
+(225, 595, 13),
+(226, 596, 13),
+(227, 597, 13),
+(228, 598, 13),
+(229, 599, 13),
+(230, 9, 13),
+(231, 9, 14),
+(232, 600, 13),
+(233, 600, 14),
+(234, 600, 15),
+(235, 504, 13),
+(236, 585, 13),
+(237, 601, 13),
+(238, 602, 14),
+(239, 603, 14),
+(240, 1013, 14),
+(241, 1013, 15),
+(242, 1013, 16),
+(243, 1013, 1),
+(244, 1013, 2),
+(245, 1013, 4),
+(246, 604, 14),
+(247, 605, 14),
+(248, 606, 14),
+(249, 607, 14),
+(250, 608, 14),
+(251, 608, 15),
+(252, 608, 16),
+(253, 609, 14),
+(254, 609, 16),
+(255, 609, 2),
+(256, 586, 14),
+(257, 570, 14),
+(258, 588, 14),
+(259, 555, 14),
+(260, 569, 14),
+(261, 610, 15),
+(262, 610, 16),
+(263, 610, 1),
+(264, 611, 15),
+(265, 611, 16),
+(266, 612, 15),
+(267, 613, 15),
+(268, 613, 16),
+(269, 614, 15),
+(270, 614, 16),
+(271, 614, 1),
+(272, 614, 2),
+(273, 615, 15),
+(274, 616, 15),
+(275, 616, 16),
+(276, 617, 15),
+(277, 1021, 15),
+(278, 1021, 16),
+(279, 1021, 1),
+(280, 1021, 2),
+(281, 556, 15),
+(283, 10, 15),
+(284, 619, 15),
+(285, 618, 15),
+(286, 11, 15),
+(287, 620, 15),
+(288, 621, 15),
+(289, 622, 15),
+(290, 623, 15),
+(291, 581, 16),
+(292, 582, 16),
+(293, 624, 16),
+(294, 625, 16),
+(295, 10, 16),
+(296, 11, 16),
+(297, 1028, 16),
+(298, 627, 16),
+(299, 628, 16),
+(300, 629, 16),
+(301, 630, 16),
+(302, 631, 16),
+(303, 632, 16),
+(304, 633, 16),
+(305, 634, 16),
+(306, 635, 16),
+(307, 636, 16),
+(309, 637, 16),
+(310, 638, 16),
+(311, 1023, 16),
+(312, 618, 16),
+(313, 622, 16),
+(314, 639, 16),
+(315, 640, 16),
+(316, 641, 16),
+(317, 1200, 16),
+(318, 643, 16),
+(319, 1009, 16),
+(320, 620, 16),
+(321, 644, 16),
+(322, 645, 16),
+(323, 11, 1),
+(324, 10, 1),
+(325, 644, 1),
+(326, 646, 1),
+(327, 646, 2),
+(328, 647, 1),
+(329, 647, 2),
+(330, 648, 1),
+(331, 625, 1),
+(332, 625, 2),
+(333, 1022, 1),
+(334, 1015, 1),
+(335, 1018, 1),
+(336, 636, 1),
+(337, 649, 1),
+(338, 1200, 1),
+(339, 1200, 2),
+(341, 610, 1),
+(342, 1008, 1),
+(343, 650, 1),
+(344, 651, 1),
+(345, 1019, 1),
+(347, 1011, 2),
+(348, 1024, 2),
+(349, 630, 2),
+(350, 652, 2),
+(351, 1017, 2),
+(352, 653, 2),
+(353, 637, 2),
+(354, 654, 2),
+(355, 655, 2),
+(356, 1010, 2),
+(357, 1009, 2),
+(358, 622, 2),
+(359, 1016, 2),
+(360, 638, 2),
+(361, 1033, 3),
+(362, 1024, 3),
+(363, 1022, 3),
+(364, 1025, 3),
+(365, 1030, 3),
+(366, 1037, 3),
+(367, 1020, 3),
+(368, 1029, 3),
+(369, 1026, 3),
+(370, 1027, 3),
+(371, 1032, 3),
+(372, 1034, 3),
+(373, 1012, 3),
+(374, 1010, 3),
+(375, 1009, 3),
+(376, 1038, 3),
+(377, 1017, 3),
+(378, 1031, 3),
+(379, 1036, 4),
+(380, 1007, 4),
+(383, 1039, 4),
+(384, 1011, 4),
+(387, 1016, 4),
+(388, 1028, 4),
+(389, 1023, 4),
+(390, 1018, 4),
+(391, 1014, 4),
+(392, 1008, 4),
+(393, 1021, 4),
+(394, 1035, 4),
+(395, 1019, 4),
+(396, 1015, 4),
+(421, 1036, 6),
+(420, 1009, 5),
+(419, 1033, 5),
+(418, 1017, 5),
+(417, 1007, 6),
+(416, 1011, 6),
+(415, 1027, 5),
+(414, 1023, 6),
+(430, 1021, 5),
+(429, 1024, 5),
+(428, 1020, 6),
+(427, 52, 6),
+(426, 51, 6),
+(425, 1200, 6),
+(424, 1200, 5),
+(423, 1010, 5),
+(460, 1201, 5),
+(431, 1021, 6),
+(432, 1031, 5),
+(433, 1012, 5),
+(434, 1041, 5),
+(435, 1042, 6),
+(436, 1043, 6),
+(437, 12, 7),
+(438, 12, 8),
+(439, 12, 11),
+(440, 12, 12),
+(441, 12, 13),
+(442, 1015, 6),
+(443, 1044, 6),
+(444, 1045, 6),
+(445, 1046, 5),
+(446, 1047, 6),
+(447, 1048, 6),
+(448, 1049, 5),
+(449, 1050, 6),
+(450, 1022, 6),
+(451, 1051, 6),
+(452, 1052, 5),
+(453, 1053, 6),
+(454, 1054, 5),
+(455, 1035, 6),
+(461, 1202, 5),
+(457, 1056, 5),
+(458, 1056, 6),
+(459, 1032, 5),
+(462, 1203, 6),
+(463, 1054, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `camps`
+--
+
+CREATE TABLE `camps` (
+  `_id` int(2) NOT NULL,
+  `year` int(4) DEFAULT NULL,
+  `month` int(1) DEFAULT NULL,
+  `day` int(2) DEFAULT NULL,
+  `week` int(1) DEFAULT NULL,
+  `theme` varchar(64) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `camps`
+--
+
+INSERT INTO `camps` (`_id`, `year`, `month`, `day`, `week`, `theme`) VALUES
+(1, 2015, 7, 6, 1, ''),
+(2, 2015, 7, 13, 2, ''),
+(3, 2016, 7, 4, 1, ''),
+(4, 2016, 7, 11, 2, ''),
+(5, 2017, 7, 3, 1, 'Back to our /root'),
+(6, 2017, 7, 10, 2, 'Back to our /root'),
+(7, 2007, 0, 0, 0, 'Exploring Web 2.0'),
+(8, 2008, 0, 0, 0, 'Simplicity'),
+(11, 2009, 0, 0, 0, 'Technology to the Limit'),
+(12, 2010, 0, 0, 0, 'It\'s an Automated World'),
+(13, 2011, 0, 0, 0, 'Dancing With Robots'),
+(14, 2012, 0, 0, 0, ''),
+(15, 2013, 0, 0, 0, ''),
+(16, 2014, 0, 0, 0, 'The Art of Games');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `checkin`
+--
+
+CREATE TABLE `checkin` (
+  `_id` int(4) NOT NULL,
+  `camper` int(4) NOT NULL,
+  `camp` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `completions`
+--
+
+CREATE TABLE `completions` (
+  `_id` int(8) NOT NULL,
+  `camper` int(4) NOT NULL,
+  `requirement` int(4) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payments`
+--
+
+CREATE TABLE `payments` (
+  `_id` int(8) NOT NULL,
+  `camper` int(8) NOT NULL,
+  `method` int(2) NOT NULL,
+  `currency` varchar(4) NOT NULL,
+  `billing_first_name` varchar(32) NOT NULL,
+  `billing_last_name` varchar(32) NOT NULL,
+  `billing_city` varchar(32) NOT NULL,
+  `billing_state` varchar(32) NOT NULL,
+  `billing_postal` varchar(16) NOT NULL,
+  `billing_email` varchar(32) NOT NULL,
+  `billing_phone` varchar(16) NOT NULL,
+  `billing_address` varchar(128) NOT NULL,
+  `transaction_id` varchar(64) NOT NULL,
+  `net_revenue` varchar(8) NOT NULL,
+  `cart_total` varchar(8) NOT NULL,
+  `paid_date` varchar(32) NOT NULL,
+  `ip_address` varchar(64) NOT NULL,
+  `camp` int(4) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`_id`, `camper`, `method`, `currency`, `billing_first_name`, `billing_last_name`, `billing_city`, `billing_state`, `billing_postal`, `billing_email`, `billing_phone`, `billing_address`, `transaction_id`, `net_revenue`, `cart_total`, `paid_date`, `ip_address`, `camp`) VALUES
+(21, 1020, 2, 'CAD', 'Raelee', 'Kearns', 'Regina', 'SK', 'S4X 0J8', 'kearns@accesscomm.ca', '3065432369', '6902 Maple Vista Drive', '', '', '350.00', '2016-05-04 00:00:00', '24.72.52.156', 3),
+(173, 1045, 1, 'CAD', 'Zakhraf', 'Asghar', 'Regina', 'SK', '3065220489', 'm_asghar@hotmail.com', '3065220489', '4122 Chuka Drive', 'ch_1ASIn7CtJpHINqUwAo9cl9cu', '339.55', '350.00', '2017-06-08 05:02:43', '216.197.134.104', 6),
+(174, 1046, 1, 'CAD', 'ben', 'lin', 'regina', 'SK', 's4v1e4', 'ben20000808@icloud.com', '3064910153', '2302 Goldman c?re?s', 'ch_1ASf8MCtJpHINqUwRJXybwsh', '339.55', '350.00', '2017-06-09 04:54:07', '67.225.70.251', 5),
+(172, 1044, 1, 'CAD', 'Arno', 'Harke', 'Regina', 'SK', 'S4T1L2', 'heyrnork@gmail.com', '306 209 3209', '3120 Victoria Avenue', 'ch_1AQRpjCtJpHINqUwZMWg0yH4', '339.55', '350.00', '2017-06-03 02:17:44', '216.197.133.141', 6),
+(171, 1015, 1, 'CAD', 'Cheryl', 'Brady', 'Regina', 'SK', 'S4Y0A4', 'chicky465@hotmail.com', '306-545-0009', '8094 Fairways West Drive', 'ch_1ANpsnCtJpHINqUwTXJAenOO', '339.55', '350.00', '2017-05-26 21:22:07', '24.72.137.249', 6),
+(169, 1031, 1, 'CAD', 'Warren', 'Zatwarniski', 'Regina', 'SK', 'S4N7K6', 'warren945@hotmail.com', '306-586-7819', '3547 Waddell Cres', 'ch_1AKIbaCtJpHINqUwjI6FBowX', '339.55', '350.00', '2017-05-17 03:13:43', '65.87.246.44', 5),
+(170, 1012, 1, 'CAD', 'Tracy', 'Parrott', 'Regina', 'SK', '', 'tracyparrott4@gmail.com', '+1 03065267435', '1126 delgeman', 'ch_1AMKqGCtJpHINqUwbfPbjpc5', '339.55', '350.00', '2017-05-22 18:01:17', '64.110.200.48', 5),
+(168, 1021, 1, 'CAD', 'Shelley', 'Reddekopp', 'Regina', 'SK', 'S4P 2Z3', 'shelley@reddekopp.com', '306 584-7606', 'Box 22 Rowatt RR#3', 'ch_1AIiLwCtJpHINqUwPw4NhlYQ', '339.55', '350.00', '2017-05-12 18:19:01', '216.174.134.2', 6),
+(167, 1021, 1, 'CAD', 'Shelley', 'Reddekopp', 'Regina', 'SK', 'S4P 2Z3', 'shelley@reddekopp.com', '306 584-7606', 'Box 22 Rowatt RR#3', 'ch_1AIiIaCtJpHINqUwrG22IBWA', '339.55', '350.00', '2017-05-12 18:15:33', '216.174.134.2', 5),
+(166, 1024, 1, 'CAD', 'Kelley', 'Burke', 'Regina', 'SK', '', 'kelley.jo48@gmail.com', '3065966741', '2920 Regina Avenue', 'ch_1AGBLjCtJpHINqUwklypQ34k', '339.55', '350.00', '2017-05-05 18:40:21', '24.72.86.85', 5),
+(165, 1043, 1, 'CAD', 'Gerald', 'Obrigewitsch', 'Regina', 'SK', '', 'gerryo@sasktel.net', '306-584-3078', '3452 Balsam Grove', 'ch_1AEfDJCtJpHINqUwbJKirVAY', '339.55', '350.00', '2017-05-01 14:09:23', '207.47.206.223', 6),
+(164, 1042, 1, 'CAD', 'Scott', 'Giroux', 'Regina', 'SK', 'S4V 2S5', 'scott.sk@live.com', '306-789-0140', '3427 Tamarack Grove', 'ch_1AEVIMCtJpHINqUwYAkbhBIp', '339.55', '350.00', '2017-05-01 03:33:56', '216.174.134.2', 6),
+(163, 642, 1, 'CAD', 'Clair', 'Whittington', 'Sault Ste Marie', 'ON', '7055425949', 'agentclair@icloud.com', '7055425949', '261 Old Garden River Rd', 'ch_1ADwm2CtJpHINqUwoSotER4l', '339.55', '350.00', '2017-04-29 14:42:16', '70.76.74.19', 6),
+(162, 642, 1, 'CAD', 'Clair', 'Whittington', 'Sault Ste Marie', 'ON', '7055425949', 'agentclair@icloud.com', '7055425949', '261 Old Garden River Rd', 'ch_1ADwkZCtJpHINqUwUD17inNP', '339.55', '350.00', '2017-04-29 14:40:45', '70.76.74.19', 5),
+(161, 1010, 1, 'CAD', 'Regan', 'Riddell', 'Regina', 'SK', 'S4V 1Z7', 'srriddell@hotmail.com', '306-536-3641', '2511 Philip Rd', 'ch_1ABSSTCtJpHINqUwCcd02dzF', '339.55', '350.00', '2017-04-22 17:55:46', '24.72.90.233', 5),
+(160, 1041, 1, 'CAD', 'Kristy', 'Davies', 'Winnipeg', 'MB', 'R3T 1K9', 'kristytdavies@gmail.com', '12035097301', '893 Riverwood ave', 'ch_1A9lxnCtJpHINqUwjhtPAjIW', '339.55', '350.00', '2017-04-18 02:21:08', '206.45.6.47', 5),
+(159, 1036, 1, 'CAD', 'Tracy', 'Biever', 'Regina', 'SK', 'S4z 1a8', 'ropic@myaccess.ca', '306-541-3225', '3648 Bishop cres', 'ch_1A6757CtJpHINqUwbd3RGMVs', '339.55', '350.00', '2017-04-08 00:05:34', '24.72.37.3', 6),
+(158, 1009, 1, 'CAD', 'Cheryl', 'Robertson', 'Regina', 'SK', 'S4X 0B5', 'cherylk@accesscomm.ca', '3065331951', '4742 Sherlock Bay', 'ch_1A4CBGCtJpHINqUwESMFrcof', '339.55', '350.00', '2017-04-02 17:08:00', '207.195.86.199', 5),
+(157, 1033, 1, 'CAD', 'Debbie', 'Donald', 'McTaggart', 'SK', '', 'debbie.donald@schr.sk.ca', '3068480569', 'Box169', 'ch_1A3QTlCtJpHINqUwqZkIJuha', '339.55', '350.00', '2017-03-31 14:11:55', '142.165.85.105', 5),
+(156, 1017, 1, 'CAD', 'Kristen', 'Engele', 'Regina', 'SK', 'S4S 4Y5', 'kengele19@gmail.com', '306-525-4730', '74 Cardinal Cres', 'ch_1A2Ot3CtJpHINqUwtEwvLASW', '339.55', '350.00', '2017-03-28 18:17:48', '162.253.9.49', 5),
+(155, 1007, 1, 'CAD', 'Carmen', 'Blayone', 'Indian Head', 'SK', 'S0G 2K0', 'carmen@blayone.com', '306-727-3131', 'Box 545', 'ch_1A25sTCtJpHINqUwH7jYNJ5I', '339.55', '350.00', '2017-03-27 21:59:55', '207.195.44.193', 6),
+(154, 1011, 1, 'CAD', 'Peter', 'Frombach', 'Regina', 'SK', '3065852402', 'psfrombach@accesscomm.ca', '3065852402', '21 Dogwood Pl', 'ch_1A1diECtJpHINqUwk8lXAZAq', '339.55', '350.00', '2017-03-26 15:55:27', '24.72.127.100', 6),
+(153, 1027, 1, 'CAD', 'Cynthia', 'Lukovszki', 'Lumsden', 'SK', 'S0G 3C0', 'lostyrhsky@aol.com', '306-501-0223', 'Box 666', 'ch_1A1dW6CtJpHINqUwf7G6PDuW', '339.55', '350.00', '2017-03-26 15:42:56', '68.69.219.100', 5),
+(152, 1023, 1, 'CAD', 'Kim', 'Luu', 'Regina', 'SK', 's4v3a5', 'kim.l2918@gmail.com', '306-790-9709', '3924 Nottingham Crescent', 'ch_19t5stCtJpHINqUw4lx1YSRS', '339.55', '350.00', '2017-03-03 02:11:09', '24.72.19.130', 6),
+(151, 1038, 1, 'CAD', 'Manjinder', 'Thind', 'regina', 'SK', 'S4R 7G2', 'thind.in@gmail.com', '(306) 999 3839', '86 Dunsmore Drive', 'ch_18SaHVCtJpHINqUwaciIfL00', '339.55', '350.00', '2016-07-01 22:38:42', '24.72.25.71', 3),
+(150, 1037, 1, 'CAD', 'Manjinder', 'Thind', 'regina', 'SK', 'S4R 7G2', 'thind.in@gmail.com', '(306) 999 3839', '86 Dunsmore Drive', 'ch_18SaBmCtJpHINqUwOlxrGjHd', '339.55', '350.00', '2016-07-01 22:32:48', '24.72.25.71', 3),
+(149, 1035, 1, 'CAD', 'Jacquie', 'Stark', 'Regina', 'SK', 'S4X0J2', 'jacquie_stark@yahoo.ca', '306-531-8948', '6214 Little Pine Loop', 'ch_18OsCbCtJpHINqUwWbv6kMbt', '339.55', '350.00', '2016-06-21 16:58:19', '69.11.79.143', 4),
+(77, 1020, 1, 'CAD', 'Raelee', 'Kearns', 'Regina', 'SK', 'S4X 0J8', 'kearns@accesscomm.ca', '3065432369', '6902 Maple Vista Drive', '', '', '350.00', '', '24.72.52.156', 3),
+(148, 1036, 1, 'CAD', 'Tracy', 'Biever', 'Regina', 'SK', 's4z1a8', 'ropic@myaccess.ca', '306-541-3225', '3648 Bishop cres', 'ch_18OgiECtJpHINqUwDjEdKazT', '339.55', '350.00', '2016-06-21 04:42:14', '24.72.37.3', 4),
+(147, 1034, 1, 'CAD', 'Carla', 'Barkman', 'Regina', 'SK', 'S4R 1H2', 'carlamilo@hotmail.com', '3062052642', '2128 Dewdney Ave, Unit 402', 'ch_18NaWlCtJpHINqUwS3fmckK9', '339.55', '350.00', '2016-06-18 03:53:49', '24.89.111.168', 3),
+(146, 1033, 1, 'CAD', 'Debbie', 'Donald', 'McTaggart', 'YT', 'S)G3G0', 'debbie.donald@schr.sk.ca', '3068619822', 'Box 169', 'ch_18NSGACtJpHINqUwpmaED3M8', '339.55', '350.00', '2016-06-17 19:04:09', '216.174.136.2', 3),
+(145, 1032, 1, 'CAD', 'Trevor', 'Martel', 'Lumsden', 'SK', 'S0G 3C0', 'tntmartel@sasktel.net', '306-536-4906', 'PO Box 607', 'ch_18N8H6CtJpHINqUwhFFmO1sr', '339.55', '350.00', '2016-06-16 21:43:46', '68.69.216.32', 3),
+(144, 1031, 1, 'CAD', 'Warren', 'Zatwarniski', 'Regina', 'SK', '3065867819', 'warren945@hotmail.com', '3065867819', '3547 Waddell Cres', 'ch_18HRnYCtJpHINqUwMgZNDZ5r', '339.55', '350.00', '2016-06-01 05:21:46', '65.87.246.44', 3),
+(143, 1030, 1, 'CAD', 'Denise', 'Junek', 'Regina', 'SK', 'S4Y 1G7', 'djunek@sasktel.net', '306-585-2041', '8211 Kestral Drive', 'ch_18GCotCtJpHINqUwRiM8IVhd', '339.55', '350.00', '2016-05-28 19:10:00', '67.225.9.233', 3),
+(142, 1029, 1, 'CAD', 'Saqib', 'Khan', 'Regina', 'SK', 'S4V3C9', 'saqib.khan@uregina.ca', '(306)737-2214', '2810 Sandringham Crescent', 'ch_18DHw9CtJpHINqUwEZiNgMfi', '339.55', '350.00', '2016-05-20 18:01:26', '67.225.25.68', 3),
+(141, 1028, 1, 'CAD', 'Laurie', 'Lindsay', 'Regina', 'SK', 'S4R 6X6', 'laurie.lindsay@uregina.ca', '306-586-7479', '27 Weekes Cres', 'ch_18ASFcCtJpHINqUw8HH9lnvV', '339.55', '350.00', '2016-05-12 22:25:49', '142.3.103.20', 4),
+(140, 1027, 1, 'CAD', 'Al', 'Lukovszki', 'Craven', 'SK', 's0g 0w0', 'lostyrhsky@aol.com', '306 731 2383', 'Box 350', 'ch_187FVyCtJpHINqUwxqh39xk3', '339.55', '350.00', '2016-05-04 02:13:28', '68.69.219.100', 3),
+(139, 1026, 1, 'CAD', 'Candy', 'Klaudeman', 'Regina', 'SK', 'S4T 2X4', 'cklaudeman@sasktel.net', '3062090845', '875 Garnet St', 'ch_185HU2CtJpHINqUwhDj5uads', '339.55', '350.00', '2016-04-28 15:55:20', '207.195.1.6', 3),
+(138, 1025, 1, 'CAD', 'dolly', 'huber', 'regina', 'SK', 's4n 2a8', 'dollyhuber@sasktel.net', '306-530-3778', '3058 lacon st', 'ch_18405RCtJpHINqUwv2dMeWTG', '339.55', '350.00', '2016-04-25 03:08:38', '207.47.198.71', 3),
+(137, 1024, 1, 'CAD', 'Kelley Jo', 'Burke', 'Regina', 'SK', 'S4S 0G6', 'kelley.jo48@gmail.com', '3063470757', '2920 Regina Ave', 'ch_1821jNCtJpHINqUwni1lhfYn', '339.55', '350.00', '2016-04-19 16:29:43', '24.72.86.85', 3),
+(136, 1023, 1, 'CAD', 'Kim', 'Luu', 'Regina', 'SK', 'S4V 3A5', 'kim.l2918@gmail.com', '3067909709', '3924 E Nottingham Cres', 'ch_17w3iQCtJpHINqUwZpEz6XDn', '339.55', '350.00', '2016-04-03 05:24:04', '24.89.69.138', 4),
+(135, 1022, 1, 'CAD', 'Colin', 'Hall', 'Regina', 'SK', 'S4T6N2', 'colin@bodhitreeyoga.com', '3067578289', '116 Angus Cres', 'ch_17vruzCtJpHINqUwLh2cmM6d', '339.55', '350.00', '2016-04-02 16:48:14', '67.225.5.222', 3),
+(134, 1021, 1, 'CAD', 'Shelley', 'Reddekopp', 'Regina', 'SK', 'S4V 0J5', 'shelley@reddekopp.com', '306 539-3914', '55 Noonan Road', 'ch_17u8l7CtJpHINqUwJKqebe8l', '339.55', '350.00', '2016-03-28 22:22:55', '216.174.134.2', 4),
+(133, 1019, 1, 'CAD', 'Kim', 'Ashton', 'Regina', 'SK', 's4r6p8', 'kimashton69@gmail.com', '13067215181', '625 dalgliesh dr', 'ch_17sc8ICtJpHINqUwgYzMeGgH', '339.55', '350.00', '2016-03-24 17:20:31', '24.72.129.154', 4),
+(132, 1018, 1, 'CAD', 'Deborah', 'Martin', 'Prince Albert', 'SK', 'S6V 5R2', 'articulatemasonry@yourlink.ca', '3069407228', 'RR4, Site11, Comp 49', 'ch_17sNLPCtJpHINqUwwrrf2abD', '339.55', '350.00', '2016-03-24 01:33:04', '208.110.37.39', 4),
+(131, 1017, 1, 'CAD', 'Kristen', 'Engele', 'Regina', 'SK', 'S4S 4Y5', 'kengele19@gmail.com', '306-525-4730', '74 Cardinal Cres', 'ch_17sGx9CtJpHINqUwLxMHH2jG', '339.55', '350.00', '2016-03-23 18:43:37', '71.17.167.132', 3),
+(130, 1016, 1, 'CAD', 'AEDA', 'KHOKHAR', 'REGINA', 'SK', 'S4V 2T2', 'aeda2k@yahoo.ca', '(306) 526-5646', '4245 WASCANA RIDGE', 'ch_17rhqnCtJpHINqUwUV9vJ0RI', '339.55', '350.00', '2016-03-22 05:14:43', '204.83.90.14', 4),
+(129, 1015, 1, 'CAD', 'Cheryl', 'Brady', 'Regina', 'SK', 'S4Y0A4', 'chicky465@hotmail.com', '3065450009', '8094 Fairways West Drive', 'ch_17rdINCtJpHINqUw7YPJVEWs', '339.55', '350.00', '2016-03-22 00:22:53', '24.72.137.249', 4),
+(128, 1014, 1, 'CAD', 'Devin', 'Bjola-Matileg', 'White City', 'SK', 'S4L5B1', 'carrielyn0521@yahoo.com', '3065500023', 'PO Box 777', 'ch_17rX8nCtJpHINqUwo1MLC6w1', '339.55', '350.00', '2016-03-21 17:48:35', '216.174.134.2', 4),
+(127, 1013, 1, 'CAD', 'Brent', 'Eidsness', 'Regina', 'SK', 'S4V2A6', 'brent.eidsness@gov.sk.ca', '306-584-9736', '3535 Pederson Cres', 'ch_17rTcbCtJpHINqUw65NFuJuo', '339.55', '350.00', '2016-03-21 14:03:07', '198.169.112.254', 4),
+(126, 1012, 1, 'CAD', 'Tracy', 'Parrott', 'Regina', 'SK', 'S4N 7P7', 'tracyparrott4@gmail.com', '3065267435', '1126 Degelman Drive', 'ch_17qvqOCtJpHINqUwlPhJuCvo', '339.55', '350.00', '2016-03-20 01:59:05', '96.63.143.47', 3),
+(125, 1011, 1, 'CAD', 'Peter', 'Frombach', 'Regina', 'SK', 'S4S 5A1', 'psfrombach@accesscomm.ca', '306 585 2402', '21 Dogwood Pl', 'ch_17qps5CtJpHINqUwrD3ENRj4', '339.55', '350.00', '2016-03-19 19:36:27', '24.72.127.100', 4),
+(124, 1010, 1, 'CAD', 'Regan', 'Riddell', 'Regina', 'SK', 'S4V 1Z7', 'srriddell@hotmail.com', '306-586-7831', '2511 E Philip Rd', 'ch_17qnfACtJpHINqUw6QUVs0JU', '339.55', '350.00', '2016-03-19 17:14:57', '24.72.90.233', 3),
+(123, 1009, 1, 'CAD', 'Cheryl', 'Robertson', 'Regina', 'SK', 'S4x 0b5', 'cherylk@accesscomm.ca', '3065331951', '4742 Sherlock Bay', 'ch_17qkoTCtJpHINqUwyayiZdF0', '339.55', '350.00', '2016-03-19 14:12:22', '65.87.236.102', 3),
+(122, 1008, 1, 'CAD', 'Tracy', 'Parrott', 'Regina', 'SK', 'S4N 7P7', 'tracyparrott4@gmail.com', '3065267435', '1126 Degelman Drive', 'ch_17qke6CtJpHINqUwFiVAhtka', '339.55', '350.00', '2016-03-19 14:01:40', '96.63.143.47', 4),
+(121, 1007, 1, 'CAD', 'Carmen', 'Blayone', 'Indian Head', 'SK', 'S0G2K0', 'carmen@blayone.com', '3067273131', 'Box 545', 'ch_17qX6uCtJpHINqUwhQNhn0LN', '339.55', '350.00', '2016-03-18 23:34:29', '68.69.212.32', 4),
+(110, 1020, 2, 'CAD', 'Raelee', 'Kearns', 'Regina', 'SK', 'S4X OJ8', 'kearns@accesscomm.ca', '3065432369', '6902 Maple Vista Drive', '', '', '350.00', '2017-05-04 00:00:00', '24.72.53.227', 6),
+(120, 1004, 1, 'CAD', 'Rolf', 'Holzkaemper', 'Regina', 'SK', 'S4V 3G2', 'holzkaemper@hotmail.com', '306-591-2026', '7335 Wascana Cove Place', 'ch_17qW4bCtJpHINqUwwIAYN6Xy', '339.55', '350.00', '2016-03-18 22:28:03', '24.72.37.180', 4),
+(119, 1003, 1, 'CAD', 'Mark', 'Heinrichs', 'Regina', 'SK', 'S4S 1B7', 'heing@sasktel.net', '306-352-3631', '3027 Whitmore Ave', 'ch_17qRJRCtJpHINqUwHFGHzpNX', '339.55', '350.00', '2016-03-18 17:23:02', '204.83.107.21', 4),
+(118, 1002, 1, 'CAD', 'Karrie', 'Derbyshire', 'Regina', 'SK', 'S4V2X9', 'derbykarrie@hotmail.com', '3065223884', '3268 Thames Crescent', 'ch_17qRCkCtJpHINqUw6dAxXpH2', '339.55', '350.00', '2016-03-18 17:16:07', '207.195.1.6', 3),
+(117, 1001, 1, 'CAD', 'Rhonda', 'Dvernichuk', 'Regina', 'SK', 'S4V 2W8', 'dvernichuk@sasktel.net', '306-581-7137', '2915 Hayden Park Road', 'ch_17qQdwCtJpHINqUw1otrr2OV', '339.55', '350.00', '2016-03-18 16:40:10', '216.174.136.2', 4),
+(116, 1000, 1, 'CAD', 'Karen', 'Cyrenne', 'Regina', 'SK', 'S4V 1P3', 'karen.cyrenne@sasktel.net', '3065337566', '135 - 2501 Windsor Park Road', 'ch_17qQCICtJpHINqUwmxyXfCuY', '339.55', '350.00', '2016-03-18 16:11:36', '71.17.100.70', 4),
+(175, 1047, 1, 'CAD', 'Carla', 'Wilchowy', 'Pilot Butte', 'SK', 'S0G 3Z0', 'carla.wilchowy@csc-scc.gc.ca', '306-530-0192', 'Box 179', 'ch_1AU3SLCtJpHINqUwmaZ3Mgwx', '339.55', '350.00', '2017-06-13 01:04:30', '142.165.85.18', 6),
+(176, 1048, 1, 'CAD', 'Tennille', 'Young', 'Pilot Butte', 'SK', 'S0G 3Z0', 'youngteno@sasktel.net', '306-535-2008', 'PO Box 610', 'ch_1AUHxYCtJpHINqUwjuHfEfgL', '339.55', '350.00', '2017-06-13 16:33:41', '204.83.191.12', 6),
+(177, 1049, 1, 'CAD', 'Sylvia', 'kreutzer', 'lumsden', 'SK', 's0g 3c0', 'dean.kreutzer@gmail.com', '306-535-1278', 'box 618', 'ch_1AV1OxCtJpHINqUwdXH4MztI', '339.55', '350.00', '2017-06-15 17:05:00', '74.216.112.24', 5),
+(178, 1050, 1, 'CAD', 'Natasha', 'Venables', 'Regina', 'SK', 'S4V 3A5', 'ns.venables@gmail.com', '306-529-4124', '3836 Thames Rd', 'ch_1AWbzXCtJpHINqUwXOhOGSij', '339.55', '350.00', '2017-06-20 02:21:21', '71.17.237.93', 6),
+(179, 1022, 1, 'CAD', 'Colin', 'Hall', 'Regina', 'SK', 'S4T6N2', 'colin@bodhitreeyoga.com', '3067578289', '116 Angus Cres', 'ch_1AXdbPCtJpHINqUwxlfKp8d4', '339.55', '350.00', '2017-06-22 22:16:40', '204.83.75.127', 5),
+(180, 1051, 1, 'CAD', 'Crystal', 'Mihalicz', 'Raymore', 'SK', 'S0A3J0', 'gandcmihalicz@sasktel.net', '3067467387', 'Box 340', 'ch_1AYeS4CtJpHINqUwPTZrtdSX', '339.55', '350.00', '2017-06-25 17:23:13', '216.197.200.193', 6),
+(181, 1052, 1, 'CAD', 'Kara', 'Wheeler', 'Regina Beach', 'SK', 'S0G4C0', 'Karalwheeler@gmail.com', '3065197759', '228 Fairchild Avenue', 'ch_1AYmodCtJpHINqUwWU06tyav', '339.55', '350.00', '2017-06-26 02:19:05', '71.17.80.101', 5),
+(182, 1053, 1, 'CAD', 'Jason', 'Hennig', 'Regina', 'SK', 'S4V 1S6', 'jason.hennig@gmail.com', '306-789-9863', '1739 E Boyd Street', 'ch_1AZ224CtJpHINqUwSQnkiQzc', '339.55', '350.00', '2017-06-26 18:33:57', '24.72.74.165', 6),
+(183, 1054, 1, 'CAD', 'Darla', 'Carignan', 'Kronau', 'SK', 'S0G 2T0', 'the6carignans@gmail.com', '3062019411', 'Box 129', 'ch_1AZL01CtJpHINqUwyhrU3d1D', '339.55', '350.00', '2017-06-27 14:49:07', '204.83.240.102', 5),
+(184, 1035, 1, 'CAD', 'Jacquie', 'Stark', 'Regina', 'SK', 'S4X0J2', 'jacquie_stark@yahoo.ca', '306-531-8948', '6214 Little Pine Loop', 'ch_1AZjd5CtJpHINqUwdUTPWoEr', '339.55', '350.00', '2017-06-28 17:07:05', '67.225.44.226', 6),
+(185, 1055, 1, 'CAD', 'kenda', 'Power', 'Regina', 'SK', 'S4V 0G1', 'kenda.power@rqhealth.ca', '306-529-4757', '154 Windfield Rd', 'ch_1Aa2zICtJpHINqUwLI6GunSL', '339.55', '350.00', '2017-06-29 13:47:17', '207.195.1.6', 5),
+(186, 1022, 1, 'CAD', 'Colin', 'Hall', 'Regina', 'SK', 'S4T6N2', 'colin@bodhitreeyoga.com', '3067578289', '116 Angus Cres', 'ch_1AXdbPCtJpHINqUwxlfKp8d4', '339.55', '350.00', '2017-06-22 22:16:40', '204.83.75.127', 6),
+(187, 1056, 1, 'CAD', 'Gordie', 'Yee', 'Regina', 'SK', 's4v2v3', 'ggkktyy@accesscomm.ca', '3067374409', '3912 Arbor Grove Drive', 'ch_1AaSw5CtJpHINqUw2EZ0Xf1s', '339.55', '350.00', '2017-06-30 17:29:42', '65.87.234.49', 5),
+(188, 1056, 1, 'CAD', 'Gordie', 'Yee', 'Regina', 'SK', 's4v2v3', 'ggkktyy@accesscomm.ca', '3067374409', '3912 Arbor Grove Drive', 'ch_1AaSyjCtJpHINqUwxDoh3DwZ', '339.55', '350.00', '2017-06-30 17:32:27', '65.87.234.49', 6),
+(189, 1032, 1, 'CAD', 'Trevor', 'Martel', 'Lumsden', 'SK', 'S0G 3C0', 'Tntmartel@sasktel.net', '13065364906', '200 lake st', 'ch_1AaUmfCtJpHINqUwPHd0VLTh', '339.55', '350.00', '2017-06-30 19:28:06', '71.17.81.203', 5),
+(190, 1200, 1, 'CAD', 'Clair', 'Whittington', 'Sault Ste Marie', 'ON', '7055425949', 'agentclair@icloud.com', '7055425949', '261 Old Garden River Rd', 'ch_1ADwkZCtJpHINqUwUD17inNP', '339.55', '350.00', '2017-04-29 22:40:45', '70.76.74.19', 5),
+(191, 1200, 1, 'CAD', 'Clair', 'Whittington', 'Sault Ste Marie', 'ON', '7055425949', 'agentclair@icloud.com', '7055425949', '261 Old Garden River Rd', 'ch_1ADwm2CtJpHINqUwoSotER4l', '339.55', '350.00', '2017-04-29 22:42:16', '70.76.74.19', 6),
+(192, 1201, 1, 'CAD', 'Kara', 'Wheeler', 'Regina Beach', 'SK', 'S0G4C0', 'Karalwheeler@gmail.com', '3065197759', '228 Fairchild Avenue', 'ch_1AYmodCtJpHINqUwWU06tyav', '339.55', '350.00', '2017-06-26 02:19:05', '71.17.80.101', 5),
+(193, 1202, 1, 'CAD', 'kenda', 'Power', 'Regina', 'SK', 'S4V 0G1', 'kenda.power@rqhealth.ca', '306-529-4757', '154 Windfield Rd', 'ch_1Aa2zICtJpHINqUwLI6GunSL', '339.55', '350.00', '2017-06-29 13:47:17', '207.195.1.6', 5),
+(194, 1203, 1, 'CAD', 'Catherine', 'Chan', 'Regina', 'SK', 'S4S6B8', 'clchan@sasktel.net', '306-586-4062', '4431 Pasqua St', 'ch_1AcggWCtJpHINqUwbY9HgwJf', '339.55', '350.00', '2017-07-06 20:34:49', '207.47.202.141', 6),
+(195, 1054, 1, 'CAD', 'Darla', 'Carignan', 'Kronau', 'SK', 'S0G 2T0', 'the6carignans@gmail.com', '3062019411', 'Box 129', 'ch_1AczUQCtJpHINqUwli5NpJOo', '339.55', '350.00', '2017-07-07 16:39:36', '64.110.246.109', 6);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `payment_methods`
+--
+
+CREATE TABLE `payment_methods` (
+  `_id` int(2) NOT NULL,
+  `name` varchar(64) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `payment_methods`
+--
+
+INSERT INTO `payment_methods` (`_id`, `name`) VALUES
+(1, 'Stripe'),
+(2, 'E-Transfer');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
+
+CREATE TABLE `projects` (
+  `_id` int(4) NOT NULL,
+  `year` int(4) NOT NULL,
+  `type` int(2) NOT NULL,
+  `name` varchar(64) NOT NULL,
+  `about` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`_id`, `year`, `type`, `name`, `about`) VALUES
+(1, 2017, 6, 'Website', 'Create a website to display your projects.'),
+(2, 2017, 4, 'Presentation Prep', 'Preparation for the Friday presentations.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `requirements`
+--
+
+CREATE TABLE `requirements` (
+  `_id` int(4) NOT NULL,
+  `project` int(4) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `about` text NOT NULL,
+  `mentor` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `requirements`
+--
+
+INSERT INTO `requirements` (`_id`, `project`, `name`, `about`, `mentor`) VALUES
+(1, 1, 'CompCamps Link', 'Have a link on your website back to compcamps.com', 0),
+(2, 1, 'Your Name', 'Your name needs to be on your website\'s homepage.', 0),
+(3, 2, 'Website Uploaded', '', 1),
+(4, 2, 'Practice Presentation', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sessions`
+--
+
+CREATE TABLE `sessions` (
+  `_id` int(2) NOT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `type` int(1) DEFAULT NULL,
+  `day` varchar(1) DEFAULT NULL,
+  `starth` int(2) DEFAULT NULL,
+  `startm` int(2) DEFAULT NULL,
+  `endh` int(2) DEFAULT NULL,
+  `endm` int(2) DEFAULT NULL,
+  `camp` int(1) DEFAULT NULL,
+  `about` text
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sessions`
+--
+
+INSERT INTO `sessions` (`_id`, `name`, `type`, `day`, `starth`, `startm`, `endh`, `endm`, `camp`, `about`) VALUES
+(1, 'Biobreak', 2, 'M', 10, 0, 10, 15, 5, ''),
+(2, 'Biobreak', 2, 'T', 10, 0, 10, 15, 5, ''),
+(3, 'Biobreak', 2, 'W', 10, 0, 10, 15, 5, ''),
+(4, 'Biobreak', 2, 'R', 10, 0, 10, 15, 5, ''),
+(5, 'Biobreak', 2, 'F', 10, 0, 10, 15, 5, ''),
+(6, 'Biobreak', 2, 'M', 15, 0, 15, 15, 5, ''),
+(7, 'Biobreak', 2, 'T', 15, 0, 15, 15, 5, ''),
+(8, 'Biobreak', 2, 'W', 15, 0, 15, 15, 5, ''),
+(9, 'Biobreak', 2, 'R', 15, 0, 15, 15, 5, ''),
+(10, 'Lunch', 3, 'M', 12, 0, 13, 0, 5, ''),
+(58, 'HTML / CSS', 6, 'M', 10, 15, 12, 0, 5, ''),
+(11, 'Pizza Lunch', 3, 'T', 11, 45, 13, 0, 5, 'A pizza lunch is provided to all campers courtesy of Innovation Place.'),
+(12, '2-Peat Luncheon', 3, 'W', 12, 0, 13, 0, 5, 'Lunch will be provided to any camper that has been with the camp for 2 or more years.'),
+(13, 'Lunch', 3, 'R', 12, 0, 13, 0, 5, ''),
+(14, 'Lunch', 3, 'F', 12, 0, 13, 0, 5, ''),
+(15, 'Supper', 3, 'M', 16, 30, 17, 30, 5, ''),
+(16, 'BBQ Supper', 3, 'T', 17, 0, 19, 0, 5, 'All campers will be provided with a BBQ supper.'),
+(17, 'Supper', 3, 'W', 17, 0, 18, 0, 5, ''),
+(18, '3-Peat Supper', 3, 'R', 17, 0, 18, 0, 5, 'Supper will be provided to any camper that has been with the camp for 3 or more years.'),
+(22, 'Sign In', 1, 'M', 8, 0, 8, 30, 5, ''),
+(23, 'Drop Off', 1, 'T', 8, 0, 8, 15, 5, ''),
+(24, 'Drop Off', 1, 'W', 8, 0, 8, 15, 5, ''),
+(25, 'Drop Off', 1, 'R', 8, 0, 8, 15, 5, ''),
+(26, 'Drop Off', 1, 'F', 8, 0, 8, 15, 5, ''),
+(27, 'Presentations', 4, 'F', 14, 0, 17, 0, 5, ''),
+(28, 'Presentation Prep', 1, 'F', 13, 0, 14, 0, 5, ''),
+(29, 'Swimming', 5, 'T', 13, 0, 15, 0, 5, ''),
+(30, 'Swimming', 5, 'R', 13, 0, 15, 0, 5, ''),
+(31, 'Bowling', 5, 'M', 17, 30, 20, 0, 5, ''),
+(32, 'Matrix Gaming', 5, 'W', 18, 0, 20, 30, 5, ''),
+(69, 'Python', 7, 'W', 10, 15, 11, 15, 5, ''),
+(67, 'Mentor Talk', 4, 'W', 8, 15, 9, 0, 5, ''),
+(35, 'Project Work', 1, 'F', 8, 45, 10, 0, 5, ''),
+(36, 'Project Work', 1, 'F', 10, 15, 12, 0, 5, ''),
+(37, 'Intro to Git', 6, 'M', 9, 0, 10, 0, 5, ''),
+(68, 'C++', 7, 'W', 9, 0, 10, 0, 5, ''),
+(66, 'Video Editing', 8, 'T', 19, 0, 20, 30, 5, ''),
+(65, 'Photoshop', 9, 'T', 15, 15, 17, 0, 5, ''),
+(64, 'GasBuddy', 4, 'T', 10, 15, 11, 45, 5, ''),
+(63, 'C++', 7, 'T', 9, 0, 10, 0, 5, ''),
+(61, 'Intro to Hacking', 4, 'M', 15, 15, 16, 30, 5, ''),
+(60, 'HTML / CSS', 6, 'M', 14, 0, 15, 0, 5, ''),
+(57, 'Tours of Facility', 4, 'M', 8, 30, 9, 0, 5, ''),
+(59, 'Intro to FTP', 6, 'M', 13, 0, 14, 0, 5, ''),
+(51, 'HTML / CSS', 6, 'W', 13, 0, 15, 0, 5, ''),
+(62, 'Founder Talk', 4, 'T', 8, 15, 9, 0, 5, ''),
+(53, 'Photoshop', 9, 'R', 15, 15, 17, 0, 5, ''),
+(55, 'Web Scraping', 7, 'R', 9, 0, 10, 0, 5, ''),
+(56, 'Project Work', 1, 'R', 11, 15, 12, 0, 5, ''),
+(70, 'Binary / Hex', 4, 'W', 11, 15, 12, 0, 5, ''),
+(71, 'Javascript', 6, 'W', 15, 15, 17, 0, 5, ''),
+(72, 'Mentor Talk', 4, 'R', 8, 15, 9, 0, 5, ''),
+(73, 'C++', 7, 'R', 10, 15, 11, 15, 5, ''),
+(74, 'Game Dev', 4, 'R', 18, 0, 19, 0, 5, ''),
+(75, 'Javascript', 6, 'R', 19, 0, 20, 30, 5, ''),
+(76, 'Burndown Charts', 4, 'F', 8, 15, 8, 45, 5, ''),
+(77, 'Sign In', 1, 'M', 8, 0, 8, 30, 6, ''),
+(78, 'Tours of Facility', 4, 'M', 8, 30, 9, 0, 6, ''),
+(79, 'Intro to Git', 6, 'M', 9, 0, 10, 0, 6, ''),
+(80, 'Biobreak', 2, 'M', 10, 0, 10, 15, 6, ''),
+(81, 'GasBuddy Tour', 4, 'M', 10, 15, 11, 45, 6, ''),
+(82, 'Pizza Lunch', 3, 'M', 11, 45, 13, 0, 6, ''),
+(83, 'Intro to FTP', 6, 'M', 13, 0, 14, 0, 6, ''),
+(84, 'HTML / CSS', 6, 'M', 14, 0, 15, 0, 6, ''),
+(85, 'Biobreak', 2, 'M', 15, 0, 15, 15, 6, ''),
+(86, 'Intro to Hacking', 4, 'M', 15, 15, 16, 30, 6, ''),
+(87, 'Supper', 3, 'M', 16, 30, 17, 30, 6, ''),
+(88, 'Bowling', 5, 'M', 17, 30, 20, 0, 6, ''),
+(89, 'Drop Off', 1, 'T', 8, 0, 8, 15, 6, ''),
+(90, 'Founder Talk', 4, 'T', 8, 15, 9, 0, 6, ''),
+(91, 'C++', 7, 'T', 9, 0, 10, 0, 6, ''),
+(92, 'Biobreak', 2, 'T', 10, 0, 10, 15, 6, ''),
+(93, 'HTML / CSS', 6, 'T', 10, 15, 12, 0, 6, ''),
+(94, 'Lunch', 3, 'T', 12, 0, 13, 0, 6, ''),
+(95, 'Swimming', 5, 'T', 13, 0, 15, 0, 6, ''),
+(96, 'Biobreak', 2, 'T', 15, 0, 15, 15, 6, ''),
+(97, 'Photoshop', 9, 'T', 15, 15, 17, 0, 6, ''),
+(98, 'BBQ Supper', 3, 'T', 17, 0, 19, 0, 6, ''),
+(99, 'Video Editing', 8, 'T', 19, 0, 20, 30, 6, ''),
+(100, 'Drop Off', 1, 'W', 8, 0, 8, 15, 6, ''),
+(101, 'Mentor Talk', 4, 'W', 8, 15, 9, 0, 6, ''),
+(102, 'C++', 7, 'W', 9, 0, 10, 0, 6, ''),
+(103, 'Biobreak', 2, 'W', 10, 0, 10, 15, 6, ''),
+(104, 'Python', 7, 'W', 10, 15, 11, 15, 6, ''),
+(105, 'Binary / Hex', 4, 'W', 11, 15, 12, 0, 6, ''),
+(106, '2-Peat Luncheon', 3, 'W', 12, 0, 13, 0, 6, ''),
+(107, 'HTML / CSS', 6, 'W', 13, 0, 15, 0, 6, ''),
+(108, 'Biobreak', 2, 'W', 15, 0, 15, 15, 6, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `session_types`
+--
+
+CREATE TABLE `session_types` (
+  `_id` int(1) NOT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `color` varchar(7) DEFAULT NULL,
+  `lesson` int(1) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `session_types`
+--
+
+INSERT INTO `session_types` (`_id`, `name`, `color`, `lesson`) VALUES
+(1, 'Unstructured', '#D7CCC8', 0),
+(2, 'Break', '#F44336', 0),
+(3, 'Meal', '#B2FF59', 0),
+(4, 'Presentation', '#FFFF00', 1),
+(5, 'Activity', '#FFD740', 1),
+(6, 'WebDev', '#18FFFF', 1),
+(7, 'C++', '#00BCD4', 1),
+(8, 'Video Editing', '#2196F3', 1),
+(9, 'Photo Editing', '#40C4FF', 1);
+
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(4) NOT NULL AUTO_INCREMENT,
-  `name` varchar(64) NOT NULL,
-  `username` varchar(64) NOT NULL,
-  `email` varchar(64) NOT NULL,
-  `password` text NOT NULL,
-  `phone` varchar(32) NOT NULL,
-  `dob` varchar(32) NOT NULL,
-  `address` text NOT NULL,
-  `gender` int(1) NOT NULL,
-  `parent_name` varchar(64) NOT NULL,
-  `health_notes` text NOT NULL,
-  `helath_card` varchar(32) NOT NULL,
-  `level` int(2) NOT NULL,
-  `shirt` int(2) NOT NULL,
-  `change_pass` int(1) NOT NULL DEFAULT '0',
-  `hash_pass` int(1) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `_id` int(4) NOT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `username` varchar(32) DEFAULT NULL,
+  `password` text,
+  `dob` varchar(16) DEFAULT NULL,
+  `health` varchar(32) DEFAULT NULL,
+  `phone` varchar(36) DEFAULT NULL,
+  `parents` varchar(64) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `alergies` text,
+  `gender` varchar(6) DEFAULT NULL,
+  `level` int(1) DEFAULT NULL,
+  `shirt` varchar(16) DEFAULT NULL,
+  `change_pass` int(1) DEFAULT NULL,
+  `hash_pass` int(1) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (NULL,'Mentor','mentor','','admin','','','',0,'','','',1,0,1,0);
-INSERT INTO `users` VALUES (NULL,'Hyacinth Armstrong','harmstrong','fake@email.net','default','613-794-9384','5/12/1995','715 Carling Avenue, Ottawa ON, K1Z 7B5','1','Parent Armstrong','','373 597 509','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dora Ryan','dryan','fake@email.net','default','403-723-9365','10/25/1999','455 40th Street, Calgary AB, T2C 2P3','1','Parent Ryan','','133 405 860','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sharon Green','sgreen','fake@email.net','default','416-856-3087','4/12/2005','2474 Bay Street, Toronto ON, M5J 2R8','1','Parent Green','','412 660 888','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dawn Clark','dclark','fake@email.net','default','705-799-9491','5/24/1998','867 Reserve St, Omemee ON, K0L 2S0','1','Parent Clark','','355 020 108','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Matthew Gow','mgow','fake@email.net','default','780-717-4654','8/27/2000','4853 184th Street, Edmonton AB, T5J 2R4','0','Parent Gow','','615 703 717','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Margaret Fletcher','mfletcher','fake@email.net','default','450-646-7324','3/18/1999','4869 rue Saint-Charles, Longueuil QC, J4H 1M3','1','Parent Fletcher','','460 461 916','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Violet Bryant','vbryant','fake@email.net','default','604-888-8813','8/25/2001','4388 Glover Road, Fort Langley BC, V3A 6X5','1','Parent Bryant','','124 139 593','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Johnathan Hudson','jhudson','fake@email.net','default','902-892-8738','10/9/1998','2178 Bunbury Road, Mount Herbert PE, C1B 3M8','0','Parent Hudson','','415 496 934','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joseph Liggins','jliggins','fake@email.net','default','519-572-6943','9/30/1996','4742 Benton Street, Kitchener ON, N2G 4L9','0','Parent Liggins','','359 779 907','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ross McDonald','rmcdonald','fake@email.net','default','519-824-0742','1/20/1998','4710 Cork St, Guelph ON, N1H 2W8','0','Parent McDonald','','014 253 744','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Everett Bartley','ebartley','fake@email.net','default','604-519-2499','12/9/1999','2255 Sixth Street, New Westminster BC, V3L 3C1','0','Parent Bartley','','588 058 305','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'John Garcia','jgarcia','fake@email.net','default','306-656-9877','6/5/2001','4746 Albert Street, Harris SK, S4P 3Y2','0','Parent Garcia','','797 901 162','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Victor Varner','vvarner','fake@email.net','default','613-268-8770','5/2/1999','307 Reserve St, Maberly ON, K0H 2B0','0','Parent Varner','','222 056 137','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Denise Nguyen','dnguyen','fake@email.net','default','416-456-5928','5/31/2004','1136 Halsey Avenue, Toronto ON, M3B 2W6','1','Parent Nguyen','','193 407 426','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Chad Forde','cforde','fake@email.net','default','905-212-5443','6/19/1995','895 Wellington Street, Toronto ON, M9C 3J5','0','Parent Forde','','512 223 876','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sarah Simons','ssimons','fake@email.net','default','902-750-9529','4/20/1996','1477 Higginsville Road, Alton NS, B0N 1C0','1','Parent Simons','','608 828 174','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jennifer Wright','jwright','fake@email.net','default','867-841-7259','2/15/2003','4944 47th Avenue, Destruction Bay YT, Y0B 1H0','1','Parent Wright','','215 539 859','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'William Rivera','wrivera','fake@email.net','default','905-867-3036','2/7/2002','2174 Orenda Rd, Brampton ON, L6W 1Z2','0','Parent Rivera','','007 336 076','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Edward London','elondon','fake@email.net','default','780-435-8970','11/21/1998','1423 Gateway Blvd, Edmonton AB, T6H 1J5','0','Parent London','','135 466 241','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Norman Graves','ngraves','fake@email.net','default','416-919-6081','7/27/2000','3681 Merton Street, Toronto ON, M1L 3K7','0','Parent Graves','','165 957 119','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Gaylene Vincent','gvincent','fake@email.net','default','905-569-6265','4/20/2003','336 Central Pkwy, Erin Mills ON, L5L 3A1','1','Parent Vincent','','209 217 553','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wayne Smith','wsmith','fake@email.net','default','902-858-0739','12/14/1994','2023 Granville St, Hubbards NS, B3K 5M1','0','Parent Smith','','712 350 511','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Daniel Alonzo','dalonzo','fake@email.net','default','514-864-5217','12/8/1995','917 rue de la Gauchetière, Montreal QC, H3B 2M3','0','Parent Alonzo','','787 008 861','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Laura Santos','lsantos','fake@email.net','default','604-877-9513','11/30/2000','634 St George Street, Vancouver BC, V5T 1Z7','1','Parent Santos','','481 792 935','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Viola Gonzalez','vgonzalez','fake@email.net','default','780-763-9918','7/30/2000','2781 Township Rd, Lloydminster AB, T9V 0L9','1','Parent Gonzalez','','189 735 194','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kathaleen Souza','ksouza','fake@email.net','default','705-523-0552','6/21/2003','591 Paris St, Sudbury ON, P3E 5B2','1','Parent Souza','','225 123 991','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'David Hammond','dhammond','fake@email.net','default','613-750-9563','1/8/2001','1538 MacLaren Street, Ottawa ON, K1P 5M7','0','Parent Hammond','','541 061 446','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joseph Silva','jsilva','fake@email.net','default','905-696-6301','1/15/2000','473 Central Pkwy, Malton ON, L5T 2B7','0','Parent Silva','','663 875 383','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Robby Moore','rmoore','fake@email.net','default','819-565-2237','6/28/2001','1703 Rue King, Sherbrooke QC, J1H 1R4','0','Parent Moore','','598 402 600','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Justine Coleman','jcoleman','fake@email.net','default','450-517-1500','4/17/2005','2186 rue St-Paul, Sorel QC, J3P 6S2','1','Parent Coleman','','477 947 006','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Katherine Ford','kford','fake@email.net','default','613-265-4504','6/1/1998','1389 Merivale Road, Ottawa ON, K2P 0K1','1','Parent Ford','','088 626 502','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Richard Edelstein','redelstein','fake@email.net','default','902-242-7550','6/1/1997','4163 Main St, Kingston NS, B0P 1R0','0','Parent Edelstein','','636 736 589','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Richard Bankston','rbankston','fake@email.net','default','416-338-7592','7/21/2003','3573 Adelaide St, Toronto ON, M5H 1P6','0','Parent Bankston','','056 840 556','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Margaret Gomez','mgomez','fake@email.net','default','416-616-3048','2/17/1996','4142 Yonge Street, Toronto ON, M4W 1J7','1','Parent Gomez','','772 228 565','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'William Powell','wpowell','fake@email.net','default','416-913-1432','12/2/1997','3581 Horner Ave, Toronto ON, M8W 4Y4','0','Parent Powell','','491 006 789','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'David Fonville','dfonville','fake@email.net','default','604-575-6044','5/23/2001','2338 Glover Road, Surrey BC, V3S 4C4','0','Parent Fonville','','519 585 459','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lindsay Copple','lcopple','fake@email.net','default','604-771-7362','10/17/2000','2156 Hastings Street, Vancouver BC, V6C 1B4','1','Parent Copple','','456 082 288','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Albert King','aking','fake@email.net','default','450-505-1701','1/26/2005','1239 Pitfield Blvd, Laval QC, H7W 1A9','0','Parent King','','306 381 070','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Justine Cowan','jcowan','fake@email.net','default','416-700-2654','1/15/2000','1772 Merton Street, Toronto ON, M1L 3K7','1','Parent Cowan','','422 609 479','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Marilynn McCarty','mmccarty','fake@email.net','default','519-230-5484','5/26/2001','883 Queens Sq, Hespeler ON, N3C 1H3','1','Parent McCarty','','093 186 369','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Adrienne Sechrist','asechrist','fake@email.net','default','416-995-4971','1/24/2002','1771 Weir Crescent, Toronto ON, M1E 3T8','1','Parent Sechrist','','565 373 693','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mark Ramirez','mramirez','fake@email.net','default','519-276-9127','1/8/1999','2610 Albert Street, Stratford ON, N5A 3K5','0','Parent Ramirez','','049 266 356','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Edwin Gould','egould','fake@email.net','default','416-317-8296','12/30/2003','4031 Yonge Street, Toronto ON, M4W 1J7','0','Parent Gould','','017 058 926','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Chris Boyd','cboyd','fake@email.net','default','613-639-8978','3/22/2004','2864 Isabella Street, Pembroke ON, K8A 5S5','0','Parent Boyd','','467 333 605','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Rickey Evans','revans','fake@email.net','default','780-298-7830','12/12/2001','1931 Jasper Avenue, Edmonton AB, T5J 3N2','0','Parent Evans','','753 064 773','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kenneth Braatz','kbraatz','fake@email.net','default','416-242-3325','5/7/2002','68 Weston Rd, Toronto ON, M9N 1G4','0','Parent Braatz','','066 282 682','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Thomas Buck','tbuck','fake@email.net','default','902-853-8300','4/6/2002','357 Poplar Street, Alberton PE, C0B 1B0','0','Parent Buck','','666 753 447','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Patricia Jacques','pjacques','fake@email.net','default','519-330-3006','4/23/2005','2195 Exmouth Street, Sarnia ON, N7T 4C8','1','Parent Jacques','','663 129 419','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'James Staley','jstaley','fake@email.net','default','416-939-1625','12/22/2003','26 Bay Street, Toronto ON, M5J 2R8','0','Parent Staley','','106 363 955','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Melissa Manley','mmanley','fake@email.net','default','250-954-1362','8/15/1996','2336 Roger Street, Parksville BC, V9P 1R1','1','Parent Manley','','449 579 531','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Christie Terry','cterry','fake@email.net','default','604-872-6315','6/18/1995','2276 St George Street, Vancouver BC, V5T 1Z7','1','Parent Terry','','155 468 309','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Craig Kovach','ckovach','fake@email.net','default','902-531-7066','1/20/1997','849 Blue Rocks Road, Mahone Bay NS, B0J 2C0','0','Parent Kovach','','061 024 659','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Meredith Mendoza','mmendoza','fake@email.net','default','905-969-4002','7/25/2003','3612 Harvest Moon Dr, Unionville ON, L3R 0L7','1','Parent Mendoza','','784 679 060','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alexander Souders','asouders','fake@email.net','default','905-475-6887','6/19/1996','1942 Harvest Moon Dr, Unionville ON, L3R 0L7','0','Parent Souders','','061 529 939','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Frances Mitchell','fmitchell','fake@email.net','default','604-464-1344','2/22/2000','3539 Shaughnessy St, Port Coquitlam BC, V3C 4S7','1','Parent Mitchell','','055 079 735','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'James Mackenzie','jmackenzie','fake@email.net','default','705-642-8642','9/24/1996','4053 Nelson Street, Swastika ON, P0K 1T0','0','Parent Mackenzie','','633 601 612','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Edith Buchanan','ebuchanan','fake@email.net','default','416-306-2810','11/22/1999','1525 Adelaide St, Toronto ON, M5H 1P6','1','Parent Buchanan','','564 409 647','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Oscar Saucedo','osaucedo','fake@email.net','default','418-380-8538','2/14/1995','4078 avenue Royale, Ste Foy QC, G1V 2L2','0','Parent Saucedo','','663 093 805','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'John Olson','jolson','fake@email.net','default','613-237-1931','2/15/1998','737 MacLaren Street, Ottawa ON, K1P 5M7','0','Parent Olson','','552 878 324','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Karl Watson','kwatson','fake@email.net','default','418-923-6688','3/28/2005','619 Rue De La Gare, Mistassini Lac QC, G8M 3S1','0','Parent Watson','','570 031 765','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Claire Miller','cmiller','fake@email.net','default','780-681-9269','11/13/1998','1368 Venture Place, Flatbush AB, T0G 0Z0','1','Parent Miller','','730 766 847','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jamie Stamps','jstamps','fake@email.net','default','519-636-7518','3/28/1997','1072 York St, London ON, N5W 2S9','1','Parent Stamps','','749 117 552','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Elizabeth McRae','emcrae','fake@email.net','default','819-378-8007','4/1/2002','963 rue Saint-Édouard, Trois Rivieres QC, G9A 5S8','1','Parent McRae','','014 651 137','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ted Vazquez','tvazquez','fake@email.net','default','416-988-8134','7/8/2004','467 Merton Street, Toronto ON, M1L 3K7','0','Parent Vazquez','','495 655 433','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joel Weiss','jweiss','fake@email.net','default','780-706-7546','10/2/2003','3947 50th Avenue, Whitecourt AB, T7S 1A1','0','Parent Weiss','','704 115 575','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Riley Reese','rreese','fake@email.net','default','418-918-1411','2/28/2002','3985 Côte Joyeuse, St Agapit QC, H0H 0H0','0','Parent Reese','','079 473 740','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Gerald Boyce','gboyce','fake@email.net','default','705-331-6221','5/29/2004','4146 Lockhart Drive, Barrie ON, L4M 3B1','0','Parent Boyce','','213 567 944','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lori Arrieta','larrieta','fake@email.net','default','778-838-6066','2/8/2001','1403 Nootka Street, Vancouver BC, V5M 3M5','1','Parent Arrieta','','068 443 589','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sonya Moore','smoore','fake@email.net','default','807-583-6594','1/19/2005','346 Blind Bay Road, Armstrong ON, V0E 1B0','1','Parent Moore','','345 739 478','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Norman Wallace','nwallace','fake@email.net','default','519-440-5567','7/20/2005','4623 Scotchmere Dr, Goderich ON, N7A 1C9','0','Parent Wallace','','715 466 041','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Hector Bryant','hbryant','fake@email.net','default','780-492-4407','6/30/2001','368 137th Avenue, Edmonton AB, T5B 3V4','0','Parent Bryant','','538 373 119','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Richard Kimbrough','rkimbrough','fake@email.net','default','613-362-5116','5/28/2004','1719 Pitt St, Cornwall ON, K6J 3R2','0','Parent Kimbrough','','352 657 407','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Carol Bowden','cbowden','fake@email.net','default','514-994-8999','5/24/1997','3107 René-Lévesque Blvd, Montreal QC, H3B 4W8','1','Parent Bowden','','144 759 818','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lindsay Perez','lperez','fake@email.net','default','450-298-8141','5/13/1998','4725 Richford Road, Frelighsburg QC, J0J 1C0','1','Parent Perez','','384 468 674','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ann Salsbury','asalsbury','fake@email.net','default','705-666-8388','7/28/2000','458 Lynden Road, Moonstone ON, L0K 1N0','1','Parent Salsbury','','763 453 909','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alexis Mathis','amathis','fake@email.net','default','807-766-5063','3/17/1995','2358 Algoma St, Thunder Bay ON, P7A 4T3','1','Parent Mathis','','040 967 416','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Edwin Ludwig','eludwig','fake@email.net','default','905-456-4466','12/17/1997','130 Orenda Rd, Brampton ON, L6W 1Z2','0','Parent Ludwig','','761 290 295','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Michael Mosley','mmosley','fake@email.net','default','519-679-5132','9/23/2003','843 Gorham Street, London ON, N0N 0N0','0','Parent Mosley','','772 578 316','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Scott Hirsch','shirsch','fake@email.net','default','705-657-0276','4/9/2000','3523 Reserve St, Buckhorn ON, K0L 1J0','0','Parent Hirsch','','014 643 126','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Justin Pearsall','jpearsall','fake@email.net','default','416-982-6930','6/2/2002','4274 Adelaide St, Toronto ON, M5H 1P6','0','Parent Pearsall','','678 306 861','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ilse Worthley','iworthley','fake@email.net','default','819-333-0082','10/3/2002','3350 rue Principale, La Sarre QC, J9Z 1H5','1','Parent Worthley','','542 343 819','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Gladys Jackson','gjackson','fake@email.net','default','905-790-3194','9/26/2001','2763 Speers Road, Brampton ON, L6T 3W9','1','Parent Jackson','','301 530 978','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Michael Varney','mvarney','fake@email.net','default','780-853-2446','6/4/1998','1256 Bloor Street, Vermilion AB, T0B 4M0','0','Parent Varney','','284 858 297','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Stacy Groner','sgroner','fake@email.net','default','403-588-2704','5/29/1997','1263 Galts Ave, Red Deer AB, T4N 5Z9','1','Parent Groner','','674 555 966','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Tania Willis','twillis','fake@email.net','default','819-456-5755','4/7/2001','2881 rue des Églises Est, Ste Cecile De Masham QC, J0X 2W0','1','Parent Willis','','119 116 994','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Christine Daniels','cdaniels','fake@email.net','default','780-871-4446','2/12/1996','2105 Township Rd, Lloydminster AB, T9V 0L9','1','Parent Daniels','','582 704 649','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Barbara Colley','bcolley','fake@email.net','default','905-404-6425','8/2/1998','1026 Richmond Street, Oshawa ON, S4P 3Y2','1','Parent Colley','','002 457 042','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Philip Stepp','pstepp','fake@email.net','default','902-588-1933','5/31/1996','3537 White Point Road, Bridgetown NS, B0S 1C0','0','Parent Stepp','','768 042 665','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Linda Shepley','lshepley','fake@email.net','default','780-369-9430','4/17/2004','1586 Venture Place, Widewater AB, T0G 2M0','1','Parent Shepley','','739 185 981','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Bonnie Lewis','blewis','fake@email.net','default','519-855-5539','9/5/1994','2791 Northumberland Street, Hillsburgh ON, N0B 1Z0','1','Parent Lewis','','403 939 739','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Russell Wray','rwray','fake@email.net','default','416-683-4272','6/2/1997','2167 Sheppard Ave, Toronto ON, M1S 1T4','0','Parent Wray','','100 659 911','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'George Schechter','gschechter','fake@email.net','default','416-797-1287','2/27/2004','149 Weir Crescent, Toronto ON, M1E 3T8','0','Parent Schechter','','268 243 227','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Henry Hughley','hhughley','fake@email.net','default','905-644-0206','2/25/1998','4920 Richmond Street, Oshawa ON, S4P 3Y2','0','Parent Hughley','','680 254 661','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'William Wimer','wwimer','fake@email.net','default','306-251-2441','7/25/2001','1545 Wentz Avenue, Saskatoon SK, S7K 7A9','0','Parent Wimer','','363 192 253','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Annalisa Gonzalez','agonzalez','fake@email.net','default','705-649-9642','2/27/1999','3714 Nelson Street, Goulais ON, P0S 1E0','1','Parent Gonzalez','','050 573 856','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Morris Sustaita','msustaita','fake@email.net','default','418-866-3481','7/29/1996','714 Boulevard Laflèche, Riviere Du Loup QC, G5R 3Y4','0','Parent Sustaita','','083 711 838','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'William Lamb','wlamb','fake@email.net','default','519-469-0428','10/26/2002','4555 Embro St, Innerkip ON, N0J 1M0','0','Parent Lamb','','247 677 313','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lisa Garnett','lgarnett','fake@email.net','default','519-240-1575','9/22/2000','1374 Queens Sq, Hespeler ON, N3C 1H3','1','Parent Garnett','','384 689 410','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Rocio Self','rself','fake@email.net','default','604-296-7407','5/31/2002','1254 Hammarskjold Dr, Burnaby BC, V5B 3C9','1','Parent Self','','585 923 220','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Christine Adams','cadams','fake@email.net','default','705-340-9090','6/21/2004','1366 Kennedy Rd, Lindsay ON, K9V 4A4','1','Parent Adams','','566 507 349','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Adam Baines','abaines','fake@email.net','default','613-340-3664','5/4/2003','1751 Parkdale Ave, Brockville ON, K6V 4X4','1','Parent Baines','','576 907 851','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kevin Goodwin','kgoodwin','fake@email.net','default','705-223-7535','6/19/2004','3764 Manitoba Street, North Bay ON, P1B 2Y8','0','Parent Goodwin','','198 468 423','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Geraldine Samuels','gsamuels','fake@email.net','default','867-766-8812','2/20/2000','267 54th Street, Yellowknife NT, X1A 2R3','1','Parent Samuels','','329 964 290','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Tonia Murphy','tmurphy','fake@email.net','default','780-430-0210','4/24/2005','3531 Gateway Blvd, Edmonton AB, T6H 1J5','1','Parent Murphy','','131 701 872','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'William Dennis','wdennis','fake@email.net','default','705-856-2260','9/26/2000','4591 Nelson Street, Wawa ON, P0S 1K0','0','Parent Dennis','','044 132 504','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alvin Warren','awarren','fake@email.net','default','403-609-3766','11/5/1996','507 Port Washington Road, Canmore AB, T0L 0M0','0','Parent Warren','','093 562 791','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dolores Dye','ddye','fake@email.net','default','819-453-9444','1/7/2000','2466 rue des Églises Est, Otter Lake QC, J0X 2P0','1','Parent Dye','','787 789 668','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Tamara Alexander','talexander','fake@email.net','default','604-339-3865','10/9/1997','3122 Hastings Street, Vancouver BC, V6C 1B4','1','Parent Alexander','','100 336 437','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Fred Thompson','fthompson','fake@email.net','default','905-456-2205','1/7/2000','2854 Orenda Rd, Brampton ON, L6W 1Z2','0','Parent Thompson','','623 792 264','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kathryn Contreras','kcontreras','fake@email.net','default','613-248-3048','3/3/1996','1655 Bank St, Ottawa ON, K1H 7Z1','1','Parent Contreras','','130 936 628','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alisha Urbano','aurbano','fake@email.net','default','780-307-3048','11/22/2003','3520 Venture Place, Westlock AB, T0G 2L0','1','Parent Urbano','','399 435 221','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Bella Daniels','bdaniels','fake@email.net','default','613-269-2550','8/9/1997','262 Reserve St, Merrickville ON, K0G 1N0','1','Parent Daniels','','564 680 890','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Nancy Shirk','nshirk','fake@email.net','default','306-567-9814','12/16/2001','4404 St. John Street, Davidson SK, S4P 3Y2','1','Parent Shirk','','621 431 386','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Margaret Cassady','mcassady','fake@email.net','default','403-508-1239','12/17/2000','50 11th Ave, Calgary AB, T2P 1M6','1','Parent Cassady','','276 275 708','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Harry Sawyer','hsawyer','fake@email.net','default','613-451-9583','1/27/1995','2871 Reserve St, Carleton Place ON, K0G 1K0','0','Parent Sawyer','','335 084 968','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Amber Suarez','asuarez','fake@email.net','default','819-571-9891','1/23/2000','4202 rue Parc, Sherbrooke QC, J1H 1R6','1','Parent Suarez','','046 261 673','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wanda Bender','wbender','fake@email.net','default','403-806-1771','7/25/2004','3720 Richmond Road, Calgary AB, T2T 0C6','1','Parent Bender','','508 766 896','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Luis Raabe','lraabe','fake@email.net','default','705-383-8613','9/30/1994','1888 Nelson Street, Britt ON, P0G 1A0','0','Parent Raabe','','210 194 056','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jessica McBride','jmcbride','fake@email.net','default','519-921-9522','1/9/2003','3247 Fallon Drive, Durham ON, N0G 1R0','1','Parent McBride','','434 889 127','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Nathaniel Reck','nreck','fake@email.net','default','613-385-6882','6/3/2004','1492 Reserve St, Wolfe Island ON, K0H 2Y0','0','Parent Reck','','787 289 297','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joe Hargrave','jhargrave','fake@email.net','default','705-876-9860','8/4/2000','1638 George Street, Peterborough ON, K9H 2L1','0','Parent Hargrave','','242 570 612','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Betty Adams','badams','fake@email.net','default','519-866-1175','3/4/2004','1447 Embro St, Straffordville ON, N0J 1Y0','1','Parent Adams','','599 438 322','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Helen Stines','hstines','fake@email.net','default','905-738-4858','7/11/2001','1531 Alness Street, Toronto ON, M3J 2J1','1','Parent Stines','','280 909 888','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dylan Ramos','dramos','fake@email.net','default','819-941-1568','4/19/1995','4392 rue des Églises Est, Beaucanton QC, J0Z 1H0','0','Parent Ramos','','031 512 221','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ana Marcus','amarcus','fake@email.net','default','250-845-8394','2/28/1997','526 Tchesinkut Lake Rd, Houston BC, V0J 1Z0','1','Parent Marcus','','649 533 882','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Vicki Dawkins','vdawkins','fake@email.net','default','613-222-7675','8/16/1997','4465 Carling Avenue, Ottawa ON, K1Z 7B5','1','Parent Dawkins','','765 071 105','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Stanley Breaux','sbreaux','fake@email.net','default','705-658-6208','9/15/1995','4817 James Street, Moose Factory ON, P0L 1W0','0','Parent Breaux','','581 320 850','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Linda Patrick','lpatrick','fake@email.net','default','905-373-9193','2/12/2004','1962 Kennedy Rd, Cobourg ON, K9A 1J1','1','Parent Patrick','','543 890 545','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mathew Ables','mables','fake@email.net','default','780-986-4989','8/24/2001','2889 Township Rd, Leduc AB, T9E 2W9','0','Parent Ables','','025 239 617','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lois Harlan','lharlan','fake@email.net','default','780-477-3131','5/20/1999','4174 137th Avenue, Edmonton AB, T5B 3V4','1','Parent Harlan','','664 800 398','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Karen Harriss','kharriss','fake@email.net','default','416-737-2200','1/24/1997','683 Pape Ave, Toronto ON, M4E 2V5','1','Parent Harriss','','598 701 324','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ryan Andrade','randrade','fake@email.net','default','519-636-3069','5/10/1998','4596 York St, London ON, N5W 2S9','0','Parent Andrade','','584 836 472','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Frank Engles','fengles','fake@email.net','default','905-201-9884','3/4/2005','3201 Davis Drive, Markham ON, L3P 2M4','0','Parent Engles','','674 794 672','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'George Ritter','gritter','fake@email.net','default','780-743-3087','7/28/2002','3456 Riedel Street, Fort Mcmurray AB, T9H 3J9','0','Parent Ritter','','272 268 798','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Larry Smith','lsmith','fake@email.net','default','519-828-9398','2/14/1996','2199 Fallon Drive, Arkona ON, N0M 1B0','0','Parent Smith','','170 817 365','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Benjamin McCune','bmccune','fake@email.net','default','905-869-4159','6/19/1998','1413 Charleton Ave, Hamilton ON, L8N 3X3','0','Parent McCune','','366 536 993','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'John Liddell','jliddell','fake@email.net','default','807-628-0728','6/15/2001','286 Walsh Street, Thunder Bay ON, P7E 1J5','0','Parent Liddell','','406 883 850','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Eric Bradley','ebradley','fake@email.net','default','519-433-0820','8/27/2003','134 Baker Street, London ON, N0N 0N0','0','Parent Bradley','','709 315 063','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Angela Gardner','agardner','fake@email.net','default','604-878-3057','1/6/2000','4235 Sixth Street, New Westminster BC, V3L 3C1','1','Parent Gardner','','406 426 106','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Armando Corl','acorl','fake@email.net','default','403-250-9578','4/15/2005','2534 40th Street, Calgary AB, T2E 7T6','0','Parent Corl','','304 732 100','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dennis Montgomery','dmontgomery','fake@email.net','default','705-323-1738','10/6/1999','175 Davis Drive, Orillia ON, L3V 1T4','0','Parent Montgomery','','202 619 581','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wendy Adams','wadams','fake@email.net','default','519-353-0559','5/31/1998','450 Fallon Drive, Paisley ON, N0G 2N0','1','Parent Adams','','438 659 104','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Theresa Huber','thuber','fake@email.net','default','819-737-4570','2/19/2004','308 Côte Joyeuse, Senneterre QC, H0H 0H0','1','Parent Huber','','230 461 535','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Christine Brown','cbrown','fake@email.net','default','867-588-2619','10/16/1996','169 49th Avenue, Tulita NT, X0E 0K0','1','Parent Brown','','445 731 128','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Franklin Carignan','fcarignan','fake@email.net','default','819-694-1114','12/22/2002','32 rue Saint-Édouard, Trois Rivieres QC, G9A 5S8','0','Parent Carignan','','560 153 298','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jessie Mitchell','jmitchell','fake@email.net','default','905-833-9245','12/20/2002','557 Wyecroft Road, King City ON, L7B 1G4','0','Parent Mitchell','','499 835 080','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'William Boylan','wboylan','fake@email.net','default','450-374-4895','11/25/1995','3577 rue Boulay, Valleyfield QC, J0H 2A0','0','Parent Boylan','','229 301 973','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Andy Horn','ahorn','fake@email.net','default','613-297-0788','6/18/2002','4578 Carling Avenue, Ottawa ON, K1Z 7B5','0','Parent Horn','','014 029 458','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Maria Taylor','mtaylor','fake@email.net','default','403-738-3104','11/2/2002','3070 Port Washington Road, Iron Springs AB, T0K 1G0','1','Parent Taylor','','728 126 202','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joan Perez','jperez','fake@email.net','default','647-880-3224','1/2/2002','913 Pape Ave, Toronto ON, M4E 2V5','1','Parent Perez','','513 138 164','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Carlos Johnson','cjohnson','fake@email.net','default','604-813-0517','9/27/1997','1237 Sixth Street, New Westminster BC, V3L 3C1','0','Parent Johnson','','276 321 882','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Larry Ward','lward','fake@email.net','default','519-582-2570','7/10/2003','4559 9th Avenue, Delhi ON, N4B 2K6','0','Parent Ward','','167 330 414','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Roger Weiser','rweiser','fake@email.net','default','705-783-6097','2/3/2004','862 Bellwood Acres Rd, Huntsville ON, P0A 1K0','0','Parent Weiser','','794 752 469','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Toby Hosmer','thosmer','fake@email.net','default','514-394-7681','10/18/1995','1478 rue de la Gauchetière, Montreal QC, H3B 2M3','0','Parent Hosmer','','102 280 997','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wesley Thomas','wthomas','fake@email.net','default','514-927-6841','2/18/2003','1058 rue de la Gauchetière, Montreal QC, H3B 2M3','0','Parent Thomas','','377 221 643','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lynette Sweet','lsweet','fake@email.net','default','604-827-4255','10/12/2004','1916 Tolmie St, Vancouver BC, V6R 4C5','1','Parent Sweet','','211 596 739','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Gail Ketchum','gketchum','fake@email.net','default','250-347-8078','5/16/2001','735 Yoho Valley Road, Radium Hot Springs BC, V0A 1M0','1','Parent Ketchum','','605 172 576','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'James Null','jnull','fake@email.net','default','519-471-3365','11/18/1999','3648 Hyde Park Road, London ON, N6H 3S2','0','Parent Null','','225 671 882','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Barbara Campbell','bcampbell','fake@email.net','default','905-399-3920','9/24/1994','4255 Speers Road, Oakville ON, L6L 2X5','1','Parent Campbell','','568 702 773','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Katherine Garcia','kgarcia','fake@email.net','default','519-943-8066','12/7/1998','4833 Bridgeport Rd, Orangeville ON, L9W 2C8','1','Parent Garcia','','626 529 093','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sharen Garcia','sgarcia','fake@email.net','default','705-528-2129','8/28/2002','1106 Bayfield St, Midland ON, L4S 1V5','1','Parent Garcia','','740 338 454','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kenneth Delagarza','kdelagarza','fake@email.net','default','905-883-3787','3/21/2001','3376 Bayfield St, Richmond Hill ON, L4C 3Y2','0','Parent Delagarza','','770 823 821','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dennis Wagner','dwagner','fake@email.net','default','514-702-3819','5/27/1995','1309 rue Levy, Montreal QC, H3C 5K4','0','Parent Wagner','','319 906 319','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Nia Robertson','nrobertson','fake@email.net','default','780-668-2437','3/10/2004','1058 184th Street, Edmonton AB, T5J 2R4','1','Parent Robertson','','445 171 655','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Shannon Moss','smoss','fake@email.net','default','250-877-6658','8/15/2002','1073 Tchesinkut Lake Rd, Smithers BC, V0J 2N0','0','Parent Moss','','691 632 723','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sasha Bryson','sbryson','fake@email.net','default','613-391-7798','6/23/2000','308 Wallbridge Loyalist Rd, Belleville ON, K8N 1L9','1','Parent Bryson','','681 437 513','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'John Young','jyoung','fake@email.net','default','416-237-5760','7/17/2000','4206 Eagle Rd, Toronto ON, M8Z 4H4','0','Parent Young','','561 070 236','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mary Willard','mwillard','fake@email.net','default','905-687-4809','5/14/2002','3043 James Street, St Catharines ON, L2R 3H6','1','Parent Willard','','266 851 732','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Frances Dean','fdean','fake@email.net','default','780-742-2748','7/27/1998','511 Riedel Street, Fort Mcmurray AB, T9H 3J9','1','Parent Dean','','603 566 183','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Scott Passmore','spassmore','fake@email.net','default','306-968-9482','3/17/2005','4048 St. John Street, Alsask SK, S4P 3Y2','0','Parent Passmore','','330 375 445','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Percy Wilcox','pwilcox','fake@email.net','default','647-887-6581','8/25/1998','4962 Bay Street, Toronto ON, M5J 2R8','0','Parent Wilcox','','239 475 064','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Clayton Gardner','cgardner','fake@email.net','default','403-466-4910','12/9/2000','39 Maynard Rd, Calgary AB, T2E 6J8','0','Parent Gardner','','636 968 869','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Arthur Bemis','abemis','fake@email.net','default','705-331-2689','7/6/2000','855 Lockhart Drive, Barrie ON, L4M 3B1','0','Parent Bemis','','205 447 659','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ben Derby','bderby','fake@email.net','default','807-983-8625','8/9/1997','3238 Algoma St, Thunder Bay ON, P7A 4T3','0','Parent Derby','','069 820 462','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Estelle Martinez','emartinez','fake@email.net','default','613-744-7457','1/23/2004','3056 Montreal Road, Ottawa ON, K1L 6C7','1','Parent Martinez','','209 245 208','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Elmer Kennedy','ekennedy','fake@email.net','default','416-404-2212','7/7/2000','3247 Danforth Avenue, Toronto ON, M4K 1A6','0','Parent Kennedy','','166 076 513','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Paulette Rich','prich','fake@email.net','default','613-928-4709','4/12/2002','3840 Elgin Street, Delta ON, K0E 1G0','1','Parent Rich','','766 630 149','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Steve Mangum','smangum','fake@email.net','default','514-793-5986','2/15/2000','3580 rue Levy, Montreal QC, H3C 5K4','0','Parent Mangum','','007 559 594','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Owen Turner','oturner','fake@email.net','default','416-675-7413','4/6/1996','2314 Derry Rd, Malton ON, L4T 1A8','0','Parent Turner','','026 092 502','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Marty Keasler','mkeasler','fake@email.net','default','780-480-9192','11/26/2002','3461 137th Avenue, Edmonton AB, T5B 3V4','0','Parent Keasler','','313 830 499','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mary Plumley','mplumley','fake@email.net','default','905-436-2021','4/19/1997','4672 Richmond Street, Oshawa ON, S4P 3Y2','1','Parent Plumley','','286 161 757','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Steven Patchen','spatchen','fake@email.net','default','780-693-3472','2/5/1998','4039 Park Ct, Peers AB, T0E 1W0','0','Parent Patchen','','720 009 117','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lillie Williams','lwilliams','fake@email.net','default','416-508-1354','3/1/2004','3950 Front Street, Toronto ON, M5J 2N1','1','Parent Williams','','765 671 847','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Robert Button','rbutton','fake@email.net','default','418-653-7482','10/24/1994','2652 rue Garneau, Quebec QC, G1V 3V5','0','Parent Button','','235 404 027','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Curtis Landeros','clanderos','fake@email.net','default','416-296-5273','1/25/1995','4565 Borough Drive, Toronto ON, M1P 4W2','0','Parent Landeros','','134 157 007','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Catherine Snead','csnead','fake@email.net','default','403-571-3433','7/15/1996','123 11th Ave, Calgary AB, T2P 1M6','1','Parent Snead','','510 828 395','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Patrick Harris','pharris','fake@email.net','default','250-334-5973','2/8/2002','2146 Roger Street, Courtenay BC, V9N 2J6','0','Parent Harris','','540 590 841','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joseph Velez','jvelez','fake@email.net','default','613-738-1912','3/25/2000','3256 Bank St, Ottawa ON, K1H 7Z1','0','Parent Velez','','233 078 625','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Amy Webb','awebb','fake@email.net','default','403-783-7992','8/8/2003','3180 Pine Street, Ponoka AB, T0C 2H0','1','Parent Webb','','073 802 290','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wendy Baxter','wbaxter','fake@email.net','default','403-612-4142','4/13/2001','4595 Fourth Avenue, Calgary AB, T2P 0H3','1','Parent Baxter','','660 969 494','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Marguerite Davis','mdavis','fake@email.net','default','514-804-3589','12/5/1997','1855 René-Lévesque Blvd, Montreal QC, H3B 4W8','1','Parent Davis','','553 251 547','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Debra Smith','dsmith','fake@email.net','default','403-807-9234','11/18/1997','67 Heritage Drive, Calgary AB, T2V 2W2','1','Parent Smith','','333 399 897','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Eugene Gonzalez','egonzalez','fake@email.net','default','780-428-0389','8/7/2004','2018 A Avenue, Edmonton AB, T5J 0K7','0','Parent Gonzalez','','609 366 323','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'James Watson','jwatson','fake@email.net','default','250-826-6408','8/6/1996','528 Hardy Street, Kelowna BC, V1Y 8H2','0','Parent Watson','','321 198 236','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alice Smith','asmith','fake@email.net','default','604-677-2432','4/17/1997','110 Tolmie St, Vancouver BC, V6A 4E6','1','Parent Smith','','053 033 627','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kevin Blewett','kblewett','fake@email.net','default','306-745-0914','12/27/1999','2609 Hamilton Street, Esterhazy SK, S4P 3Y2','0','Parent Blewett','','271 074 635','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Amanda Winter','awinter','fake@email.net','default','306-489-1172','8/10/2003','3825 St. John Street, Alameda SK, S4P 3Y2','1','Parent Winter','','578 576 704','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Fred Lim','flim','fake@email.net','default','519-230-7637','1/31/1999','1542 Queens Sq, Hespeler ON, N3C 1H3','0','Parent Lim','','601 409 501','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Roy Burrier','rburrier','fake@email.net','default','514-652-1637','9/25/1998','4942 René-Lévesque Blvd, Montreal QC, H3B 4W8','0','Parent Burrier','','179 862 339','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sam Cornett','scornett','fake@email.net','default','905-870-7780','6/27/2004','1026 Charleton Ave, Hamilton ON, L8N 3X3','0','Parent Cornett','','110 878 956','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wanda Hodge','whodge','fake@email.net','default','705-949-1663','8/11/2001','1895 Churchill Plaza, Sault Ste Marie ON, P6A 1Z2','1','Parent Hodge','','318 032 026','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Luke Macaulay','lmacaulay','fake@email.net','default','705-639-5050','2/19/1998','4070 Reserve St, Norwood ON, K0L 2V0','0','Parent Macaulay','','198 896 417','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Rebecca Harden','rharden','fake@email.net','default','780-786-9910','1/11/2001','2864 Park Ct, Mayerthorpe AB, T0E 1N0','1','Parent Harden','','077 198 075','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'David Riddle','driddle','fake@email.net','default','613-269-4968','2/11/1997','4090 Reserve St, Merrickville ON, K0G 1N0','0','Parent Riddle','','759 889 066','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alice Carey','acarey','fake@email.net','default','514-391-7016','5/3/2002','2229 rue de la Gauchetière, Montreal QC, H3B 2M3','1','Parent Carey','','094 881 307','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Broderick Garcia','bgarcia','fake@email.net','default','819-548-2526','5/24/2004','1390 St Jean Baptiste St, St Ludger QC, G0M 1W0','0','Parent Garcia','','173 053 828','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jeri Elgin','jelgin','fake@email.net','default','416-864-9929','8/13/1999','1501 Adelaide St, Toronto ON, M5H 1P6','1','Parent Elgin','','116 700 303','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Chet Lear','clear','fake@email.net','default','905-788-4475','2/19/2000','4500 Davis Drive, Welland ON, L3B 3Z6','0','Parent Lear','','297 092 983','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kyle Longwell','klongwell','fake@email.net','default','905-632-3233','4/13/1996','3796 Maria St, Burlington ON, L7R 2G6','0','Parent Longwell','','722 246 469','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mary Weiland','mweiland','fake@email.net','default','705-632-1668','12/9/2004','3614 Reserve St, Campbellford ON, K0L 1L0','1','Parent Weiland','','677 158 172','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Keith Butts','kbutts','fake@email.net','default','613-828-5744','12/22/1995','1267 Merivale Road, Ottawa ON, K2H 5B6','0','Parent Butts','','207 544 495','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Raymond Palmateer','rpalmateer','fake@email.net','default','519-560-4941','3/27/1996','4491 Goyeau Ave, Windsor ON, N9A 1H9','0','Parent Palmateer','','336 768 494','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Athena Key','akey','fake@email.net','default','403-749-9986','4/19/2004','3898 Port Washington Road, Delburne AB, T0M 0V0','1','Parent Key','','210 368 437','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Charles Poffenberger','cpoffenberger','fake@email.net','default','418-274-1487','8/26/2002','2514 Rue De La Gare, Normandin QC, G8M 4B5','0','Parent Poffenberger','','400 659 231','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Orlando Holloway','oholloway','fake@email.net','default','902-877-0243','8/8/1995','4250 Granville St, Halifax NS, B3K 1N7','0','Parent Holloway','','435 529 730','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Angelica Jenkins','ajenkins','fake@email.net','default','778-552-6649','3/21/1996','1666 Russell Avenue, Langley BC, V4X 1J7','1','Parent Jenkins','','076 651 017','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Frank Gardner','fgardner','fake@email.net','default','604-951-4848','8/19/1999','3348 Holdom Avenue, Surrey BC, V3T 4Y5','0','Parent Gardner','','617 548 912','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alfred Cahill','acahill','fake@email.net','default','403-946-8329','5/19/1998','2995 Port Washington Road, Crossfield AB, T0M 0S0','0','Parent Cahill','','347 110 199','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mary Patricio','mpatricio','fake@email.net','default','416-432-5494','2/24/1996','190 Merton Street, Toronto ON, M1L 3K7','1','Parent Patricio','','644 202 525','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ben Edwards','bedwards','fake@email.net','default','514-573-8133','10/4/1998','4394 René-Lévesque Blvd, Montreal QC, H3B 4W8','0','Parent Edwards','','484 026 497','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Timothy Armstrong','tarmstrong','fake@email.net','default','519-619-9528','5/24/2003','4924 York St, London ON, N5W 2S9','0','Parent Armstrong','','295 871 776','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Amy Faulkner','afaulkner','fake@email.net','default','905-846-4941','4/24/2003','4053 Wyecroft Road, Snelgrove ON, L7A 1E6','1','Parent Faulkner','','550 551 139','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Clint Thomas','cthomas','fake@email.net','default','613-534-0553','6/22/1997','1906 Reserve St, Long Sault ON, K0L 1P0','0','Parent Thomas','','713 309 185','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Albert Butler','abutler','fake@email.net','default','905-382-6202','1/8/1998','3901 Lynden Road, Stevensville ON, L0S 1S1','0','Parent Butler','','095 818 159','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Miles Cutter','mcutter','fake@email.net','default','705-765-7757','6/10/1997','2009 Manitoba Street, Bracebridge ON, P1L 2B7','0','Parent Cutter','','065 627 754','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sylvester Hobbs','shobbs','fake@email.net','default','905-689-8143','6/15/1999','635 Barton Street, Waterdown ON, L8G 3R4','0','Parent Hobbs','','480 393 701','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Maria Rudder','mrudder','fake@email.net','default','780-455-0210','6/28/2005','259 137th Avenue, Edmonton AB, T5M 3K3','1','Parent Rudder','','692 553 217','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Louis Hostetter','lhostetter','fake@email.net','default','613-788-2421','9/13/1996','611 MacLaren Street, Ottawa ON, K1P 5M7','0','Parent Hostetter','','485 415 210','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Michael Matthew','mmatthew','fake@email.net','default','807-983-6147','1/16/2000','4294 Algoma St, Thunder Bay ON, P7A 4T3','0','Parent Matthew','','733 673 826','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'John Warner','jwarner','fake@email.net','default','780-778-9753','2/17/1998','2860 50th Avenue, Whitecourt AB, T7S 1A1','0','Parent Warner','','329 909 857','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Elmer Croy','ecroy','fake@email.net','default','819-375-8869','7/26/1997','839 rue Saint-Édouard, Trois Rivieres QC, G9A 5S8','0','Parent Croy','','116 108 762','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Denise King','dking','fake@email.net','default','807-224-0167','8/8/1995','3565 Nelson Street, Minaki ON, P0X 1J0','1','Parent King','','459 787 073','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sonia Morin','smorin','fake@email.net','default','250-378-8551','2/17/2005','4523 Mesa Vista Drive, Merritt BC, V0K 2B0','1','Parent Morin','','048 338 339','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Stacey Addison','saddison','fake@email.net','default','514-780-2314','8/19/2004','4275 Ste. Catherine Ouest, Montreal QC, H9S 3H5','0','Parent Addison','','438 015 737','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Donna Taylor','dtaylor','fake@email.net','default','514-588-2533','2/18/1999','3464 chemin Hudson, Montreal QC, H4J 1M9','1','Parent Taylor','','354 932 915','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Janice Darst','jdarst','fake@email.net','default','306-880-6228','2/19/1996','3412 Wentz Avenue, Saskatoon SK, S7K 1J6','1','Parent Darst','','267 800 480','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Patricia Williams','pwilliams','fake@email.net','default','867-925-7312','2/26/1997','1786 49th Avenue, Coral Harbour NU, X0C 0C0','1','Parent Williams','','399 247 568','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'John Valencia','jvalencia','fake@email.net','default','514-998-1063','11/10/2003','3772 René-Lévesque Blvd, Montreal QC, H3B 4W8','0','Parent Valencia','','767 208 986','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Keith Ferranti','kferranti','fake@email.net','default','604-488-1468','3/18/2002','303 Robson St, Vancouver BC, V6B 3K9','0','Parent Ferranti','','376 277 265','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'David Dennis','ddennis','fake@email.net','default','416-896-7908','4/24/1998','1555 Derry Rd, Malton ON, L4T 1A8','0','Parent Dennis','','074 631 714','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Thomas Harrison','tharrison','fake@email.net','default','250-860-8662','7/1/1999','4432 Hardy Street, Kelowna BC, V1Y 8H2','0','Parent Harrison','','755 431 327','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alice Kramer','akramer','fake@email.net','default','819-577-1321','2/3/2003','2293 Rue King, Sherbrooke QC, J1H 1R4','1','Parent Kramer','','195 878 574','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Charles Fuller','cfuller','fake@email.net','default','613-594-4932','7/3/2000','404 MacLaren Street, Ottawa ON, K1P 5M7','0','Parent Fuller','','410 459 481','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sam Griffin','sgriffin','fake@email.net','default','250-441-9959','12/7/2000','3266 Kinchant St, Cluculz Lake BC, V2N 4T6','0','Parent Griffin','','130 674 716','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Danny Dever','ddever','fake@email.net','default','250-809-3160','2/5/1996','711 Calgary Avenue, Penticton BC, V2A 2T6','0','Parent Dever','','127 614 568','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jermaine Lantz','jlantz','fake@email.net','default','705-326-7481','12/7/1995','2407 Davis Drive, Orillia ON, L3V 1T4','0','Parent Lantz','','166 977 025','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Eric Butler','ebutler','fake@email.net','default','819-325-5569','6/16/2001','42 rue St-Paul, Ste Agathe QC, J3P 6S2','0','Parent Butler','','161 585 641','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Margaret Thompson','mthompson','fake@email.net','default','705-943-6504','8/12/1999','735 Oakland Ave, Sault Ste Marie ON, P6A 2T3','1','Parent Thompson','','708 154 356','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Devona Bell','dbell','fake@email.net','default','250-678-6784','5/5/2002','4430 Blind Bay Road, Avola BC, V0E 1C0','1','Parent Bell','','159 861 178','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Andrew Sullivan','asullivan','fake@email.net','default','519-680-4209','3/13/2004','409 Hyde Park Road, London ON, N6E 1A9','0','Parent Sullivan','','511 135 170','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Raquel Albritton','ralbritton','fake@email.net','default','780-785-9934','9/20/1995','2760 Park Ct, Sangudo AB, T0E 2A0','1','Parent Albritton','','382 528 628','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wendi Worthington','wworthington','fake@email.net','default','250-369-9634','9/20/1997','4231 Queens Bay, Nakusp BC, V0G 1R0','1','Parent Worthington','','217 286 616','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Barbara James','bjames','fake@email.net','default','450-820-3802','4/22/1998','150 rue Fournier, St Jerome QC, J7Z 5L3','1','Parent James','','745 323 311','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Robert Lebron','rlebron','fake@email.net','default','416-534-3322','9/17/1997','3858 Dufferin Street, Toronto ON, M6H 4B6','0','Parent Lebron','','617 190 061','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Christopher Knapp','cknapp','fake@email.net','default','416-649-6785','2/21/1997','3618 Queen Elizabeth Boulevard, Etobicoke ON, M9W 1K7','0','Parent Knapp','','334 672 722','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Steven Connolly','sconnolly','fake@email.net','default','613-232-6628','4/18/1998','936 MacLaren Street, Ottawa ON, K1P 5M7','0','Parent Connolly','','142 458 496','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Janice Wallace','jwallace','fake@email.net','default','418-657-5150','1/24/2005','3285 rue Garneau, Quebec QC, G1V 3V5','1','Parent Wallace','','163 245 152','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Alice Dotson','adotson','fake@email.net','default','250-702-8780','7/12/1998','4670 Roger Street, Comox BC, V9N 6A1','1','Parent Dotson','','610 947 129','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Richard Bethea','rbethea','fake@email.net','default','905-451-4921','9/19/2002','4521 Orenda Rd, Brampton ON, L6W 1Z2','0','Parent Bethea','','777 819 269','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Susan Garling','sgarling','fake@email.net','default','613-245-2480','10/22/1998','3943 MacLaren Street, Ottawa ON, K1P 5M7','1','Parent Garling','','496 308 495','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Richard Hamer','rhamer','fake@email.net','default','250-207-1496','6/29/2001','2606 Roger Street, Courtenay BC, V9N 2J6','0','Parent Hamer','','250 703 048','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jennifer Brooks','jbrooks','fake@email.net','default','514-996-6164','11/20/2004','1646 René-Lévesque Blvd, Montreal QC, H3B 4W8','1','Parent Brooks','','021 812 847','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'James Williams','jwilliams','fake@email.net','default','416-699-0249','1/30/2005','29 Pape Ave, Toronto ON, M4E 2V5','0','Parent Williams','','120 920 665','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wendy Bright','wbright','fake@email.net','default','905-983-8938','8/20/2000','1020 Lynden Road, Orono ON, L0B 1M0','1','Parent Bright','','050 082 130','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Monica Stewart','mstewart','fake@email.net','default','905-902-9269','6/18/2000','2422 Smith Avenue, Hamilton ON, L9H 1E6','1','Parent Stewart','','706 334 729','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joyce Patterson','jpatterson','fake@email.net','default','450-807-9581','12/30/2003','1321 rue Ellice, Valleyfield QC, J6T 4R2','1','Parent Patterson','','431 846 849','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Craig Cote','ccote','fake@email.net','default','780-447-9802','10/19/2001','4714 137th Avenue, Edmonton AB, T5M 3K3','0','Parent Cote','','168 353 951','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Carol Hogan','chogan','fake@email.net','default','604-506-2625','11/19/2002','4076 Cordova Street, Vancouver BC, V6B 1E1','1','Parent Hogan','','568 983 811','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Nathaniel Powell','npowell','fake@email.net','default','519-312-2820','7/18/2002','3637 Scotchmere Dr, Sarnia ON, N7T 7X5','0','Parent Powell','','158 995 845','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Spring Mendiola','smendiola','fake@email.net','default','613-732-0697','2/3/1999','2724 Isabella Street, Pembroke ON, K8A 5S5','1','Parent Mendiola','','282 512 136','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Peter Ansari','pansari','fake@email.net','default','604-966-3989','3/10/2005','1428 Brew Creek Rd, Whistler BC, V0N 1B0','0','Parent Ansari','','421 904 822','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Timothy Pierce','tpierce','fake@email.net','default','250-935-0097','7/17/1995','3332 Noble Rd, Cortes Island BC, V0P 1T0','0','Parent Pierce','','387 562 556','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Celia Moss','cmoss','fake@email.net','default','819-349-0283','10/27/1994','1123 rue Parc, Sherbrooke QC, J1L 1C9','1','Parent Moss','','597 083 385','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jose Meyer','jmeyer','fake@email.net','default','519-322-0824','11/17/1997','2798 Lauzon Parkway, Leamington ON, N8H 3B1','0','Parent Meyer','','747 135 796','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Leo Phillips','lphillips','fake@email.net','default','604-938-3261','5/27/2005','3750 Brew Creek Rd, Whistler BC, V0N 1B0','0','Parent Phillips','','362 812 786','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Curtis Bedell','cbedell','fake@email.net','default','819-573-3590','1/24/2001','568 Rue King, Sherbrooke QC, J1H 1R4','0','Parent Bedell','','625 084 132','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Horace Atwood','hatwood','fake@email.net','default','416-224-7218','10/23/1998','277 Dundas St, Toronto ON, M2N 2G8','0','Parent Atwood','','455 405 126','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mary Sutherland','msutherland','fake@email.net','default','514-594-1123','1/27/1999','4503 rue de la Gauchetière, Montreal QC, H3B 2M3','1','Parent Sutherland','','318 745 122','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Miguel Sanders','msanders','fake@email.net','default','613-558-7082','3/19/2002','290 Carling Avenue, Ottawa ON, K1Z 7B5','0','Parent Sanders','','429 552 128','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joseph Jackson','jjackson','fake@email.net','default','780-928-5903','2/9/2004','2306 5th Avenue, La Crete AB, T0H 2H0','0','Parent Jackson','','606 268 357','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Deborah Conklin','dconklin','fake@email.net','default','780-940-0262','1/10/1996','3432 184th Street, Edmonton AB, T5J 2R4','1','Parent Conklin','','260 708 433','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mike Coe','mcoe','fake@email.net','default','519-741-8568','8/21/2002','3779 Water Street, Kitchener ON, N2H 5A5','0','Parent Coe','','590 779 518','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Elaine Blackshear','eblackshear','fake@email.net','default','819-947-4164','3/5/2004','469 rue des Églises Est, La Reine QC, J0Z 2L8','1','Parent Blackshear','','326 571 288','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Maria Sherwood','msherwood','fake@email.net','default','867-897-0015','5/7/2003','3398 49th Avenue, Cape Dorset NU, X0A 0C0','1','Parent Sherwood','','492 331 095','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Donna Otis','dotis','fake@email.net','default','416-740-5742','12/20/1999','566 Islington Ave, Toronto ON, M9V 2X5','1','Parent Otis','','009 889 395','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Rosemary Judge','rjudge','fake@email.net','default','519-505-8742','5/22/2004','4727 Water Street, Kitchener ON, N2H 5A5','1','Parent Judge','','323 595 876','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Russell King','rking','fake@email.net','default','905-874-2848','8/8/2000','2595 Orenda Rd, Brampton ON, L6W 1Z2','0','Parent King','','568 579 585','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Gabriela Abramson','gabramson','fake@email.net','default','647-201-1283','8/13/1999','778 Eglinton Avenue, Toronto ON, M4P 1A6','1','Parent Abramson','','047 841 739','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mark Stebbins','mstebbins','fake@email.net','default','780-576-2015','8/19/1994','1076 47th Avenue, Newbrook AB, T0A 2P0','0','Parent Stebbins','','053 399 242','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Brandi Maloney','bmaloney','fake@email.net','default','204-357-1311','4/7/2004','3080 2nd Street, Cormorant MB, R0B 0G0','1','Parent Maloney','','190 325 597','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Samuel Hill','shill','fake@email.net','default','403-217-6938','8/12/1996','4986 Silver Springs Blvd, Calgary AB, T3E 0K6','0','Parent Hill','','163 653 124','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Janet Mickens','jmickens','fake@email.net','default','604-838-2977','11/10/2002','4075 Sixth Street, New Westminister BC, V3L 3C1','1','Parent Mickens','','774 109 904','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Arline Rees','arees','fake@email.net','default','416-836-5758','12/31/1997','4172 Bay Street, Toronto ON, M5J 2R8','1','Parent Rees','','131 590 903','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Marc Perry','mperry','fake@email.net','default','416-715-1007','9/2/2001','3049 Victoria Park Ave, Toronto ON, M2J 3T7','0','Parent Perry','','358 473 775','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Cynthia Hatch','chatch','fake@email.net','default','514-220-3441','12/3/2004','3720 Duke Street, Montreal QC, H3C 5K4','1','Parent Hatch','','766 047 468','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Luis Cupp','lcupp','fake@email.net','default','819-350-3321','8/23/2000','3033 St-Jacques Est, Arthabaska QC, G6P 5V8','0','Parent Cupp','','750 998 379','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sheryl Scroggins','sscroggins','fake@email.net','default','416-888-8109','3/3/2005','4141 Tycos Dr, Toronto ON, M5T 1T4','1','Parent Scroggins','','484 781 497','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dennis Chatfield','dchatfield','fake@email.net','default','647-686-7221','6/21/2001','2828 Bay Street, Toronto ON, M5J 2R8','0','Parent Chatfield','','132 468 604','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Gonzalo Draper','gdraper','fake@email.net','default','519-933-9654','5/12/2000','3349 York St, London ON, N5W 2S9','0','Parent Draper','','417 044 609','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kristen Johnson','kjohnson','fake@email.net','default','780-663-8133','7/22/1998','2548 Bloor Street, Ryley AB, T0B 4A0','1','Parent Johnson','','613 074 392','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Bobby Fuller','bfuller','fake@email.net','default','819-955-3192','11/10/2001','3035 Promenade du Portage, Hull QC, S4P 3Y2','0','Parent Fuller','','175 106 376','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Johnie Richardson','jrichardson','fake@email.net','default','250-733-6472','6/24/2002','507 Scotts Lane, Cobble Hill BC, V0R 1L1','0','Parent Richardson','','399 603 125','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Robert Brady','rbrady','fake@email.net','default','807-927-0410','4/20/1998','578 Nelson Street, Minaki ON, P0X 1J0','0','Parent Brady','','701 991 747','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Pamela Anthony','panthony','fake@email.net','default','819-372-1541','10/29/2000','2242 rue Saint-Édouard, Trois Rivieres QC, G9A 5S8','1','Parent Anthony','','265 010 017','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Thomas Calfee','tcalfee','fake@email.net','default','905-885-6957','9/3/1996','6 Toy Avenue, Port Hope ON, L1A 1N4','0','Parent Calfee','','777 324 328','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Brian Barr','bbarr','fake@email.net','default','306-789-7419','5/14/2001','2342 Wascana Parkway, Regina SK, S4S 2R3','0','Parent Barr','','667 817 910','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wayne Johnson','wjohnson','fake@email.net','default','613-746-1451','1/29/1995','1945 Montreal Road, Ottawa ON, K1L 6C7','0','Parent Johnson','','115 344 848','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Julie Ashcraft','jashcraft','fake@email.net','default','403-681-3256','2/15/1998','4615 Fourth Avenue, Calgary AB, T2P 0H3','1','Parent Ashcraft','','288 611 338','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joseph Looney','jlooney','fake@email.net','default','705-338-9143','10/13/2004','1096 James Street, Smooth Rock Falls ON, P0L 2B0','0','Parent Looney','','704 122 233','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Bobby Ryan','bryan','fake@email.net','default','250-639-3174','10/24/1996','3317 Burdett Avenue, Kitimat BC, V8C 1G3','0','Parent Ryan','','581 469 186','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Catherine Gallagher','cgallagher','fake@email.net','default','204-399-8637','6/30/2003','4826 St Marys Rd, Winnipeg MB, R2X 2Y7','1','Parent Gallagher','','683 104 525','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Christina Brown','cbrown','fake@email.net','default','867-561-2614','6/8/2004','3363 49th Avenue, Taloyoak NT, X0E 1B0','1','Parent Brown','','371 997 289','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dan Garza','dgarza','fake@email.net','default','604-808-9835','5/30/2005','3486 Quayside Dr, New Westminster BC, V3M 6A1','0','Parent Garza','','592 448 989','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Constance Mendoza','cmendoza','fake@email.net','default','418-574-5634','12/23/2000','119 Galt Street, Quebec QC, G2C 1S4','1','Parent Mendoza','','744 516 410','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Marianne Eicher','meicher','fake@email.net','default','905-901-6131','4/2/1999','1541 Speers Road, Oakville ON, L6J 3X4','1','Parent Eicher','','626 941 439','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Karen Brace','kbrace','fake@email.net','default','250-752-3307','12/6/1994','3008 Scotts Lane, Qualicum Beach BC, V0R 2T0','1','Parent Brace','','252 837 885','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Grace Hayes','ghayes','fake@email.net','default','807-983-4153','9/4/1999','636 Algoma St, Thunder Bay ON, P7A 4T3','1','Parent Hayes','','636 450 751','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Leonor Harris','lharris','fake@email.net','default','902-572-5767','2/7/2005','133 Black Avon Road, Heatherton NS, B0H 1R0','1','Parent Harris','','508 213 493','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Tricia Johnson','tjohnson','fake@email.net','default','902-576-2613','12/11/1996','4010 Higginsville Road, Waverley NS, B0N 2S0','1','Parent Johnson','','508 093 465','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Maria Alexander','malexander','fake@email.net','default','306-585-7158','12/20/1994','1629 Wascana Parkway, Regina SK, S4S 2R3','1','Parent Alexander','','776 184 491','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Latoya Beckett','lbeckett','fake@email.net','default','306-685-7194','11/3/1998','2369 Stoney Creek, Gainsborough SK, S4P 3Y2','1','Parent Beckett','','472 683 598','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Kerri Garcia','kgarcia','fake@email.net','default','705-362-5787','4/21/2000','2590 James Street, Hearst ON, P0L 1N0','1','Parent Garcia','','795 002 724','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joseph Vega','jvega','fake@email.net','default','416-873-2016','11/29/1994','4523 Pape Ave, Toronto ON, M4E 2V5','0','Parent Vega','','026 005 074','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Gary Bollinger','gbollinger','fake@email.net','default','250-297-9329','2/27/1997','4113 Stum Lake Road, Mcleese Lake BC, V0L 1P0','0','Parent Bollinger','','595 688 532','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'John Quick','jquick','fake@email.net','default','819-585-9061','2/18/1996','380 rue des Églises Est, Lac Des Ecorces QC, J0W 1H0','0','Parent Quick','','374 102 416','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Casey Brady','cbrady','fake@email.net','default','604-288-9825','11/20/1996','3862 Tolmie St, Richmond BC, V6X 2W7','1','Parent Brady','','115 612 491','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Boyd Dion','bdion','fake@email.net','default','780-973-3239','5/29/2005','4071 47th Avenue, Namao AB, T0A 2N0','0','Parent Dion','','517 971 198','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Marie Brooks','mbrooks','fake@email.net','default','709-458-4040','1/4/1998','1442 Pond Rd, Rocky Harbour NL, A1C 5H6','1','Parent Brooks','','346 297 609','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Stephanie Lacombe','slacombe','fake@email.net','default','514-286-3050','2/8/2005','1780 rue Ontario Ouest, Montreal QC, H2X 1Y8','1','Parent Lacombe','','341 060 614','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Erline Goldberg','egoldberg','fake@email.net','default','604-264-2874','1/1/2004','523 Tolmie St, Vancouver BC, V6M 1Y8','1','Parent Goldberg','','783 043 516','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Bobby Studer','bstuder','fake@email.net','default','705-672-0270','4/19/1999','1961 Silver St, Haileybury ON, P0J 1K0','0','Parent Studer','','790 206 361','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jeannette Pinner','jpinner','fake@email.net','default','905-871-5591','11/23/2000','153 Whitmore Road, Fort Erie ON, L0L 0L0','1','Parent Pinner','','768 063 414','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Linda Jones','ljones','fake@email.net','default','613-397-0753','1/2/2003','2103 Reserve St, Frankford ON, K0K 2C0','1','Parent Jones','','520 110 321','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jennifer Hicks','jhicks','fake@email.net','default','819-949-4717','11/3/2002','1418 rue des Églises Est, Angliers QC, J0Z 1A0','1','Parent Hicks','','548 136 712','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ray Linares','rlinares','fake@email.net','default','306-774-6235','6/29/2001','4875 Brand Road, Swift Current SK, S7K 1W8','0','Parent Linares','','622 825 933','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Robert Whitfield','rwhitfield','fake@email.net','default','250-629-8602','8/9/2001','2813 Brew Creek Rd, North Pender Island BC, V0N 2M1','0','Parent Whitfield','','179 748 231','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Marcia Copeland','mcopeland','fake@email.net','default','905-836-5959','12/19/2000','1598 Leslie Street, Newmarket ON, L3Y 2A3','1','Parent Copeland','','480 255 678','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joan Dupras','jdupras','fake@email.net','default','418-629-4859','3/2/2000','4325 Boulevard Laflèche, Amqui QC, G5J 1V5','1','Parent Dupras','','239 054 992','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sharon Figueroa','sfigueroa','fake@email.net','default','819-347-8979','1/2/2001','4866 Rue King, Sherbrooke QC, J1H 1R4','1','Parent Figueroa','','161 709 944','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Terri Stubbs','tstubbs','fake@email.net','default','506-721-8456','6/28/2001','1602 Prince William, Saint John NB, E2L 4V1','1','Parent Stubbs','','066 365 487','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Arnold Sin','asin','fake@email.net','default','604-974-7730','2/18/2001','4534 Robson St, Vancouver BC, V6B 3K9','0','Parent Sin','','095 902 045','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mable Yarbrough','myarbrough','fake@email.net','default','705-897-7946','2/15/2003','3190 Dry Pine Bay Rd, Blezard Valley ON, P0M 1E0','1','Parent Yarbrough','','195 087 051','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lloyd Burger','lburger','fake@email.net','default','780-891-7242','7/18/1997','807 Venture Place, Wabasca AB, T0G 2K0','0','Parent Burger','','594 731 275','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Carmen Hall','chall','fake@email.net','default','250-292-6938','7/30/2003','2971 Old Spallumcheen Rd, Hedley BC, V0X 1K0','1','Parent Hall','','718 414 402','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Daniel Sutphin','dsutphin','fake@email.net','default','250-212-0132','1/19/1998','4425 Hardy Street, Kelowna BC, V1Y 8H2','0','Parent Sutphin','','581 275 906','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Clyde William','cwilliam','fake@email.net','default','403-388-7671','2/23/1997','2780 9th Ave, Lethbridge AB, T1J 2J7','0','Parent William','','692 934 870','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Carol Mattes','cmattes','fake@email.net','default','250-255-3990','2/20/2005','862 Kinchant St, Quesnel BC, V2J 2R5','1','Parent Mattes','','659 331 607','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Carol Dixon','cdixon','fake@email.net','default','519-881-7691','3/25/2000','4538 Fallon Drive, Walkerton ON, N0G 2V0','1','Parent Dixon','','249 905 431','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Marcelina Werner','mwerner','fake@email.net','default','902-641-9765','7/14/2001','886 Bragg Road, Debert NS, B0M 1G0','1','Parent Werner','','416 757 300','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Lori Hedges','lhedges','fake@email.net','default','306-831-1580','12/16/1997','172 Brand Road, Rosetown SK, S7K 1W8','1','Parent Hedges','','793 107 095','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Earl Jones','ejones','fake@email.net','default','905-690-8849','5/13/1999','4042 Barton Street, Waterdown ON, L8G 3R4','0','Parent Jones','','310 401 666','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Elizabeth Larkin','elarkin','fake@email.net','default','902-530-5325','8/7/1996','423 Brook St, Bridgewater NS, B4V 1B1','1','Parent Larkin','','497 836 692','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'David Glenn','dglenn','fake@email.net','default','819-455-5133','5/29/2000','256 rue des Églises Est, Luskville QC, J0X 2G0','0','Parent Glenn','','667 009 203','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Martha Salinas','msalinas','fake@email.net','default','250-335-6731','2/3/2000','4166 Scotts Lane, Union Bay BC, V0R 3B0','1','Parent Salinas','','391 244 431','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ginger Alvarado','galvarado','fake@email.net','default','416-399-3032','1/31/2004','3613 Adelaide St, Toronto ON, M5H 1P6','1','Parent Alvarado','','783 287 956','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Steve Johnson','sjohnson','fake@email.net','default','519-878-3563','2/17/2002','1943 Dundas St, London ON, N6B 3L5','0','Parent Johnson','','308 339 357','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Frank Vaughn','fvaughn','fake@email.net','default','306-772-1179','12/10/2002','4239 Thatcher Avenue, Swift Current SK, S9H 3X7','0','Parent Vaughn','','079 500 773','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Mark Prince','mprince','fake@email.net','default','250-615-0944','12/24/2003','2782 Burdett Avenue, Terrace BC, V8G 1S2','0','Parent Prince','','515 995 579','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Darren Crockett','dcrockett','fake@email.net','default','250-712-8245','5/11/2000','3855 Hardy Street, Kelowna BC, V1Y 8H2','0','Parent Crockett','','185 929 858','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dean Jensen','djensen','fake@email.net','default','416-648-5365','5/21/2002','2773 Halsey Avenue, Toronto ON, M3B 2W6','0','Parent Jensen','','631 304 136','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Terrance Nolan','tnolan','fake@email.net','default','519-381-8635','4/15/1995','350 Scotchmere Dr, Sarnia ON, N7T 7T9','0','Parent Nolan','','609 285 200','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Randolph Reyes','rreyes','fake@email.net','default','819-736-4994','11/5/1998','3432 rue des Églises Est, Louvicourt QC, J0Y 1Y0','0','Parent Reyes','','168 002 541','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'John Murphy','jmurphy','fake@email.net','default','647-222-5888','4/21/2004','1424 Islington Ave, Toronto ON, M8V 3B6','0','Parent Murphy','','380 127 514','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Stacy Ybarra','sybarra','fake@email.net','default','905-294-9189','6/15/2000','3082 Davis Drive, Markham ON, L3P 2M4','1','Parent Ybarra','','701 842 437','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Leroy Martin','lmartin','fake@email.net','default','418-952-0178','9/9/1999','4254 rue Garneau, Quebec QC, G1V 3V5','0','Parent Martin','','565 256 476','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Nathan Lacroix','nlacroix','fake@email.net','default','604-270-8250','1/3/1998','1312 No. 3 Road, Richmond BC, V6X 2B8','0','Parent Lacroix','','188 844 609','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Leland Henry','lhenry','fake@email.net','default','306-662-9233','3/24/2005','926 Main St, Maple Creek SK, S0N 1N0','0','Parent Henry','','251 576 898','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Johanna Eastman','jeastman','fake@email.net','default','905-939-9313','5/12/2002','2287 Lynden Road, Schomberg ON, L0G 1T0','1','Parent Eastman','','374 799 344','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ollie James','ojames','fake@email.net','default','905-891-3253','5/17/2004','886 Central Pkwy, Port Credit ON, L5G 1K2','1','Parent James','','501 905 319','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wayne Yarbrough','wyarbrough','fake@email.net','default','905-634-8341','9/18/2001','3648 Maria St, Burlington ON, L7R 2G6','0','Parent Yarbrough','','056 715 733','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'David Howe','dhowe','fake@email.net','default','780-367-4301','11/2/1996','2913 Bloor Street, Willingdon AB, T0B 4R0','0','Parent Howe','','568 505 358','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Brenda Austin','baustin','fake@email.net','default','604-231-5980','12/26/1996','239 No. 3 Road, Richmond BC, V6X 2B8','1','Parent Austin','','098 117 161','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Cornell Beyer','cbeyer','fake@email.net','default','519-362-1557','12/17/2004','2776 Cork St, Guelph ON, N1H 2W8','0','Parent Beyer','','026 684 738','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Adam Johnson','ajohnson','fake@email.net','default','416-525-3020','11/27/1999','977 Merton Street, Toronto ON, M1L 3K7','0','Parent Johnson','','756 461 828','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Teresa Hatton','thatton','fake@email.net','default','905-384-3836','12/26/1998','1989 Davis Drive, Welland ON, L3B 3Z6','1','Parent Hatton','','239 845 076','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Wayne Santos','wsantos','fake@email.net','default','705-894-1507','9/17/1995','1952 Dry Pine Bay Rd, Gogama ON, P0M 1W0','0','Parent Santos','','735 223 182','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dianne Peterson','dpeterson','fake@email.net','default','250-312-7472','6/10/1998','308 Kinchant St, Kamloops BC, V2B 3J5','1','Parent Peterson','','337 318 604','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Julia Holmes','jholmes','fake@email.net','default','403-342-8090','7/1/1997','320 Galts Ave, Red Deer AB, T4N 2A6','1','Parent Holmes','','654 852 383','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Patricia Jones','pjones','fake@email.net','default','604-785-6258','5/24/2003','1374 Tanner Street, Vancouver BC, V5R 2T4','1','Parent Jones','','217 903 517','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dawn Anglin','danglin','fake@email.net','default','306-697-8524','8/25/2001','1111 Stoney Creek, Grenfell SK, S4P 3Y2','1','Parent Anglin','','418 935 722','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Sheila Knight','sknight','fake@email.net','default','819-688-8587','1/9/2003','4740 rue des Églises Est, St Faustin QC, J0T 2G0','1','Parent Knight','','177 939 311','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Douglas Foss','dfoss','fake@email.net','default','519-318-1169','12/9/1998','3806 Dundas St, London ON, N6B 3L5','0','Parent Foss','','372 107 367','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Caroline Rossetti','crossetti','fake@email.net','default','705-932-6912','1/30/2001','540 Lynden Road, Millbrook ON, L0A 1G0','1','Parent Rossetti','','085 294 239','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Jewel Fay','jfay','fake@email.net','default','604-529-4837','6/8/2000','3259 Sixth Street, New Westminster BC, V3L 3C1','1','Parent Fay','','439 069 485','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Charles Harris','charris','fake@email.net','default','905-351-4771','4/13/2004','4570 St. Paul Street, Niagara Falls ON, L2E 4E6','0','Parent Harris','','280 291 022','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'James Harrison','jharrison','fake@email.net','default','647-686-7717','10/13/2000','2961 Bay Street, Toronto ON, M5J 2R8','0','Parent Harrison','','234 077 477','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Nina Stout','nstout','fake@email.net','default','418-632-0808','8/16/2000','4872 St Jean Baptiste St, Petite Riviere St Francois QC, G0A 2L0','1','Parent Stout','','783 866 957','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Rose Zamora','rzamora','fake@email.net','default','647-435-8710','5/30/2000','2099 Horner Ave, Toronto ON, M8W 4Y4','1','Parent Zamora','','780 898 532','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'William Lynch','wlynch','fake@email.net','default','905-652-6003','6/8/2003','2386 Bayfield St, Woodbridge ON, L4L 8Z7','0','Parent Lynch','','473 971 364','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Brittany Porter','bporter','fake@email.net','default','306-522-7564','1/25/2000','3555 Wascana Parkway, Regina SK, S4S 2R3','1','Parent Porter','','706 345 337','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Scottie Meneses','smeneses','fake@email.net','default','613-821-6720','8/20/2004','3492 Hamilton Street, Metcalfe ON, K0A 2P0','0','Parent Meneses','','531 204 287','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Rosie Kelly','rkelly','fake@email.net','default','867-928-4063','3/25/2000','1070 49th Avenue, Hall Beach NU, X0A 0K0','1','Parent Kelly','','582 869 939','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Simone Vaughn','svaughn','fake@email.net','default','306-924-5836','2/13/1996','3039 Rose Street, Regina SK, S4P 3Y2','1','Parent Vaughn','','733 774 079','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Dorothy Monroe','dmonroe','fake@email.net','default','514-980-6748','12/7/1994','1526 rue Levy, Montreal QC, H3C 5K4','1','Parent Monroe','','594 287 146','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Joyce Logan','jlogan','fake@email.net','default','613-347-5267','6/6/1996','22 Dominion St, Lancaster ON, K0C 1N0','1','Parent Logan','','188 474 126','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Bertha Stephens','bstephens','fake@email.net','default','416-723-9093','3/5/2002','20 Eglinton Avenue, Toronto ON, M4P 1A6','1','Parent Stephens','','651 988 479','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Ruth McLain','rmclain','fake@email.net','default','450-209-4158','9/15/2001','3915 rue Saint-Antoine, St. Hyacinthe QC, J2T 1K9','1','Parent McLain','','041 228 479','2','0','1','0');
-INSERT INTO `users` VALUES (NULL,'Clifford Davis','cdavis','fake@email.net','default','250-713-4012','9/5/2004','3048 Wallace Street, Nanaimo BC, V9R 3A8','0','Parent Davis','','769 724 261','2','0','1','0');
+INSERT INTO `users` (`_id`, `name`, `username`, `password`, `dob`, `health`, `phone`, `parents`, `email`, `alergies`, `gender`, `level`, `shirt`, `change_pass`, `hash_pass`) VALUES
+(1, 'Mentor', 'mentor', '1$BiM8WZLf2M1bInKJ$25969865485d92357dbfc06228cf873f0ea7fdaedc13d9208f32e15389121a13bdfded92e48dd928d683d80dc4e4993d6c26fe39e441a9aed63cc8d1a136422f', '', '', '', '', '', '', '', 1, '', 0, 1),
+(2, 'Kim Nguyen', 'knguyen', '2007', '', '', '', '', '', '', 'Male', 1, '', 1, 0),
+(3, 'Landon Rohatensky', 'lrohatensky', 'wontwork', '', '', '', '', '', '', 'Male', 1, '', 0, 1),
+(4, 'Nelson Hackewich', 'nhackewich', '2007', '', '', '', '', '', '', 'Male', 1, '', 0, 0),
+(5, 'Paul Hewitt', 'phewitt', '2007', '', '', '', '', '', '', 'Male', 1, '', 1, 0),
+(6, 'Cole Novak', 'cnovak', '2007', '', '', '', '', '', '', 'Male', 1, '', 0, 0),
+(7, 'Brett Mayson', 'bmayson', '1$UjU2Bo2iVrcMbi5p$272f8f0a14d2eb104f3aa3303e43255dd4260228d6c9fad37510b523df78b427ab8017dd60078de27770f66ede4991d0056d51e225e8b2ee05dc26f1f8a9f07b', '', '', '', '', '', '', 'Male', 1, '', 0, 1),
+(8, 'Lucas Kuffner', 'lkuffner', '2007', '', '', '', '', '', '', 'Male', 1, '', 1, 0),
+(9, 'Shambhavi Kalra', 'skalra', '2007', '', '', '', '', '', '', 'Female', 1, '', 0, 0),
+(10, 'Connor Brezinsky', 'cbrezinsky', '2007', '', '', '', '', '', '', 'Male', 1, '', 1, 0),
+(11, 'Ryan Aird', 'raird', '2007', '', '', '', '', '', '', 'Male', 1, '', 1, 0),
+(500, 'Alex Karnitsky', '_akarnitsky', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(501, 'Alex Leveille', '_aleveille', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(502, 'Ali Piwowar', '_apiwowar', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(503, 'Alex Styles', '_astyles', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(504, 'Anna Tunison', '_atunison', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(505, 'Ben Quesnel', '_bquesnel', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(506, 'Cole Perlett', '_cperlett', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(507, 'Daniel Sexton', '_dsexton', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(508, 'Ethan Anderson', '_eanderson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(509, 'Evan Hewitt', '_ehewitt', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(510, 'Evan Lozinski', '_elozinski', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(511, 'Grant Atter', '_gatter', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(512, 'Garion Carlson', '_gcarlson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(513, 'Jason Brouwers', '_jbrouwers', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(514, 'Jeremy Jordan', '_jjordan', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(515, 'Jessica Kopan', '_jkopan', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(516, 'Kai Charlton', '_kcharlton', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(517, 'Laurie Arthur', '_larthur', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(518, 'Marln Arnall', '_marnall', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(519, 'Mason Leidal', '_mleidal', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(520, 'Matthew Stinnen', '_mstinnen', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(521, 'Nicolas Méthot', '_nmethot', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(522, 'Roger Boutin', '_rboutin', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(523, 'Ryan MacRobbie', '_rmacrobbie', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(524, 'Steven Chamberlain', '_schamberlain', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(525, 'Shivaun Eberle', '_seberle', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(526, 'Scott Mepham', '_smepham', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(527, 'Sean Taylor', '_staylor', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(528, 'Tylor Froese', '_tfroese', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(12, 'Taylor Petrychyn', '_tpetrychyn', '2007', '', '', '', '', '', '', 'Male', 1, '', 1, 0),
+(530, 'Billy Kriska', '_bkriska', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(531, 'Connor Burns', '_cburns', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(532, 'Derek Ball', '_dball', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(533, 'Derek Cameron', '_dcameron', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(534, 'Evan Kupchyk', '_ekupchyk', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(535, 'Jeffrey Beitel', '_jbeitel', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(536, 'Mitchell MacNaughton', '_mmacnaughton', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(537, 'Jacob Braumberger', '_jbraumberger', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(538, 'Justice Spakin', '_jspakin', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(539, 'Justice Sparvier-Kinequon', '_jsparvierkinequon', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(540, 'Kenny Kriska', '_kkriska', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(541, 'Mitchell Zimmer', '_mzimmer', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(542, 'Rowan Tubello', '_rtubello', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(543, 'Sydnee Hastings', '_shastings', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(544, 'Sean Hope', '_shope', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(545, 'Arthur Jack', '_ajack', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(546, 'Aidan Piwowar', '_aipiwowar', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(547, 'Brayden Belleville', '_bbelleville', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(548, 'Brendan Chmielnicki', '_bchmielnicki', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(549, 'Chris Raedeke', '_craedeke', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(550, 'Colby Thompson', '_cthompson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(551, 'Evan Anderson', '_evanderson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(552, 'James Dillon', '_jdillon', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(553, 'Joshua Moats', '_jmoats', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(554, 'Kaeden Holowatuk', '_kholowatuk', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(555, 'Keone Rohatensky', '_krohatensky', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(556, 'Mark Romanow', '_mromanow', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(557, 'Stephen Modderman', '_smodderman', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(558, 'Tyler Oliver', '_toliver', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(559, 'A Huber', '_ahuber', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(560, 'Adam Smith', '_asmith', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(561, 'Aaron Thomson', '_athomson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(562, 'Ben Bodnarchuk', '_bbodnarchuk', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(563, 'Colten Molnar', '_cmolnar', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(564, 'Destin Martin', '_dmartin', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(565, 'Jarom Hall', '_jhall', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(566, 'Jeremy Heymen', '_jheymen', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(567, 'Jayden Vernon', '_jvernon', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(568, 'Kristina Langgard', '_klanggard', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(569, 'L Bartha', '_lbartha', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(570, 'Morgan Garneau', '_mgarneau', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(571, 'Mykola Kyba', '_mkyba', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(572, 'Michael Rivera', '_mrivera', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(573, 'Nick Volsky', '_nvolsky', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(574, 'Oksana Kyba', '_okyba', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(575, 'Paul Anderson', '_panderson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(576, 'Quinton Chastkiewicz', '_qchastkiewicz', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(577, 'Seth Baker', '_sbaker', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(578, 'Spencer Medford', '_smedford', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(579, 'Zachary Huot', '_zhout', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(580, 'Simon Tubello', '_stubello', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(581, 'Adam Carlson', '_acarlson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(582, 'Alex Niebergall', '_alniebergall', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(583, 'Avner Phen', '_aphen', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(584, 'Ben Leech', '_bleech', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(585, 'Chace Burnett', '_cburnett', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(586, 'Dylan Lazar', '_dlazar', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(587, 'Isaac Cicansky', '_icicansky', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(588, 'Khalil Anderson', '_kanderson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(589, 'Kelsey Bilokreli', '_kbilokreli', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(590, 'Kyle Morris', '_kmorris', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(591, 'Kathleen Yao', '_kyao', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(592, 'Liam Kilbride', '_lkilbride', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(593, 'Matthew Donaldson', '_mdonaldson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(594, 'Matthew Yao', '_myao', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(595, 'Nolan Antochow', '_nantochow', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(596, 'Nathan Power', '_npower', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(597, 'Payton Gilbertson', '_pgilbertson', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(598, 'Pieter Luttig', '_pluttig', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(599, 'Quinn Taylor', '_qtaylor', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(600, 'Thor O\'Connor', '_toconnor', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(601, 'V Nicholas', '_vnicholas', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(602, 'Ariston Bodnarchuk', '_abodnarchuk', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(603, 'Aaron Wanjala', '_awanjala', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(604, 'Gabe Latoski', '_glatoski', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(605, 'Josh Latoski', '_jlatoski', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(606, 'Marc Barry', '_mbarry', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(607, 'Max Liu', '_mliu', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(608, 'Nick Giles', '_ngiles', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(609, 'Tyson Bennett', '_tbennett', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(610, 'Cole Crouter', '_ccrouter', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(611, 'Donovan Cunningham', '_dcunningham', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(612, 'Joseph Bardestani', '_jbardestani', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(613, 'Lucas Anderson', '_landerson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(614, 'Lucas Fink', '_lfink', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(615, 'Mackenzie Amundsen', '_mamundson', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(616, 'Mason Antrobus', '_mantrobus', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(617, 'Michael Elliott', '_melliott', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(618, 'Noah Chammartin', '_nchammartin', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(619, 'Jim Duggleby', '_jdubbleby', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(620, 'Sage Bueckert', '_sbueckert', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(621, 'Stephen Lylyk', '_slylyk', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(622, 'Sayer Weselak', '_sweselak', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(623, 'Tyrel Delorme', '_tdelorme', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(624, 'Bryce Nichol', '_bnichol', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(625, 'Brock Van Alstine', '_bvan-alstine', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(627, 'Edward Liu', '_eliu', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(628, 'Isaac Kalyniuk', '_ikalyniuk', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(629, 'Isaiah Klaudeman', '_iklaudeman', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(630, 'Jaxon Fuessel', '_jfuessel', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(631, 'Jonas Guilbault', '_jguilbault', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(632, 'Jordan Seitz', '_jseitz', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(633, 'Jacob Viher', '_jviher', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(634, 'J Yauck', '_jyauck', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(635, 'Kim Guo', '_kguo', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(636, 'Koston Wendt', '_kwendt', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(637, 'Liam Vuong', '_lvuong', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(638, 'Matt Klimchuk', '_mklimchuk', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(639, 'Taylor Fergusson', '_tfergusson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(640, 'Tejas Leong', '_tleong', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(641, 'Tyler Munson', '_tmunson', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(1200, 'William Whittington', 'wwhittington', '1$bphLiqdbM0hntDAl$7ad6e7dea33440a974c85bfe1927fb67e00019ecdc0cb31420657ca29a5b8ccefb2a6d980eb2f51218659852176c99700dbbb76883d609a124b58b7a23e2cfc5', '', '1821624952JY', '7055425949', 'Clair Whittington', 'agentclair@icloud.com', '', 'Male', 2, 'Adult XL', 0, 1),
+(643, 'Xavier Russell-Maclean', '_xrussell-maclean', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(644, 'Stanislav Fedyk', '_sfedyk', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(645, 'Sam Krieger', '_skrieger', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(646, 'Cohen Bews', '_cbews', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(647, 'Jordan Smith', '_jsmith', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(648, 'Nathan Sarma', '_nsarma', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(649, 'Shawn Alger', '_salger', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(650, 'Valerie Li', '_vli', '', '', '', '', '', '', '', 'Female', 0, '', 0, 0),
+(651, 'Mark Mydelski', '_mmydelski', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(652, 'Joshua Cossitt', '_jcossitt', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(653, 'Liam Lachambre', '_llachambre', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(654, 'Logan Hesse', '_lhesse', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(655, 'Matthew Hilsenteger', '_mhilsenteger', '', '', '', '', '', '', '', 'Male', 0, '', 0, 0),
+(1000, 'Davis Giroux', 'dgiroux', 'default', '04-04-2001', '325020515', '3065337566', 'Karen Cyrenne / Scott Giroux', 'karen.cyrenne@sasktel.net', 'none', 'Male', 2, 'Adult Medium', 1, 0),
+(1001, 'Austin Dvernichuk', 'advernichuk', 'default', '02-06-2001', '709753136', '306-581-7137', 'Rhonda Dvernichuk', 'dvernichuk@sasktel.net', 'Penicillin Allergy', 'Male', 2, 'Adult Medium', 1, 0),
+(1002, 'Matthew Deyenberg', 'mdeyenberg', 'default', '12-04-2003', '356741516', '3065223884', 'Lorne Deyenberg', 'derbykarrie@hotmail.com', '', 'Male', 2, ' Adult Large ', 1, 0),
+(1003, 'Mark Heinrichs', 'mheinrichs', 'default', '06-07-2003', '815 894 368', '306-352-3631', 'Therese Kenny', 'heing@sasktel.net', '', 'Male', 2, 'Adult Medium', 1, 0),
+(1004, 'Rolf Thomas Holzkaemper', 'rholzkaemper', 'default', '16-05-2000', '842128042', '306-591-2026', 'Rolf or Shannon Holzkaemper', 'holzkaemper@hotmail.com', 'penicillan and sulfa', 'Male', 2, 'Adult Large', 1, 0),
+(1007, 'Josh Blayone', 'jblayone', 'default', '29-12-2003', '922403643', '306-727-3131', 'Carmen Blayone', 'carmen@blayone.com', '', 'Male', 2, 'Adult Medium', 1, 0),
+(1008, 'Quinn Parrott', 'qparrott', 'default', '13-02-2001', '588109541', '3065267435', 'Tracy Parrott ', 'tracyparrott4@gmail.com', 'None known', 'Male', 2, 'Adult Medium', 1, 0),
+(1009, 'Ryan Robertson', 'rrobertson', '1$s6VnzQe82+WJBjeY$e56c5399c0a0ec25d2d280592bef42357b0e1d8717cdbbc875730fcbfc4713185f542ed6911b4d94b6ffdecff04f8d81032841505b97c9e200f23315a9b1eb62', '29-02-2004', '749137347', '3065331951', 'Cheryl Robertson ', 'cherylk@accesscomm.ca', '', 'Male', 2, 'Adult Small', 0, 1),
+(1010, 'Rhiannon Riddell', 'rriddell', '1$lI0yRxkWt5Csq+IC$d8ae7aa9bcdd850221a71c293d3ee3897b40736240227b5816f44f9f8ae9cfcc9fa09c57258cd277cc5a006984abca256ffcecc181bbac529e2a5905044e1a3e', '17-02-2002', '367131943', '306-536-3641', 'Regan Riddell', 'srriddell@hotmail.com', 'None', 'Female', 2, 'Adult Medium', 0, 1),
+(1011, 'Derek Frombach', 'dfrombach', 'default', '08-09-2000', '875425488', '3065852402', 'Peter Frombach', 'psfrombach@accesscomm.ca', 'None', 'Male', 2, 'Adult Medium', 1, 0),
+(1012, 'Rhys Parrott', 'rparrott', '1$x0/+Riu6UkuVf5Zg$ddf1efb07717639358fbaaa20f39bccde5579186c46133a11555d62ec42a01774e09947bebf387212b2bb9a181db7b2efced668aee3bfc1aa455e5d730dbd33b', '21-10-2003', '574607749', '+1 03065267435', 'Tray Parrott', 'tracyparrott4@gmail.com', 'None', 'Male', 2, 'Adult Small', 0, 1),
+(1013, 'Bennett Eidsness', 'beidsness', 'default', '23-11-1999', '243485921', '306-584-9736', 'Brent', 'brent.eidsness@gov.sk.ca', '', 'Male', 2, 'Adult Large', 1, 0),
+(1014, 'Devin Bjola Matileg\r\n', 'dmatileg', 'default', '09-04-2001', '924857163', '3065500023', 'Carrie Bjola-Matileg', 'carrielyn0521@yahoo.com', '', 'Male', 2, 'Adult Small', 1, 0),
+(1015, 'Travis Brady', 'tbrady', 'default', '01-11-1999', '612291464', '306-545-0009', 'Cheryl Brady', 'chicky465@hotmail.com', 'None', 'Male', 2, 'Adult Large', 1, 0),
+(1016, 'Taha Khokhar', 'tkhokhar', 'default', '15-11-2001', '312 717 504', '(306) 526-5646', 'AEDA KHOKHAR', 'aeda2k@yahoo.ca', '', 'Male', 2, 'Adult Large', 1, 0),
+(1017, 'Kaitlin Zastrow', 'kzastrow', '1$fdlBhu2kvxJFk3HI$a194370d6e47cfee75b29f21304ec2ef5e39877ad84cfb6e45acade738af8f2256d426ae8fb22d6d0aa352bbf8acc6c1b986e5f907a0ee87d1240e4c80dbcd66', '23-04-2001', '500 675 384', '306-525-4730', 'Kristen Engele', 'kengele19@gmail.com', '', 'Female', 2, 'Adult Large', 0, 1),
+(1018, 'Nicholas Martin', 'nmartin', 'default', '11-03-2003', '168490404', '3069407228', 'Deborah Martin', 'articulatemasonry@yourlink.ca', '', 'Male', 2, 'Youth Medium', 1, 0),
+(1019, 'Jordan Zellweger', 'jzellweger', 'default', '09-01-1998', '593076982', '13067215181', 'Kim Ashston', 'kimashton69@gmail.com', 'aspergers', 'Male', 2, 'Adult Medium', 1, 0),
+(1020, 'Austin Kearns', 'akearns', 'default', '11-03-2000', '952101483', '3065432369', 'Raelee Kearns ', 'kearns@accesscomm.ca', '', 'Male', 2, 'Adult Medium', 1, 0),
+(1021, 'Matthew Reddekopp', 'mreddekopp', '1$CIFAw93OLYIloY5c$0655634f2fe6d0684097ea6877132b8a78b3ab75f60b08c5aa10da53387a51fdb8089f241402d07b6bd18e0ee512c25792f8804804ad5d75782f5b89d2e98ba0', '13-09-2000', '842128891', '306 584-7606', 'Shelley Reddekopp', 'shelley@reddekopp.com', 'Gluten Free Diet', 'Male', 2, 'Adult Large', 0, 1),
+(1022, 'Eli Garden-Hall', 'egarden-hall', 'default', '24-03-2004', '456173161', '3067578289', 'Colin Hall', 'colin@bodhitreeyoga.com', 'Hardcore vegetarian', 'Male', 2, 'Youth Large', 1, 0),
+(1023, 'Mark Luu', 'mluu', 'default', '22-10-2002', '865506388', '306-790-9709', 'Kim Luu', 'kim.l2918@gmail.com', '', 'Male', 2, 'Adult Medium', 1, 0),
+(1024, 'Finn Burke Eggertson', 'feggertson', '1$kBHiuoRdl2WWZzEc$e3042ad068560bf02a3501aef62cc15bca8795a6f800470e7d5f57f87f4e9dc49abe276fa497dfff3a9d306cea96b12f28c999b6c4994763a13a305c893e5813', '13-02-2000', '282446273', '3065966741', 'Kelley Jo Burke', 'kelley.jo48@gmail.com', 'Autism spectrum, anxiety and ADD', 'Male', 2, 'Adult XL', 0, 1),
+(1025, 'Tiger Huber', 'thuber', 'default', '12-03-2016', '182227448', '306-530-3778', 'dolly huber', 'dollyhuber@sasktel.net', 'adhd', 'Male', 2, 'Youth Medium', 1, 0),
+(1026, 'Basia Klaudeman', 'bklaudeman', 'default', '20-05-2016', '731352920', '3062090845', 'Candy Klaudeman', 'cklaudeman@sasktel.net', 'Has had past concussion, approximately one year ago. ', 'Female', 2, 'Youth Medium', 1, 0),
+(1027, 'Garry Lukovszki', 'glukovszki', '1$p16Zy6reqEqsrGSF$cdb99f34ebd0867a3baaa7d5876660eaf463e73f9334e12829fc1496826e8eac51d8dbdc4d9657a804b008ac3746632aaec2a18d084888f54676b2a7878f5edf', '12-03-2003', '168470667', '306-501-0223', 'Cynthia Lukovszki', 'lostyrhsky@aol.com', 'penecillin allergy', 'Male', 2, 'Adult Medium', 0, 1),
+(1028, 'Connor Lindsay', 'clindsay', 'default', '10-10-2001', '797232613', '306-586-7479', 'Laurie Lindsay', 'laurie.lindsay@uregina.ca', 'ASD (high functioning); ADHD; and ODD for which he takes medication - he is very afraid of wasps/bees in the outdoors', 'Male', 2, 'Adult XL', 1, 0),
+(1029, 'Zain Khan', 'zkhan', 'default', '12-01-2001', '168485788', '(306)737-2214', 'Saqib Khan', 'saqib.khan@uregina.ca', 'Asthma, allergic to kiwi fruit', 'Male', 2, 'Youth Large', 1, 0),
+(1030, 'Tyler Junek', 'tjunek', 'default', '01-12-2000', '500674094', '306-585-2041', 'Denise Junek', 'djunek@sasktel.net', 'none', 'Male', 2, 'Adult Medium', 1, 0),
+(1031, 'Javin Zatwarniski', 'jzatwarniski', '1$OjCuZWueuy1B/b3I$2665eeea1972f8bfa1115863fe7be1acd53c6e95a5661a8f6d6f8fa47b820a98c1bceb1fe6f2a2d080b8758bbca33b448ccd57c2cef97a93ab74ec8ba5c08574', '16-04-2003', '114384452', '3065867819', 'Warren and Marcella', 'warren945@hotmail.com', 'Allergies to dust, mold, cats, dogs. No known food allergies.', 'Male', 2, 'Youth Medium', 0, 1),
+(1032, 'Dalton Martel', 'dmartel', '1$pec/fw6e9HMGV5Qp$08287a3a8411dbae2b83138be6ca27cae9aa23fd9588353d14f6b9ce175a28c339528fdb054460dd4367e745c88fa641587b054205d3a510b1b248855471c0cf', '07-06-2003', '815894201', '13065364906', 'Trina Martel', 'Tntmartel@sasktel.net', 'A.D.H.D.', 'Male', 2, 'Youth Large', 0, 1),
+(1033, 'Aj Donald', 'adonald', '1$v4LUmcPn+k/v6oLH$fa12940f7fa4fb1303dde51adac49d42d1acef41dc8e5c2ddcc600fa0d1cdfb02649c0b2279f67e6c50ceaa5f8a9f539138d690e894b8dc5b8010a06a42a7dfd', '17-07-2004', '552396923', '3068480569', 'Kevin Donald', 'debbie.donald@schr.sk.ca', 'Penecillin', 'Male', 2, 'Adult Large', 0, 1),
+(1034, 'Caleb Milo', 'cmilo', 'default', '30-05-2000', '709769318', '3062052642', 'Carla Barkman', 'carlamilo@hotmail.com', '', 'Male', 2, 'Adult XL', 1, 0),
+(1035, 'Colin Stark', 'cstark', 'default', '23-07-1999', '168458462', '306-531-8948', 'Jacquie Stark', 'jacquie_stark@yahoo.ca', 'Mild CP, High Functioning Autism', 'Male', 2, 'Adult Medium', 1, 0),
+(1036, 'Kyler Biever', 'kbiever', 'default', '13-10-2002', '943 857 139', '306-541-3225', 'Tracy Biever', 'ropic@myaccess.ca', 'Peanut Allergy', 'Male', 2, 'Adult Small', 1, 0),
+(1037, 'Sargun Kaur', 'skaur', 'default', '09-09-2000', '114423997', '(306) 999 3839', 'Manjinder Thind', 'thind.in@gmail.com', '', 'Female', 2, 'Youth Large', 1, 0),
+(1038, 'Sukhman Singh', 'ssingh', 'default', '08-11-2001', '142001600', '(306) 999 3839', 'Manjinder Thind', 'thind.in@gmail.com', '', 'Male', 2, 'Adult Small', 1, 0),
+(1039, 'William Engel', 'wengel', '', '', '', '', '', '', '', 'Male', 2, '', 1, 0),
+(1041, 'Amelia Davies Domararzi', 'adavies', '1$h7HL/LadgDlQYwDo$7fa09496ea8e30483a592e5c17e8f8a32f3d41a0f26d8440f37bf52d95100a8cbd0c3e8344d55cece4a5f848282a756d45263a828d90ba389ae78e1801ef8ab3', '19-11-2001', '049904 - phin 119 547 679', '12035097301', 'Kristy Davies', 'kristytdavies@gmail.com', '', 'Female', 2, 'Adult Medium', 0, 1),
+(1042, 'Arden Giroux', 'agiroux', 'camp2017', '11-10-2003', '865 509 611', '306-789-0140', 'Scott Giroux', 'scott.sk@live.com', 'Allergic to scallops', 'Male', 2, 'Adult Small', 1, 0),
+(1043, 'Myles Obrigewitsch', 'mobrigewitsch', 'camp2017', '23-09-2003', '343508656', '306-584-3078', 'Karen & Gerry Obrigewitsch', 'gerryo@sasktel.net', '', 'Male', 2, 'Adult Small', 1, 0),
+(1045, 'Zak Asghar', 'zasghar', 'camp2017', '21-02-2003', '636351505', '3065220489', 'Muhammad', 'm_asghar@hotmail.com', '', 'Male', 2, 'Youth Large', 1, 0),
+(1044, 'Tyler Harke Miles', 'tharke', 'camp2017', '24-06-2003', '749 713 909', '306 209 3209', 'Arno', 'heyrnork@gmail.com', 'None', 'Male', 2, 'Adult XL', 1, 0),
+(1046, 'Ben Lin', 'blin', '1$LPFR6x32e7wJfxPZ$85ded662a0e9c18eac3bfbf8c7333dac2b1c84ce1f9d21691b7936bc7a105ad4f66271755152b7b96a9986ee0f88e32389d06a22906a18f018873fc83c70ba07', '08-08-2000', '719343186', '3064910153', 'liang', 'ben20000808@icloud.com', '', 'Male', 2, 'Adult Medium', 0, 1),
+(1047, 'Greydon Wilchowy', 'gwilchowy', 'camp2017', '06-05-2004', '875450008', '306-530-0192', 'Carla Wilchowy', 'carla.wilchowy@csc-scc.gc.ca', 'Greydon is on Apo-Methylphenidate 20 mg - at lunch - its a ritalin type - will send it in a bubble pack for the week', 'Male', 2, 'Adult Large', 1, 0),
+(1048, 'Tyler Young', 'tyoung', 'camp2017', '13-03-2004', '731352440', '306-535-2008', 'Tennille Young', 'youngteno@sasktel.net', 'none', 'Male', 2, 'Adult Medium', 1, 0),
+(1049, 'Derek Kreutzer', 'dkreutzer', 'camp2017', '04-02-2005', '552398446', '306-535-1278', 'Dean & Sylvia Kreutzer', 'dean.kreutzer@gmail.com', 'none', 'Male', 2, 'Adult Small', 1, 0),
+(1050, 'Gavin Venables', 'gvenables', 'camp2017', '04-01-2003', '263 679 195', '306-529-4124', 'Natasha Venables', 'ns.venables@gmail.com', '', 'Male', 2, 'Adult Small', 1, 0),
+(1051, 'Zach Mihalicz', 'zmihalicz', 'camp2017', '10282002', '890706034', '3067467387', 'Glen & Crystal Mihalicz', 'gandcmihalicz@sasktel.net', 'none', 'Male', 2, 'Adult Medium', 1, 0),
+(1201, 'Nick Neault', 'nwheeler', 'camp2017', '10-09-2003', '644827270', '3065197759', 'Sean Carrier', 'Karalwheeler@gmail.com', 'Hemophilia severe B', 'Male', 2, 'Adult XL', 1, 0),
+(1053, 'Veronica Hennig', 'vhennig', 'camp2017', '31-05-2002', '193883937', '306-789-9863', 'Jason Hennig', 'jason.hennig@gmail.com', 'Autistic', 'Female', 2, 'Adult Large', 1, 0),
+(1054, 'Ryan Carignan', 'rcarignan', '1$IbxZCRfHdvw0nuB+$61c45248ed16d723c177e7313c7567c891b0cf5c5aaa496349c5dbe1ad0303c355ed47b1d1ee7576fe4f4571169140e569ea8b83beece68cadc7471e165fa8e9', '08-08-2002', '243493835', '3062019411', 'Darla & Denis Carignan', 'the6carignans@gmail.com', '', 'Male', 2, 'Adult Small', 0, 1),
+(1203, 'Kyler Chieng', 'kchan', 'camp2017', '07-12-2002', 'Alberta health #71470-7521', '306-586-4062', 'Catherine Chan', 'clchan@sasktel.net', 'nil', 'Male', 2, 'Youth Large', 1, 0),
+(1202, 'Sam Power', 'spower', 'camp2017', '20-09-2003', '114373779', '306-529-4757', 'Kenda Power', 'kenda.power@rqhealth.ca', 'no', 'Male', 2, 'Adult Small', 1, 0),
+(1056, 'Karson Yee', 'kyee', '1$KUDzejatCio3pzzD$1928bb4e14bd3d49c90831307b862141b7dd3750baa5e85149642c7fab9103163dfa70eee2167e17549c85b399190fb278d229f113915e770e5b5d9149170675', '03-02-2004', '222380497', '3067374409', 'Gordie Yee', 'ggkktyy@accesscomm.ca', 'mild case of eczyma', 'Male', 2, 'Adult Small', 0, 1);
 
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+--
+-- Indexes for dumped tables
+--
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+--
+-- Indexes for table `attend`
+--
+ALTER TABLE `attend`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `camps`
+--
+ALTER TABLE `camps`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `checkin`
+--
+ALTER TABLE `checkin`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `completions`
+--
+ALTER TABLE `completions`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `payments`
+--
+ALTER TABLE `payments`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `payment_methods`
+--
+ALTER TABLE `payment_methods`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `projects`
+--
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `requirements`
+--
+ALTER TABLE `requirements`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `sessions`
+--
+ALTER TABLE `sessions`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `session_types`
+--
+ALTER TABLE `session_types`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `attend`
+--
+ALTER TABLE `attend`
+  MODIFY `_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=464;
+--
+-- AUTO_INCREMENT for table `camps`
+--
+ALTER TABLE `camps`
+  MODIFY `_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `checkin`
+--
+ALTER TABLE `checkin`
+  MODIFY `_id` int(4) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `completions`
+--
+ALTER TABLE `completions`
+  MODIFY `_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+--
+-- AUTO_INCREMENT for table `payments`
+--
+ALTER TABLE `payments`
+  MODIFY `_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
+--
+-- AUTO_INCREMENT for table `payment_methods`
+--
+ALTER TABLE `payment_methods`
+  MODIFY `_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `projects`
+--
+ALTER TABLE `projects`
+  MODIFY `_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `requirements`
+--
+ALTER TABLE `requirements`
+  MODIFY `_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `sessions`
+--
+ALTER TABLE `sessions`
+  MODIFY `_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+--
+-- AUTO_INCREMENT for table `session_types`
+--
+ALTER TABLE `session_types`
+  MODIFY `_id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1204;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2017-08-03  5:41:27
