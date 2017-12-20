@@ -4,4 +4,9 @@
        <directory suffix="Test.php">./build/phpunit/Campers</directory>
     </testsuite>
   </testsuites>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix="Test.php">./build/phpunit/Campers</directory>
+    </whitelist>
+  </filter>
 </phpunit>
