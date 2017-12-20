@@ -1,0 +1,7 @@
+<phpunit bootstrap="dash/libs/campers.php">
+  <testsuites>
+    <testsuite>
+       <directory suffix="Test.php">./build/phpunit/Campers</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

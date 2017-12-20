@@ -3,3 +3,6 @@ test:
     - python ./build/tests/filenames.py .
     - python ./build/tests/existence.py .
     - sh ./build/tests/line-endings.sh
+  post:
+    - php vendor/bin/phpunit --coverage-clover build/coverage/xml
+    - php vendor/bin/codacycoverage clover build/coverage/xml
