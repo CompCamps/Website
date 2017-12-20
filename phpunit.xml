@@ -6,7 +6,7 @@
   </testsuites>
   <filter>
     <whitelist processUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">.</directory>
+      <file>./dash/libs/campers.php</file>
     </whitelist>
   </filter>
 </phpunit>
