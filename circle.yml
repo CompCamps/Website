@@ -6,7 +6,7 @@ dependencies:
   pre:
     - sudo apt update; sudo apt install ruby-sass
   override:
-    - npm install uglifyjs -g
+    - npm install uglify-js -g
 
 compile:
     override:
