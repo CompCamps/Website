@@ -5,7 +5,7 @@ dependencies:
 compile:
     override:
       - mkdir css
-      - sass --update resources/www/scss:ww/css
+      - sass --update resources/www/scss:www/css
 
 test:
   override:
