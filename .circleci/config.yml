@@ -11,7 +11,7 @@ jobs:
       - checkout
 
       - run: sudo apt update; sudo apt install ruby-sass
-      - run: npm install uglify-js -g #TODO install locally and cache the dependency
+      - run: sudo npm install uglify-js -g#TODO install locally and cache the dependency
 
       # Download and cache dependencies
       - restore_cache:
