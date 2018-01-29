@@ -38,24 +38,31 @@ jobs:
           paths:
             - ~/build-output
 
-  test:
+  php-test:
     docker:
       - image: circleci/php:latest
-      - image: circleci/python:2.7.12
 
     working_directory: ~/build-output
 
     steps:
       - restore_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      # run tests!
       - run: php vendor/bin/phpunit --coverage-clover build/coverage/xml
 
+  python-test:
+    machine:
+      enabled: true
+
+    working_directory: ~/build-output
+
+    - steps:
+      - restore_cache:
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - run: python2.7 ./build/tests/filenames.py www
       - run: python2.7 ./build/tests/existence.py www
       - run: sh ./build/tests/line-endings.sh
 
-  deploy:
+  deploy-testing:
     machine:
       enabled: true
 
@@ -72,12 +79,16 @@ workflows:
   build-and-deploy:
     jobs:
       - build
-      - test:
+      - php-test:
           requires:
             - build
-      - deploy:
+      - python-test:
           requires:
-            - test
+            - build
+      - deploy-testing:
+          requires:
+            - php-test
+            - python-test
           filters:
             branches:
               only: master
