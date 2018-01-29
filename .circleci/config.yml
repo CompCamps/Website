@@ -57,6 +57,9 @@ jobs:
       - run: sh ./build/tests/line-endings.sh
 
   deploy:
+    machine:
+      enabled: true
+      
     working_directory: ~/build-output
 
     steps:
