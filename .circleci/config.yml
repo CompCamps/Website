@@ -24,7 +24,7 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
 
-      - run: cp ~/repo ~/build-output
+      - run: cp ~/repo ~/build-output -r
 
       - save_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
