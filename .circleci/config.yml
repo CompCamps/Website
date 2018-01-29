@@ -55,7 +55,7 @@ jobs:
 
     working_directory: ~/build-output
 
-    - steps:
+    steps:
       - restore_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - run: python2.7 ./build/tests/filenames.py www
