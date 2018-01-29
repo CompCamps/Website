@@ -82,12 +82,14 @@ workflows:
       - php-test:
           requires:
             - build
+          filters:
+            branches:
+              only: dash
       - python-test:
           requires:
             - build
       - deploy-testing:
           requires:
-            - php-test
             - python-test
           filters:
             branches:
