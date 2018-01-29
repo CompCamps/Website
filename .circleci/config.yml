@@ -11,7 +11,7 @@ jobs:
       - checkout
 
       - run: sudo apt update; sudo apt install ruby-sass
-      - run: sudo npm install uglify-js -g#TODO install locally and cache the dependency
+      - run: sudo npm install uglify-js -g #TODO install locally and cache the dependency
 
       # Download and cache dependencies
       - restore_cache:
@@ -29,7 +29,7 @@ jobs:
 
       - run: mkdir www/css
       - run: sass --update resources/www/scss:www/css
-      - run: python3.6 build/compile/minify.py
+      - run: python3 build/compile/minify.py
 
       - run: cp ~/repo ~/build-output -r
 
