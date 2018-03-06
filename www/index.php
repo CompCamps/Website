@@ -12,7 +12,8 @@ and more flexability than object-fit -->
 <section class="font-size-zero">
   <div class="col-50 home-section">
     <div class="well">
-      The MSI Computer Camps are a set of non-profit summer camps hosted at the University of Regina. The camps are dedicated to the education of youth in the rapidly changing computing industry.
+      The MSI Computer Camps is a set of non-profit summer camps hosted at the University of Regina located in the Classroom building on 
+      University Drive W. The camps are dedicated to the education of youth in the rapidly changing computing industry.
     </div>
     <p>The topics covered over the course of the week long session include:</p>
     <br/>
@@ -26,7 +27,7 @@ and more flexability than object-fit -->
     <p>
       The 2017 Computer Camps will consist of two weeks:<br/>
       Week One: from <strong>July 3th to July 7th</strong><br/>
-      Week Two: from <strong>July 10th to July 14th</strong>
+      Week Two: from <strong>July 10th to July 14th</strong><br/>
     </p>
   </div>
   <div class="col-50 home-section text-center">
