@@ -13,7 +13,7 @@ include('includes/header.php');
 </section>
 <section class="register-section">
   <h2>Problems registering? Watch this video!</h2>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/S0I_o-ad7qg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/o2Y9pgJzlKI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
   </iframe>
 </section>
 
