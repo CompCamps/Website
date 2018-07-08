@@ -11,7 +11,6 @@ include('includes/header.php');
   <h3>$350</h3>
   <h3>First week: <b>CLOSED</b></h3>
   <h3>Secound week: Open/h3>
-=======
   <h3>First week: <b>CLOSED</b></h3>
   <h3>Second week: OPEN</h3>
   <a class="button" href="dash/register">Register</a>
