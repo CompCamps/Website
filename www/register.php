@@ -10,8 +10,8 @@ include('includes/header.php');
   <h2>Registration is Open</h2>
   <h3>$350</h3>
   <h3>First week: <b>CLOSED</b></h3>
-  <h3>Secound week: Open</h3>
-  <a class="button" href="dash/register">Register</a>
+  <h3>Secound week: <b>CLOSED</b></h3>
+  <a class="button" href="dash/register">Registration is now closed.</a>
 </section>
 
 <?php include('includes/footer.php'); ?>
