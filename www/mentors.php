@@ -24,6 +24,11 @@ include('includes/header.php');
 <section class="mentor-section text-center">
   <h3>Mentors</h3>
   <div class="mentor-card">
+    <img src="img/mentors/noimage.png" width="150" height="150" />
+    <div class="name">Adam</div>
+    <div class="position">&nbsp;</div>
+  </div>
+  <div class="mentor-card">
     <img src="img/mentors/landon.jpg" width="150" height="150" />
     <div class="name">Landon Rohatensky</div>
     <div class="position">Drones</div>
