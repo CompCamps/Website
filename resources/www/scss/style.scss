@@ -9,21 +9,32 @@
 @import 'partials/campers';
 @import 'partials/mentors';
 
-html {
+/*html {
   height: 100%;
-}
+}*/
 
 body {
   background-color: $background-color;
   font: $font;
   color: $color;
-  min-height: 100%;
+  min-height: 100vh;
+}
+
+#ie-flex-fix-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#flex-container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  flex: 1;
 }
 
 .content {
-  flex: 1;
+  flex: 1 0 auto;
 }
 
 /* code specific to the homepage banner */
@@ -31,7 +42,6 @@ body {
   background-image: url('../img/homebanner.png');
   max-width: 1280px;
   height: 400px;
-  margin-top: 25px;
 }
 
 @media only screen and (max-width: 640px) {
@@ -73,7 +83,7 @@ body {
 section {
   background-color: $section-background-color;
   max-width: 1280px;
-  margin: 10px auto;
+  margin: 0px auto;
 
   a {
     color: inherit;
