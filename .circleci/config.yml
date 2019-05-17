@@ -4,37 +4,28 @@ jobs:
     docker:
       - image: circleci/php:latest-node-browsers
 
-    working_directory: ~/repo
+    working_directory: /tmp/project/
 
     steps:
-      - checkout
+      - checkout:
+          path: /tmp/project/repo
 
       - run: sudo apt update; sudo apt install ruby-sass
       - run: sudo npm install uglify-js -g #TODO install locally and cache the dependency
 
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "composer.json" }}
-          - v1-dependencies-
+      - run: cd /tmp/project/repo &&composer install -n --prefer-dist
 
-      - run: composer install -n --prefer-dist
+      - run: cd /tmp/project/repo/www/ && composer install
+      - run: mkdir /tmp/project/repo/www/css
+      - run: cd /tmp/project/repo && sass --update resources/www/scss:www/css
+      - run: cd /tmp/project/repo && python3 build/compile/minify.py
+      - run: mkdir /tmp/project/workspace
+      - run: cp /tmp/project/repo /tmp/project/workspace/build-output -r
 
-      - save_cache:
+      - persist_to_workspace:
+          root: workspace
           paths:
-            - ./vendor
-          key: v1-dependencies-{{ checksum "composer.json" }}
-
-      - run: cd www/ && composer install
-      - run: mkdir www/css
-      - run: sass --update resources/www/scss:www/css
-      - run: python3 build/compile/minify.py
-
-      - run: cp ~/repo ~/build-output -r
-
-      - save_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - ~/build-output
+            - build-output
 
   php-test:
     docker:
@@ -45,58 +36,58 @@ jobs:
           - MYSQL_USER=ubuntu
           - MYSQL_PASSWORD=ubuntu
 
-    working_directory: ~/build-output
+    working_directory: /tmp/project
 
     steps:
-      - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - attach_workspace:
+          at: /tmp/project/workspace
 
       - run: sudo docker-php-ext-install mysqli pdo pdo_mysql
-      - run: php build/phpunit/mysql_setup.php
-      - run: php vendor/bin/phpunit --coverage-clover build/coverage/xml
-      - run: php vendor/bin/codacycoverage clover build/coverage/xml
+      - run: cd ./workspace/build-output && php build/phpunit/mysql_setup.php
+      - run: cd ./workspace/build-output && php vendor/bin/phpunit --coverage-clover build/coverage/xml
+      - run: cd ./workspace/build-output && php vendor/bin/codacycoverage clover build/coverage/xml
 
   python-test:
     machine:
       enabled: true
 
-    working_directory: ~/build-output
+    working_directory: /tmp/project
 
     steps:
-      - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - attach_workspace:
+          at: /tmp/project/workspace
 
-      - run: python2.7 ./build/tests/filenames.py www
-      - run: python2.7 ./build/tests/existence.py www
-      - run: sh ./build/tests/line-endings.sh
+      - run: cd ./workspace/build-output && python2.7 ./build/tests/filenames.py www
+      - run: cd ./workspace/build-output && python2.7 ./build/tests/existence.py www
+      - run: cd ./workspace/build-output && sh ./build/tests/line-endings.sh
 
   deploy-testing:
     machine:
       enabled: true
 
-    working_directory: ~/build-output
+    working_directory: /tmp/project
 
     steps:
-      - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - attach_workspace:
+          at: /tmp/project/workspace
 
-      - run: cd www/ && scp -oStrictHostKeyChecking=no -r * mentor@compcamps.com:/home/mentor/public_html/testing
-      - run: cd www/ && scp -oStrictHostKeyChecking=no -r .htaccess mentor@compcamps.com:/home/mentor/public_html/testing
-      - run: cd www/ && scp -oStrictHostKeyChecking=no -r dash/.htaccess mentor@compcamps.com:/home/mentor/public_html/testing/dash
+      - run: cd ./workspace/build-output/www/ && scp -oStrictHostKeyChecking=no -r * mentor@compcamps.com:/home/mentor/public_html/testing
+      - run: cd ./workspace/build-output/www/ && scp -oStrictHostKeyChecking=no -r .htaccess mentor@compcamps.com:/home/mentor/public_html/testing
+      - run: cd ./workspace/build-output/www/ && scp -oStrictHostKeyChecking=no -r dash/.htaccess mentor@compcamps.com:/home/mentor/public_html/testing/dash
 
   deploy-live:
     machine:
       enabled: true
 
-    working_directory: ~/build-output
+    working_directory: /tmp/project
 
     steps:
-      - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+      - attach_workspace:
+          at: /tmp/project/workspace
 
-      - run: cd www/ && scp -oStrictHostKeyChecking=no -r * mentor@compcamps.com:/home/mentor/public_html/
-      - run: cd www/ && scp -oStrictHostKeyChecking=no -r .htaccess.live mentor@compcamps.com:/home/mentor/public_html/.htaccess
-      - run: cd www/ && scp -oStrictHostKeyChecking=no -r dash/.htaccess.live mentor@compcamps.com:/home/mentor/public_html/dash/.htaccess
+      - run: cd ./workspace/build-output/www/ && scp -oStrictHostKeyChecking=no -r * mentor@compcamps.com:/home/mentor/public_html/
+      - run: cd ./workspace/build-output/www/ && scp -oStrictHostKeyChecking=no -r .htaccess.live mentor@compcamps.com:/home/mentor/public_html/.htaccess
+      - run: cd ./workspace/build-output/www/ && scp -oStrictHostKeyChecking=no -r dash/.htaccess.live mentor@compcamps.com:/home/mentor/public_html/dash/.htaccess
 
 workflows:
   version: 2

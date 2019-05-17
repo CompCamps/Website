@@ -8,10 +8,10 @@ include('includes/header.php');
 
 <section class="faq-section">
   <h2 class="text-center">Overview</h2>
-  <h3>When are the 2018 camps?</h3>
-  <p class="indent">This year we have two separate 5-day computer camps for you and your friends. As each camper gets an individual PC workstation, the camp is currently limited to twenty-four participants per week. Week One starts Monday, July 2 and finishes Friday, July 6, 2018. Week Two starts Monday, July 9 and finishes Friday, July 13, 2018.</p>
+  <h3>When are the 2019 camps?</h3>
+  <p class="indent">This year we have two separate 5-day computer camps for you and your friends. As each camper gets an individual PC workstation, the camp is currently limited to twenty-four participants per week. Week One starts Monday, July 8 and finishes Friday, July 12, 2019. Week Two starts Monday, July 15 and finishes Friday, July 19, 2019.</p>
   <h3>Where do the camps take place?</h3>
-  <p class="indent">The camp program takes place in the Classroom Building on the north west corner of the University of Regina Campus in Regina, Saskatchewan, Canada. Some of the camp activities such as bowling, swimming, Matrix Gaming, and a barbeque take place at other Regina locations but most of the day is in the computer lab. Campus maps are available on the University of Regina website.</p>
+  <p class="indent">The camp program takes place in the Engineering Building on the south east corner of the University of Regina Campus in Regina, Saskatchewan, Canada. Some of the camp activities such as bowling, swimming, Matrix Gaming, and a barbeque take place at other Regina locations but most of the day is in the computer lab. Campus maps are available on the University of Regina website.</p>
   <h3>Who should attend the camp?</h3>
   <p class="indent">The camp is designed for those who are age 12 to 17 (inclusive as of camp start dates), have a yearn to learn, the ability to think logically, thrive on challenge and group interaction, and have a technology interest that includes more than just playing video game. Any level of computing education is welcome, whether beginner or advanced.</p>
   <h3>What is the camp program?</h3>
@@ -91,7 +91,7 @@ include('includes/header.php');
 </section>
 <section class="faq-section">
   <h2 class="text-center">What are the camp fees?</h2>
-  <p class="indent">The camp fees are $350 per registration. Fees include T-shirts, all camp activities, and biobreak refreshments. No discounts are offered for 2-week campers or campers from the same family. A $100 administration fee will apply for any cancellation of camp participation after one month prior to the first camp.</p>
+  <p class="indent">The camp fees are $300 per registration or $500 for both weeks. Fees include T-shirts, all camp activities, and biobreak refreshments. No discounts are offered for 2-week campers or campers from the same family. A $100 administration fee will apply for any cancellation of camp participation after one month prior to the first camp.</p>
   <h3>Paying by Credit Card</h3>
   <p class="indent">Simply navigate to the registration page by clicking ‘Register’ and choose which week you would like to sign up for. You will then need to fill out your billing information and camper information. Online registration is secured using SSL encryption and all payments are processed using Stripe.</p>
   <h3>Paying by Cash or Cheque</h3>
