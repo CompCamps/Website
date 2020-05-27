@@ -10,7 +10,7 @@ and more flexability than object-fit -->
 <a id="home-banner" class="banner" href="register.php"></a>
 <section>
 	<font color="red">
-	<center><b>The compcamps site has been updated to add an announcement about COVID19; please check the <a href="./register">registration</a> section for more information.</b></center>
+		<center><b>The compcamps site has been updated to add an announcement about COVID19; please check the <a href="./register">registration</a> section for more information.</b></center>
 	</font>
 </section>
 <section class="font-size-zero">
