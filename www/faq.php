@@ -11,17 +11,17 @@ include('includes/header.php');
   <h3>When are the camps?</h3>
   <p class="indent">This year we have two separate 5-day computer camps for you and your friends. As each camper gets an individual PC workstation, the camp is currently limited to 18 participants per week. Week One starts Monday, July 8 and finishes Friday, July 12, 2019. Week Two starts Monday, July 15 and finishes Friday.</p>
   <h3>Where do the camps take place?</h3>
-  <p class="indent">The camp program takes place in the Engineering Building on the south east corner of the University of Regina Campus in Regina, Saskatchewan, Canada. Some of the camp activities such as bowling, swimming, Matrix Gaming, and a barbeque take place at other Regina locations but most of the day is in the computer lab. Campus maps are available on the University of Regina website.</p>
+  <p class="indent">The camp program takes place in the Education Building on the south east corner of the University of Regina Campus in Regina, Saskatchewan, Canada. Some of the camp activities such as our barbecue and the presentations take place at other Regina locations but most of the day is in the computer lab. Campus maps are available on the University of Regina</p>
   <h3>Who should attend the camp?</h3>
   <p class="indent">The camp is designed for those who are age 12 to 17 (inclusive as of camp start dates), have a yearn to learn, the ability to think logically, thrive on challenge and group interaction, and have a technology interest that includes more than just playing video game. Any level of computing education is welcome, whether beginner or advanced.</p>
   <h3>What is the camp program?</h3>
-  <p class="indent">Each day between 8:30 a.m. and 8:30 p.m. you’ll work on your projects as an individual and in small teams. Naturally there are biobreaks and activity breaks. Evenings include group technical, social, and recreational activities. Your camp fee covers all activites. Late morning or early afternoon activities (depending on the weather) include swimming and team games. Monday evenings offer bowling, Tuesday and Thursday evenings are for individual and team project work as well as for special guest presentations to small groups. Wednesday evenings are for competitive computer games. Friday afternoon is highlighted by a closing ceremony where campers get to show their creations to family and friends. In addition, the camps provide lasting benefits by enhancing your technical, creative, and communication skill sets. You return home better able to assist the advanced technological challenges and opportunities faced by your family, schools, and community groups.</p>
+  <p class="indent">Each day between 8:00 a.m. and 5:00 p.m. you’ll work on your projects as an individual and in small teams. Naturally there are biobreaks and activity breaks. Evenings include group technical, social, and recreational activities. Your camp fee covers all activites. Late morning or early afternoon activities (depending on the weather) include swimming and team games. Monday evenings offer bowling, Tuesday and Thursday evenings are for individual and team project work as well as for special guest presentations to small groups. Wednesday evenings are for competitive computer games. Friday afternoon is highlighted by a closing ceremony where campers get to show their creations to family and friends. In addition, the camps provide lasting benefits by enhancing your technical, creative, and communication skill sets. You return home better able to assist the advanced technological challenges and opportunities faced by your family, schools, and community groups.</p>
 
 </section>
 <section class="faq-section">
   <h2 class="text-center">What’s the camp schedule?</h2>
   <h3>How does each camp begin?</h3>
-  <p class="indent">Camp opens each week on Monday at 8:30 a.m. at the University of Regina. After a brief introduction to staff, camp rules, and procedures, everybody dives right into action! During the first Monday session, mentors evaluate each camper’s abilities and goals to ensure learning at an appropriate level.</p>
+  <p class="indent">Camp begins Monday, August 1st at 8:00 a.m. at the University of Regina. After a brief introduction to staff, camp rules, and procedures, everybody dives right into action! During the first Monday session, mentors evaluate each camper’s abilities and goals to ensure learning at an appropriate level.</p>
   <h3>What’s the typical daily schedule for Tuesdays through Thursdays?</h3>
   <table id="schedule">
     <tr>
@@ -85,17 +85,17 @@ include('includes/header.php');
   <h3>What are Biobreaks?</h3>
   <p class="indent">For the daily morning and afternoon biobreaks, campers are provided with a choice of free refreshments, ranging from bottled water to fruit juices and now and then soda pop. Although food and drink are not allowed in the computer room, water bottles are encouraged. Often, treats are awarded for great answers or creative solutions to challenges.</p>
   <h3>What meals are provided as part of the camp program?</h3>
-  <p class="indent">Campers are provided with the following meals: Monday: pizza at lunch for all campers. Tuesday: BBQ supper. Wednesday: “2-peat Lunch” for campers back for their second or higher camp year. Thursday: “3-peat Supper” for campers back for their third or higher camp year.</p>
+  <p class="indent">Campers are provided with the a pizza lunch on Monday and a BBQ lunch on Tuesday.</p>
   <h3>What about other meals?</h3>
-  <p class="indent">Campers are responsible for their own meals for other times. Campers may bring food (store in fridge / heat in microwave) or Campers may buy meals at nearby campus establishments or other nearby establishments.</p>
+  <p class="indent">Campers are responsible for their own meals for other times. Campers are welcome to bring food their own food (store in fridge / heat in microwave) or campers may purchase their own meals on campus establishments or other nearby establishments.</p>
 </section>
 <section class="faq-section">
   <h2 class="text-center">What are the camp fees?</h2>
-  <p class="indent">The camp fees are $300 per registration or $500 for both weeks. Fees include T-shirts, all camp activities, and biobreak refreshments. No discounts are offered for 2-week campers or campers from the same family. A $100 administration fee will apply for any cancellation of camp participation after one month prior to the first camp.</p>
+  <p class="indent">The camp fees are $200 per registration. Fees include T-shirts, all camp activities, and biobreak refreshments. A $100 cancellation fee will apply for any cancellation that occurs within one week of camp beginning or during camp.</p>
   <h3>Paying by Credit Card</h3>
   <p class="indent">Simply navigate to the registration page by clicking ‘Register’ and choose which week you would like to sign up for. You will then need to fill out your billing information and camper information. Online registration is secured using SSL encryption and all payments are processed using Stripe.</p>
   <h3>Paying by Cash or Cheque</h3>
-  <p class="indent">Contact Adam Knutson at (306) 535-0237 or <a href="mailto:computercamps@gmail.com">email us</a> as soon as possible.</p>
+  <p class="indent">Contact Adam Knutson at (306) 535-0237 or <a href = "mailto:computercamps@gmail.com">email us</a> as soon as possible.</p>
 </section>
 <section class="faq-section">
   <h2 class="text-center">I am out of town, where can I stay during camp?</h2>

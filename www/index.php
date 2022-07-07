@@ -8,11 +8,6 @@ include('includes/header.php');
 <!-- Using a background to place the image here. background-* has better support
 and more flexability than object-fit -->
 <a id="home-banner" class="banner" href="register.php"></a>
-<section>
-	<font color="red">
-		<center><b>The compcamps site has been updated to add an announcement about COVID19; please check the <a href="./register">registration</a> section for more information.</b></center>
-	</font>
-</section>
 <section class="font-size-zero">
   <div class="col-50 home-section">
     <div class="well">
