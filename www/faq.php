@@ -83,7 +83,7 @@ include('includes/header.php');
 <section class="faq-section">
   <h2 class="text-center">What about meals?</h2>
   <h3>What are Biobreaks?</h3>
-  <p class="indent">For the daily morning and afternoon biobreaks, campers are provided with a choice of free refreshments, ranging from bottled water to fruit juices and now and then soda pop. Although food and drink are not allowed in the computer room, water bottles are encouraged. Often, treats are awarded for great answers or creative solutions to challenges.</p>
+  <p class="indent">For the daily morning and afternoon biobreaks, campers are provided with a choice of free refreshments, ranging from bottled water to fruit juices, and a short break from their computer screens. Although food and drink are not allowed in the computer room, water bottles are encouraged.</p>
   <h3>What meals are provided as part of the camp program?</h3>
   <p class="indent">Campers are provided with the a pizza lunch on Monday and a BBQ lunch on Tuesday.</p>
   <h3>What about other meals?</h3>
