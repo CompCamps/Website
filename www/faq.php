@@ -95,7 +95,7 @@ include('includes/header.php');
   <h3>Paying by Credit Card</h3>
   <p class="indent">Simply navigate to the registration page by clicking ‘Register’ and choose which week you would like to sign up for. You will then need to fill out your billing information and camper information. Online registration is secured using SSL encryption and all payments are processed using Stripe.</p>
   <h3>Paying by Cash or Cheque</h3>
-  <p class="indent">Contact Adam Knutson at (306) 535-0237 or <a href = "mailto: computercamps@gmail.com">email us</a> as soon as possible.</p>
+  <p class="indent">Contact Adam Knutson at (306) 535-0237 or <a href = "mailto:computercamps@gmail.com">email us</a> as soon as possible.</p>
 </section>
 <section class="faq-section">
   <h2 class="text-center">I am out of town, where can I stay during camp?</h2>
