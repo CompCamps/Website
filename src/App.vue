@@ -78,9 +78,9 @@ export default defineComponent({
     const menu = {
       name: 'Main Menu',
       options: [{
-        label: 'Register Now',
+        label: 'Schedule',
         action: () => {
-          window.location.href = 'https://register.citruscamps.com/pg/pg_X9XlMypciZFIh0VJ/evt/pg_evt_MBY6qnVXaHjv9QVI'
+          window.location.href = '../public/schedule.pdf'
         }
       },
       {
