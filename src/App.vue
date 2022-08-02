@@ -80,7 +80,7 @@ export default defineComponent({
       options: [{
         label: 'Schedule',
         action: () => {
-          window.location.href = '../public/schedule.pdf'
+          window.location.href = '/schedule.pdf'
         }
       },
       {
