@@ -1,0 +1,6 @@
+<h2>Sponsors</h2>
+
+<a href="https://www.conexus.ca"><img src="img/conexus.png" class="sponsor-image" /></a>
+<a href="https://www.sasktel.ca"><img src="img/sasktel.png" class="sponsor-image" /></a>
+<a href="https://https://www.uregina.ca/engineering/index.html"><img src="img/uregina.png" class="sponsor-image" /></a>
+<a href="https://www.metric-hosting.ca/"><img src="img/metric.png"  class="sponsor-image"/></a>

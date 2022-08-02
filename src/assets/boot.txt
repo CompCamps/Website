@@ -1,0 +1,85 @@
+100|Mentor Systems Incorporated
+600|Kernel Version 29.0.0: Mon Jul 4 00:08:00 CST 2022; root:xnu-1699.22.73~1/RELEASE_X86_64
+100|PMAP: PCID enabled
+015|vm_page_bootstrap: 987323 free pages and 53061 wired pages
+015|kext submap [0xffffff7f8072e000 - 0xffffff8000000000], kernel text [0xffffff8000200000 - 0xffffff800072e000]
+015|zone leak detection enabled
+015|standard timeslicing quantum is 10000 us
+015|mig_table_max_displ = 72
+015|TSC Deadline Timer supported and enabled
+000|CompCampACPICPU: ProcessorId=1 LocalApicId=0 Enabled
+000|CompCampACPICPU: ProcessorId=2 LocalApicId=2 Enabled
+000|CompCampACPICPU: ProcessorId=3 LocalApicId=1 Enabled
+000|CompCampACPICPU: ProcessorId=4 LocalApicId=3 Enabled
+015|using 16384 buffer headers and 10240 cluster IO buffer headers
+015|IOAPIC: Version 0x20 Vectors 64:87
+015|ACPI: System State [S0 S3 S4 S5] (S3)
+015|PFM64 0xf10000000, 0xf0000000
+015|[ PCI configuration begin ]
+015|CompCampIntelCPUPowerManagement: Turbo Ratios 0046
+015|CompCampIntelCPUPowerManagement: (built 13:08:12 Jun 18 2011) initialization complete
+015|console relocated to 0xf10000000
+015|PCI configuration changed (bridge=16 device=4 cardbus=0)
+015|[ PCI configuration end, bridges 12 devices 16 ]
+015|mbinit: done [64 MB total pool size, (42/21) split]
+015|Pthread support ABORTS when sync kernel primitives misused
+015|com.MSI.CompCampFSCompressionTypeZlib kmod start
+015|com.MSI.CompCampTrololoBootScreen kmod start
+015|com.MSI.CompCampFSCompressionTypeZlib load succeeded
+015|com.MSI.CompCampFSCompressionTypeDataless load succeeded
+015| 
+200|CompCampIntelCPUPowerManagementClient: ready
+015|BTCOEXIST off 
+015|wl0: Broadcom BCM4331 802.11 Wireless Controller
+015|5.100.98.75
+015| 
+015|WayneWire (OHCI) Lucent ID 5901 built-in now active, GUID c82a14fffee4a086; max speed s800.
+015|rooting via boot-uuid from /chosen: F5670083-AC74-33D3-8361-AC1977EE4AA2
+015|Waiting on <dict ID="0"><key>IOProviderClass</key><string ID="1">
+015|IOResources</string><key>IOResourceMatch</key><string ID="2">boot-uuid-media</string></dict>
+015|Got boot device = IOService:/CompCampACPIPlatformExpert/PCI0@0/CompCampACPIPCI/SATA@1F,2/
+015|CompCampIntelPchSeriesAHCI/PRT0@0/IOAHCIDevice@0/CompCampAHCIDiskDriver/IOBlockStorageDriver/
+015|MSI SSD TS128C Media/IOGUIDPartitionScheme/Customer@2
+015|BSD root: disk0s2, major 14, minor 2
+015|Kernel is LP64
+015|
+150|calling msi_module_init for Biobreak
+015|CompCamps module loaded: Biobreak (Biobreak)
+150|calling msi_module_init for Outdoor
+015|CompCamps module loaded: Outdoor Activities (Outdoor)
+150|calling msi_module_init for GuestSpeakers
+015|CompCamps module loaded: Tech Industry Guest Speakers (GuestSpeakers)
+150|calling msi_module_init for PhotoEdit
+015|CompCamps module loaded: Photo editing lesson (PhotoEdit)
+150|calling msi_module_init for GameDev
+015|CompCamps module loaded: Game Development lessons (GameDev)
+600| 
+300|CompCamps Framework successfully initialized
+150|
+150|
+150| 
+015|Reboot Complete
+350| 
+350| 
+850| 
+010| 
+010| 
+010| 
+010| 
+010| 
+010|
+010| 
+010| 
+010|
+010| 
+010| 
+010|
+010| 
+010| 
+010|
+010| 
+010| 
+010|
+010| 
+010| 
+010|

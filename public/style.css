@@ -1,0 +1,55 @@
+body {
+    background-color: #000000;
+
+    --accent-pink: #ff4e62;
+    --accent-blue: #2ecfca;
+
+    font-family: 'Courier New', monospace;
+
+    padding: 1rem;
+}
+
+.reboot {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px var(--accent-blue), -2px -2px var(--accent-pink);
+    color: white;
+}
+
+.reboot-btn {
+    font-size: 1.5rem;
+    background-color: black;
+    border: 2px white solid;
+    color: white;
+    text-shadow: 1px 1px var(--accent-blue), -1px -1px var(--accent-pink);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.reboot-btn:hover {
+    box-shadow: 2px 2px var(--accent-blue), -2px -2px var(--accent-pink);
+}
+
+.menu {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px var(--accent-blue), -1px -1px var(--accent-pink);
+    color: white;
+}
+
+.menu-action {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px var(--accent-blue), -1px -1px var(--accent-pink);
+    cursor: pointer;
+}
+
+.sponsor-image {
+    height: auto;
+    width: 15rem;
+}
+
+@media screen and (max-width: 15rem) {
+    .sponsor-image {
+        width: 100%;
+    }
+}
