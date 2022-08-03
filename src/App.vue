@@ -17,6 +17,9 @@
               {{ line }}<br/>
             </template>
           </div>
+          <div v-else-if="camperMode" class="campers">
+            Breaking in
+          </div>
           <div v-else class="menu">
             <p
               class="menu-action"
@@ -53,6 +56,8 @@ export default defineComponent({
     const bootingText = ref([]);
 
     const bootingSource = bootingSourceText.split('\n');
+
+    const camperMode = ref(false);
 
     const lineHeight = 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
@@ -129,6 +134,8 @@ export default defineComponent({
         e.preventDefault();
       } else if (e.key === 'Enter') {
         menu.options[keyboardIndex.value].action();
+      } else if (e.key === 'c') {
+        camperMode = true;
       }
     }
     window.addEventListener('keydown', handleKey);
@@ -138,6 +145,7 @@ export default defineComponent({
     return {
       booting,
       bootingText,
+      camperMode,
       content,
       menu,
       keyboardIndex,
