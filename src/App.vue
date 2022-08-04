@@ -18,10 +18,12 @@
             </template>
           </div>
           <div v-else-if="camperMode" class="campers">
-            <template v-for="(line, i) in console" :key="i">
-              <span v-html="line"></span><br/>
-            </template>
-            {{ consolewd }}&gt; {{ prompt }}
+            <div>
+              <template v-for="(line, i) in console" :key="i">
+                <span v-html="line"></span><br/>
+              </template>
+              {{ consolewd }}&gt; {{ prompt }}
+            </div>
           </div>
           <div v-else class="menu">
             <p
@@ -149,6 +151,10 @@ export default defineComponent({
           prompt.value = '';
         } else if (e.key.length == 1) {
           prompt.value += e.key;
+          // disable firefox quick find
+          if (e.key === '/') {
+            e.preventDefault();
+          }
         } else if (e.key === 'Backspace') {
           prompt.value = prompt.value.slice(0, -1);
         } else if (e.key === 'Enter') {
@@ -156,10 +162,6 @@ export default defineComponent({
           console.value.push(...execute(prompt.value, campers));
           prompt.value = '';
           consolewd.value = wd();
-        }
-        if (console.value.length > ((screen.height / lineHeight) * 0.80)) {
-          console.value.shift();
-          console.value.shift();
         }
       } else if (e.key === 'c' && e.ctrlKey) {
         camperMode.value = true;

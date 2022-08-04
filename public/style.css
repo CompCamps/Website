@@ -58,4 +58,6 @@ body {
     font-size: 1.2rem;
     text-shadow: 1px 1px var(--accent-blue), -1px -1px var(--accent-pink);
     color: white;
+    overflow:auto; display:flex; flex-direction:column-reverse;
+    height: 80vh;
 }

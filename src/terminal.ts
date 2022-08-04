@@ -93,7 +93,7 @@ export function executeCamper(input: string, campers: Camper[]): string[] {
         ];
     } else if (input == "photo") {
         return [
-            `${camper.name}'s photo is here.`
+            `<img src="/headshots/${camper.name}.jpg" width="200px" height="200px" />`
         ];
     } else if (input == "website") {
         return [
