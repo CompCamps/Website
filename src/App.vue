@@ -18,7 +18,10 @@
             </template>
           </div>
           <div v-else-if="camperMode" class="campers">
-            Breaking in
+            <template v-for="(line, i) in console" :key="i">
+              <span v-html="line"></span><br/>
+            </template>
+            {{ consolewd }}&gt; {{ prompt }}
           </div>
           <div v-else class="menu">
             <p
@@ -49,6 +52,9 @@ import campOverviewText from '@/assets/camp-overview.txt?raw'
 import campFAQText from '@/assets/camp-faq.txt?raw'
 import campMSIText from '@/assets/camp-msi.txt?raw'
 import campSponsors from '@/assets/camp-sponsors.txt?raw'
+import campersCSV from '@/assets/camper-info.csv?raw'
+
+import { parseCampers, execute, wd } from '@/terminal';
 
 export default defineComponent({
   setup() {
@@ -58,6 +64,8 @@ export default defineComponent({
     const bootingSource = bootingSourceText.split('\n');
 
     const camperMode = ref(false);
+    const campers = parseCampers(campersCSV);
+    const consolewd = ref('$');
 
     const lineHeight = 3 * parseFloat(getComputedStyle(document.documentElement).fontSize);
 
@@ -114,6 +122,8 @@ export default defineComponent({
     };
 
     const content = ref(campSponsors.split('\n'));
+    const console = ref([]);
+    const prompt = ref('');
 
     const keyboardIndex = ref(0);
 
@@ -132,10 +142,23 @@ export default defineComponent({
           setKeyboardIndex(keyboardIndex.value + 1);
         }
         e.preventDefault();
-      } else if (e.key === 'Enter') {
+      } else if (e.key === 'Enter' && !camperMode.value) {
         menu.options[keyboardIndex.value].action();
-      } else if (e.key === 'c') {
-        camperMode = true;
+      } else if (camperMode.value) {
+        if (e.key === 'c' && e.ctrlKey) {
+          prompt.value = '';
+        } else if (e.key.length == 1) {
+          prompt.value += e.key;
+        } else if (e.key === 'Backspace') {
+          prompt.value = prompt.value.slice(0, -1);
+        } else if (e.key === 'Enter') {
+          console.value.push(`${wd()}&gt; ${prompt.value}`);
+          console.value.push(...execute(prompt.value, campers));
+          prompt.value = '';
+          consolewd.value = wd();
+        }
+      } else if (e.key === 'c' && e.ctrlKey) {
+        camperMode.value = true;
       }
     }
     window.addEventListener('keydown', handleKey);
@@ -150,6 +173,9 @@ export default defineComponent({
       menu,
       keyboardIndex,
       setKeyboardIndex,
+      console,
+      prompt,
+      consolewd,
     }
   },
 })

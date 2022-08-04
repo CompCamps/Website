@@ -53,3 +53,9 @@ body {
         width: 100%;
     }
 }
+
+.campers {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px var(--accent-blue), -1px -1px var(--accent-pink);
+    color: white;
+}
