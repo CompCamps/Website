@@ -69,9 +69,23 @@ export function executeRoot(input: string, campers: Camper[]): string[] {
 }
 
 export function executeCamper(input: string, campers: Camper[]): string[] {
-    if (input === 'cd ..') {
+    if (['cd ..', 'cd ../', '..'].includes(input)) {
         state = State.Root;
         return [];
+    } else if (input.startsWith('cd ../')) {
+        let camperName = input.substring(6);
+        let camperInterface = campers.find(c => c.name === camperName);
+        if (camperInterface !== undefined) {
+            state = State.Camper;
+            camper = camperInterface;
+            return [
+                `Switched to ${camper.name}`
+            ];
+        } else {
+            return [
+                `${camperName} is not a valid camper.`
+            ];
+        }
     } else if (input === 'ls') {
         return [
             'photo',
@@ -99,18 +113,3 @@ export function wd(): string {
             return `$/${camper.name}`;
     }
 }
-
-// Root -> print campers -> Root
-// ls
-
-// root -> camper
-// cd {camper}
-
-// camper -> root
-// cd ..
-
-/// camper -> show photo -> camper
-// photo
-
-// camper -> show website -> camper
-// website

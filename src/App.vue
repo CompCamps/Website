@@ -157,6 +157,10 @@ export default defineComponent({
           prompt.value = '';
           consolewd.value = wd();
         }
+        if (console.value.length > ((screen.height / lineHeight) * 0.80)) {
+          console.value.shift();
+          console.value.shift();
+        }
       } else if (e.key === 'c' && e.ctrlKey) {
         camperMode.value = true;
       }
