@@ -1,12 +1,6 @@
 <template>
   <div>
     <header class="shadow flex">
-      <!-- <div class="w-full px-4 py-6 sm:px-6 lg:px-8 sm:flex justify-between items-center">
-        <img src="/brand/logo.svg" class="sm:w-80 h-auto shrink"/>
-        <a class="reboot-btn h-fit xs:block" href="https://register.citruscamps.com/pg/pg_X9XlMypciZFIh0VJ/evt/pg_evt_MBY6qnVXaHjv9QVI">
-          Register Now
-        </a>
-      </div> -->
       <img src="/brand/logo.svg" class="w-max h-auto shrink sm:w-96"/>
     </header>
     <div class="mt-4">
@@ -158,6 +152,7 @@ export default defineComponent({
         } else if (e.key === 'Backspace') {
           prompt.value = prompt.value.slice(0, -1);
         } else if (e.key === 'Enter') {
+          e.preventDefault();
           console.value.push(`${wd()}&gt; ${prompt.value}`);
           console.value.push(...execute(prompt.value, campers));
           prompt.value = '';

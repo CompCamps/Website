@@ -1,8 +1,3 @@
-// Root Directory - campers
-//    - camper directory
-//      - photo
-//      - website
-
 enum State {
     Root,
     Camper
@@ -10,7 +5,6 @@ enum State {
 
 interface Camper {
     name: string;
-    // photo: string;
     github: string;
     repo: string;
 }
@@ -26,7 +20,6 @@ export function parseCampers(input: string): Camper[] {
             return null;
         }
         let [name, github, repo] = line.split(',');
-        console.log(name);
         return {
             name: name.trim().toLowerCase(),
             github: github.trim(),
@@ -36,7 +29,6 @@ export function parseCampers(input: string): Camper[] {
 }
 
 export function execute(input: string, campers: Camper[]): string[] {
-    console.log(campers);
     switch (state) {
         case State.Root:
             return executeRoot(input, campers);
