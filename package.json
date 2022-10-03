@@ -8,7 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.37"
+    "vue": "^3.2.40"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.6.7",
