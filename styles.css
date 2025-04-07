@@ -82,3 +82,62 @@ footer {
         justify-content: flex-start;
     }
 }
+
+div.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.registration {
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+div.sponsors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+section.sponsors {
+    padding: 20px 10%;
+    margin: 0;
+}
+
+div.sponsors h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+div.sponsors div.sponsor {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: fit-content;
+}
+
+div.sponsors div.sponsor img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+img.whitebg {
+    margin-top: -0.5rem;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
