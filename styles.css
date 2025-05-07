@@ -12,7 +12,15 @@ header {
 header img {
     height: 80px;
     width: auto;
+    max-width: 100%;
 }
+
+@media (max-width: 480px) {
+    header img {
+        height: 60px;
+    }
+}
+
 section {
     display: flex;
     align-items: center;
@@ -140,4 +148,10 @@ img.whitebg {
     background-color: white;
     padding: 0.5rem;
     border-radius: 0.5rem;
+}
+
+.uregina {
+    text-decoration: none;
+    display: flex;
+    gap: 1rem;
 }
