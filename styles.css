@@ -5,19 +5,15 @@ body {
     color: #fff;
     background: #111;
 }
-header {
-    text-align: center;
-    padding: 40px 20px;
-}
-header img {
-    height: 80px;
-    width: auto;
-    max-width: 100%;
+
+h1 {
+    font-size: 3em;
+    margin: 0;
 }
 
-@media (max-width: 480px) {
-    header img {
-        height: 60px;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
     }
 }
 
