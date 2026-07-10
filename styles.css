@@ -28,6 +28,10 @@ section {
     max-width: 50%;
     font-size: 1.2em;
 }
+.text-content-full {
+    text-align: center;
+    max-width: 100%;
+}
 .btn {
     display: inline-block;
     padding: 15px 30px;
@@ -172,4 +176,14 @@ img.whitebg {
 .social a img {
     filter: invert(1);
     width: 30px;
+}
+
+.campers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
 }
